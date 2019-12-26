@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\td\\source\\repos\\BL\\BL.csproj": {}
+    "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BL\\BL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\td\\source\\repos\\BE\\BE.csproj": {
+    "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BE\\BE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\td\\source\\repos\\BE\\BE.csproj",
+        "projectUniqueName": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BE\\BE.csproj",
         "projectName": "BE",
-        "projectPath": "C:\\Users\\td\\source\\repos\\BE\\BE.csproj",
+        "projectPath": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BE\\BE.csproj",
         "packagesPath": "C:\\Users\\td\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\td\\source\\repos\\BE\\obj\\",
+        "outputPath": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\td\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,14 +59,14 @@
         }
       }
     },
-    "C:\\Users\\td\\source\\repos\\BL\\BL.csproj": {
+    "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BL\\BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\td\\source\\repos\\BL\\BL.csproj",
+        "projectUniqueName": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BL\\BL.csproj",
         "projectName": "BL",
-        "projectPath": "C:\\Users\\td\\source\\repos\\BL\\BL.csproj",
+        "projectPath": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BL\\BL.csproj",
         "packagesPath": "C:\\Users\\td\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\td\\source\\repos\\BL\\obj\\",
+        "outputPath": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\td\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,11 +82,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\td\\source\\repos\\BE\\BE.csproj": {
-                "projectPath": "C:\\Users\\td\\source\\repos\\BE\\BE.csproj"
+              "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BE\\BE.csproj": {
+                "projectPath": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BE\\BE.csproj"
               },
-              "C:\\Users\\td\\source\\repos\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\td\\source\\repos\\DAL\\DAL.csproj"
+              "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\DAL\\DAL.csproj"
               }
             }
           }
@@ -121,14 +121,14 @@
         }
       }
     },
-    "C:\\Users\\td\\source\\repos\\DAL\\DAL.csproj": {
+    "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\td\\source\\repos\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\td\\source\\repos\\DAL\\DAL.csproj",
+        "projectPath": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\td\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\td\\source\\repos\\DAL\\obj\\",
+        "outputPath": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\td\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -144,11 +144,11 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\td\\source\\repos\\BE\\BE.csproj": {
-                "projectPath": "C:\\Users\\td\\source\\repos\\BE\\BE.csproj"
+              "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BE\\BE.csproj": {
+                "projectPath": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BE\\BE.csproj"
               },
-              "C:\\Users\\td\\source\\repos\\DS\\DS.csproj": {
-                "projectPath": "C:\\Users\\td\\source\\repos\\DS\\DS.csproj"
+              "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\DS\\DS.csproj": {
+                "projectPath": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\DS\\DS.csproj"
               }
             }
           }
@@ -183,14 +183,14 @@
         }
       }
     },
-    "C:\\Users\\td\\source\\repos\\DS\\DS.csproj": {
+    "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\DS\\DS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\td\\source\\repos\\DS\\DS.csproj",
+        "projectUniqueName": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\DS\\DS.csproj",
         "projectName": "DS",
-        "projectPath": "C:\\Users\\td\\source\\repos\\DS\\DS.csproj",
+        "projectPath": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\DS\\DS.csproj",
         "packagesPath": "C:\\Users\\td\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\td\\source\\repos\\DS\\obj\\",
+        "outputPath": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\DS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\td\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -206,8 +206,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\td\\source\\repos\\BE\\BE.csproj": {
-                "projectPath": "C:\\Users\\td\\source\\repos\\BE\\BE.csproj"
+              "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BE\\BE.csproj": {
+                "projectPath": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BE\\BE.csproj"
               }
             }
           }

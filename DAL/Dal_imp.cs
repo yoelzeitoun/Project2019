@@ -90,6 +90,10 @@ namespace DAL
                 throw new Exception("DAL: Guest Request key not match to the current order");
             if (DataSource.orderList[index].HostingUnitKey != order.HostingUnitKey)
                 throw new Exception("DAL: Hosting Unit key not match to the current order");
+            //DateTime i = FindGuestRequest(order).EntryDate;
+            //DateTime j = FindGuestRequest(order).ReleaseDate;
+            
+            //FindHostingUnit(order).Diary
             DataSource.orderList[index] = order;
         }
         public Order GetOrder(long orderKey)
@@ -176,6 +180,19 @@ namespace DAL
                 return v.AsEnumerable().OrderByDescending(s => s.OrderKey);
 
             return v.Where(predicat).OrderByDescending(s => s.OrderKey);
+        }
+        //Find the Host of an order
+        public Host FindHost(Order order)
+        {
+            return DataSource.hostingUnitList.FirstOrDefault(h => h.HostingUnitKey == order.HostingUnitKey).Owner;
+        }
+        public GuestRequest FindGuestRequest(Order order)
+        {
+            return DataSource.guestRequestList.FirstOrDefault(g => g.GuestRequestKey == order.GuestRequestKey);
+        }
+        public HostingUnit FindHostingUnit(Order order)
+        {
+            return DataSource.hostingUnitList.FirstOrDefault(h => h.HostingUnitKey == order.HostingUnitKey);
         }
     }
 }

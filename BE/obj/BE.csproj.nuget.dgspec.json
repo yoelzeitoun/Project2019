@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\td\\source\\repos\\BE\\BE.csproj": {}
+    "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BE\\BE.csproj": {}
   },
   "projects": {
-    "C:\\Users\\td\\source\\repos\\BE\\BE.csproj": {
+    "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BE\\BE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\td\\source\\repos\\BE\\BE.csproj",
+        "projectUniqueName": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BE\\BE.csproj",
         "projectName": "BE",
-        "projectPath": "C:\\Users\\td\\source\\repos\\BE\\BE.csproj",
+        "projectPath": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BE\\BE.csproj",
         "packagesPath": "C:\\Users\\td\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\td\\source\\repos\\BE\\obj\\",
+        "outputPath": "C:\\Users\\td\\source\\repos\\GitRepositorie\\yoelzeitoun\\Project2019\\BE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\td\\AppData\\Roaming\\NuGet\\NuGet.Config",

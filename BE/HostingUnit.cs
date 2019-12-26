@@ -10,7 +10,7 @@ namespace BE
         public long NumHostingUnit { get; set; }
         public Host Owner{ get; set; }
         public string HostingUnitName { get; set; }
-        public bool[,] Diary { get; set; }
+        public bool[,] Diary = new bool[12, 31];
         public override string ToString()
         {
             return this.ToStringProperty();

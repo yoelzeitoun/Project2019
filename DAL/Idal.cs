@@ -6,7 +6,7 @@ using BE;
 
 namespace DAL
 {
-    interface IDal
+    public interface IDal
     {
         void AddGuestRequest(GuestRequest guestRequest);
         void UpdateGuestRequest(GuestRequest guestRequest);
@@ -30,5 +30,8 @@ namespace DAL
         //returns copy of the order collection which answer a specific predicate or null
         IEnumerable<Order> GetOrderList(Func<Order, bool> predicat = null);
 
+        Host FindHost(Order order);
+        GuestRequest FindGuestRequest(Order order);
+        HostingUnit FindHostingUnit(Order order);
     }
 }
