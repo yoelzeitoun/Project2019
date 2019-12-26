@@ -11,12 +11,12 @@ namespace BE
         public string FamilyName { get; set; }
         public int PhoneNumber { get; set; }
         public string MailAddress { get; set; }
-        BankBranch BankBranchDetails { get; set; }
+        public BankBranch bankBranchDetails { get; set; }
         public int BankAccountNumber { get; set; }
         public bool CollectionClearance { get; set; }
         public override string ToString()
         {
-            return base.ToString();
+            return this.ToStringProperty();
         }
     }
 }

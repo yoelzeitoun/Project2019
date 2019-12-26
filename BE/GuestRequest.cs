@@ -1,10 +1,13 @@
 ﻿using System;
-
+using System.Reflection;
 namespace BE
 {
-    public class GuestRequest
+    [Serializable]
+    public class GuestRequest 
     {
+        public GuestRequest(){}
         public long GuestRequestKey = 10000000;
+        public long NumGuestRequest { get; set; }
         public string PrivateName { get; set;}
         public string FamilyName { get; set; }
         public string MailAddress { get; set; }
@@ -22,7 +25,7 @@ namespace BE
         public ChildrensAttractions childrenAttractions { get; set; }
         public override string ToString()
         {
-            return base.ToString();
+            return this.ToStringProperty();
         }
     }
 }

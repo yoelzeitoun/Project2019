@@ -6,11 +6,11 @@ namespace BE
 {
     public static class Configuration
     {
-        public static long NumStaticGuestRequest = 10000000;
-        public static long NumStaticHostingUnit = 10000000;
-        public static int NumStaticOrder = 1;
+        public static long _GuestRequestKey = 0;
+        public static long _HostingUnitKey = 0;
+        public static int _OrderKey = 0;
         public static int NumStaticOrderExpiration = 0;
-        public static int Commission = 0;
+        public static int Commission = 10;
         public static string WEB_LICENSE_MAIL;
         public static string MAIL_PASSWORD;
     }

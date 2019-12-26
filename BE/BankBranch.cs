@@ -13,7 +13,7 @@ namespace BE
         public string Branch_City { get; set; }
         public override string ToString()
         {
-            return base.ToString();
+            return this.ToStringProperty();
         }
     }
 }

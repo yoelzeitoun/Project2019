@@ -5,34 +5,10 @@ using BE;
 
 namespace DS
 {
-    public class DataSource : IEnumerable
+    public class DataSource
     {
-        public static List<GuestRequest> gsList = new List<GuestRequest>()
-        {
-            new GuestRequest()
-            {
-
-            }
-
-        };
-        public static List<HostingUnit> huList = new List<HostingUnit>()
-        {
-            new HostingUnit()
-            {
-
-            }
-        };
-        public static List<Order> orderList = new List<Order>()
-        {
-            new Order()
-            {
-
-            }
-        };
-
-        public IEnumerator GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
+        public static List<GuestRequest> guestRequestList = new List<GuestRequest>();
+        public static List<HostingUnit> hostingUnitList = new List<HostingUnit>();
+        public static List<Order> orderList = new List<Order>();
     }
 }

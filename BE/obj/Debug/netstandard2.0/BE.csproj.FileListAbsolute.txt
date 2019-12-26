@@ -1,0 +1,8 @@
+C:\Users\td\source\repos\BE\bin\Debug\netstandard2.0\BE.deps.json
+C:\Users\td\source\repos\BE\bin\Debug\netstandard2.0\BE.dll
+C:\Users\td\source\repos\BE\bin\Debug\netstandard2.0\BE.pdb
+C:\Users\td\source\repos\BE\obj\Debug\netstandard2.0\BE.csprojAssemblyReference.cache
+C:\Users\td\source\repos\BE\obj\Debug\netstandard2.0\BE.AssemblyInfoInputs.cache
+C:\Users\td\source\repos\BE\obj\Debug\netstandard2.0\BE.AssemblyInfo.cs
+C:\Users\td\source\repos\BE\obj\Debug\netstandard2.0\BE.dll
+C:\Users\td\source\repos\BE\obj\Debug\netstandard2.0\BE.pdb
