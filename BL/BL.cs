@@ -1,7 +1,9 @@
 ﻿using System;
 using DAL;
 using BE;
+using DS;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BL
 {
@@ -76,10 +78,28 @@ namespace BL
         public void UpdateOrder(Order order)
         {
             // verify if the Host accepted the Collection Clearance
-            if (order.status_Order== Status_order.Email_sent && !d.FindHost(order).CollectionClearance)
+            if (order.status_Order == Status_order.Email_sent && !d.FindHost(order).CollectionClearance)
                 throw new Exception("Please accept the Collection Clearance!");
             
+            HostingUnit hosting1 = DataSource.hostingUnitList.FirstOrDefault(t => t.HostingUnitKey == order.HostingUnitKey);
+            GuestRequest gs1 = DataSource.guestRequestList.FirstOrDefault(t => t.GuestRequestKey == order.GuestRequestKey);
+            if (!CheckDatesAvailable(hosting1, gs1))
+            {
+                throw new Exception("the dates you chose are not available!");
+            }
+            if (!(order.status_Order == Status_order.Closed_for_customer_response))
+                order.status_Order = Status_order.In_progress;
             d.UpdateOrder(order);
+        }
+
+        public bool CheckDatesAvailable(HostingUnit hu, GuestRequest gs)
+        {
+            for (var date = gs.EntryDate; date < gs.ReleaseDate; date = date.AddDays(1))
+            {
+                if (hu.Diary[date.Month, date.Day])
+                    return false;
+            }
+            return true;
         }
     }
 }
