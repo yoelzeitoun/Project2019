@@ -72,6 +72,7 @@ namespace BL
 
         public void UpdateGuestRequest(GuestRequest guestRequest)
         {
+            //faut faire
             throw new NotImplementedException();
         }
 
