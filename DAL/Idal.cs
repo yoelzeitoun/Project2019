@@ -92,12 +92,7 @@ namespace DAL
         #endregion
 
         #region Help Fonctions
-        /// <summary>
-        /// this fonction receives one or two dates and return the time between them.
-        /// </summary>
-        /// <param name="list"></param>
-        /// <returns></returns>
-        int Time_Span(params DateTime[] list);
+        
 
         /// <summary>
         /// 

@@ -99,6 +99,13 @@ namespace BL
         /// <param name="days"></param>
         /// <returns></returns>
         IEnumerable<HostingUnit> GetAvailableHostingUnitList(DateTime dt, int days);
+
+        /// <summary>
+        /// this fonction receives one or two dates and return the time between them.
+        /// </summary>
+        /// <param name="list"></param>
+        /// <returns></returns>
+        int Time_Span(params DateTime[] list);
         #endregion
     }
 }

@@ -197,17 +197,7 @@ namespace DAL
         {
             return DataSource.hostingUnitList.FirstOrDefault(h => h.HostingUnitKey == order.HostingUnitKey).Owner;
         }
-        public int Time_Span(params DateTime[] list)
-        {
-            if(list.Length==1)
-            {
-                return (int)(DateTime.Now - list[0]).TotalDays + 1;
-            }
-            else
-            {
-                return (int)(list[1] - list[0]).TotalDays + 1;
-            }
-        }
+        
         public GuestRequest FindGuestRequest(Order order)
         {
             return DataSource.guestRequestList.FirstOrDefault(g => g.GuestRequestKey == order.GuestRequestKey);

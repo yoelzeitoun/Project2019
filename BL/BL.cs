@@ -126,7 +126,7 @@ namespace BL
                 d.DiaryChangeToOccuped(hosting1, gs1);
                 // add comission on each hosting's day when the status order changed to "email_sent"
                 if (order.status_Order == Status_order.Email_sent)
-                    d.FindHost(order).Total_commission += Configuration.Commission * d.Time_Span(gs1);
+                    d.FindHost(order).Total_commission += Configuration.Commission * Time_Span(gs1.EntryDate, gs1.ReleaseDate);
                 return true;
             }
             return false;
@@ -174,6 +174,16 @@ namespace BL
             }
             return tempList;
         }
-
+        public int Time_Span(params DateTime[] list)
+        {
+            if (list.Length == 1)
+            {
+                return (int)(DateTime.Now - list[0]).TotalDays + 1;
+            }
+            else
+            {
+                return (int)(list[1] - list[0]).TotalDays + 1;
+            }
+        }
     }
 }
