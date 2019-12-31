@@ -14,6 +14,7 @@ namespace BE
         public BankBranch bankBranchDetails { get; set; }
         public int BankAccountNumber { get; set; }
         public bool CollectionClearance { get; set; }
+        public long Total_commission { get; set; }
         public override string ToString()
         {
             return this.ToStringProperty();

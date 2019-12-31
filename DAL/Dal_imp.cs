@@ -81,7 +81,7 @@ namespace DAL
                 throw new Exception("DAL: Hosting Unit with this key not found!");
             DataSource.orderList.Add(order);
         }
-        public void UpdateOrder(Order order)
+        public bool UpdateOrder(Order order)
         {
             int index = DataSource.orderList.FindIndex(t => t.OrderKey == order.OrderKey);
             if (index == -1)
@@ -92,12 +92,20 @@ namespace DAL
                 throw new Exception("DAL: Hosting Unit key not match to the current order");
             GuestRequest gs1 = DataSource.guestRequestList.FirstOrDefault(gs => gs.GuestRequestKey == order.GuestRequestKey);
             HostingUnit hu1 = DataSource.hostingUnitList.FirstOrDefault(hu => hu.HostingUnitKey == order.HostingUnitKey);
-            for (var date = gs1.EntryDate; date < gs1.ReleaseDate; date = date.AddDays(1))
-            {
-                hu1.Diary[date.Month, date.Day] = true;
-            }
+            
             order.CreateDate = DateTime.Now;
             DataSource.orderList[index] = order;
+
+            return true;
+        }
+
+        //fonction that change the status of the dairy to "occuped"
+        public void DiaryChangeToOccuped(HostingUnit hu, GuestRequest gs)
+        {
+            for (var date = gs.EntryDate; date < gs.ReleaseDate; date = date.AddDays(1))
+            {
+                hu.Diary[date.Month, date.Day] = true;
+            }
         }
         public Order GetOrder(long orderKey)
         {
@@ -188,6 +196,17 @@ namespace DAL
         public Host FindHost(Order order)
         {
             return DataSource.hostingUnitList.FirstOrDefault(h => h.HostingUnitKey == order.HostingUnitKey).Owner;
+        }
+        public int Time_Span(params DateTime[] list)
+        {
+            if(list.Length==1)
+            {
+                return (int)(DateTime.Now - list[0]).TotalDays + 1;
+            }
+            else
+            {
+                return (int)(list[1] - list[0]).TotalDays + 1;
+            }
         }
         public GuestRequest FindGuestRequest(Order order)
         {
