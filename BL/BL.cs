@@ -9,8 +9,13 @@ namespace BL
 {
     public class BL : IBL
     {
-        IDal d;
+       DAL.IDal d;
         Host h;
+        public BL()
+        {
+            d = DAL.Factory.getDal();
+        }
+
         public void AddGuestRequest(GuestRequest guestRequest)
         {
             // check if the release date is at least one day after entry day
@@ -22,12 +27,12 @@ namespace BL
 
         public void AddHostingUnit(HostingUnit hostingUnit)
         {
-            throw new NotImplementedException();
+            d.AddHostingUnit(hostingUnit);
         }
 
         public void AddOrder(Order order)
         {
-            throw new NotImplementedException();
+            d.AddOrder(order);
         }
 
         public bool DeleteHostingUnit(HostingUnit hostingUnit)
@@ -42,37 +47,37 @@ namespace BL
 
         public GuestRequest GetGuestRequest(long guestRequestKey)
         {
-            throw new NotImplementedException();
+            return d.GetGuestRequest(guestRequestKey);
         }
 
-        public IEnumerable<GuestRequest> GetGuestRequestList(Func<GuestRequest, bool> predicat = null)
+        public IEnumerable<GuestRequest> GetGuestRequestList(Func<GuestRequest, bool> predicate = null)
         {
-            throw new NotImplementedException();
+            return d.GetGuestRequestList(predicate);
         }
 
         public HostingUnit GetHostingUnit(long hostingUnitKey)
         {
-            throw new NotImplementedException();
+            return d.GetHostingUnit(hostingUnitKey);
         }
 
-        public IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicat = null)
+        public IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicate = null)
         {
-            throw new NotImplementedException();
+            return d.GetHostingUnitList(predicate);
         }
 
         public Order GetOrder(long orderKey)
         {
-            throw new NotImplementedException();
+            return d.GetOrder(orderKey);
         }
 
-        public IEnumerable<Order> GetOrderList(Func<Order, bool> predicat = null)
+        public IEnumerable<Order> GetOrderList(Func<Order, bool> predicate = null)
         {
-            throw new NotImplementedException();
+            return d.GetOrderList(predicate);
         }
 
         public void UpdateGuestRequest(GuestRequest guestRequest)
         {
-            throw new NotImplementedException();
+            d.UpdateGuestRequest(guestRequest);
         }
 
         public void UpdateHostingUnit(HostingUnit hostingUnit)
