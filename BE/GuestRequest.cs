@@ -19,6 +19,7 @@ namespace BE
         public Type type { get; set; }
         public int NumAdults { get; set; }
         public int NumChildren { get; set; }
+        public int TotalNumPersons { get; set; }
         public Pool pool { get; set; }
         public Jaccuzzi jacuzzi { get; set; }
         public Garden garden { get; set; }

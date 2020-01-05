@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using BE;
 
@@ -58,6 +59,13 @@ namespace BL
         HostingUnit GetHostingUnit(long hostingUnitKey);
 
         /// <summary>
+        /// quantity of hosting units per host
+        /// </summary>
+        /// <param name="h"></param>
+        /// <returns></returns>
+        List<HostingUnit> HostingUnitPerHost(Host h);
+
+        /// <summary>
         /// returns copy of the Hosting Unit collection which answer a specific predicate or null
         /// </summary>
         /// <param name="predicat"></param>
@@ -106,6 +114,13 @@ namespace BL
         /// <param name="list"></param>
         /// <returns></returns>
         int Time_Span(params DateTime[] list);
+        #endregion
+
+        #region Grouping
+        IGrouping<Area, GuestRequest> GetGuestReqGroupByArea(bool sorted = false);
+        IGrouping<int, GuestRequest> GetGuestRequestGroupByPersons(bool sorted = false);
+        IGrouping<int, Host> GetHostGroupByNumofHU(bool sorted = false);
+        IGrouping<Area, HostingUnit> GetHUGroupByArea(bool sorted = false);
         #endregion
     }
 }

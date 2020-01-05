@@ -63,6 +63,8 @@ namespace DAL
         /// <param name="predicat"></param>
         /// <returns></returns>
         IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicat = null);
+
+        IEnumerable<Host> GetHostsList(Func<Host, bool> predicat = null);
         #endregion
 
         #region Order

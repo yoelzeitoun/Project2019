@@ -206,5 +206,12 @@ namespace DAL
         {
             return DataSource.hostingUnitList.FirstOrDefault(h => h.HostingUnitKey == order.HostingUnitKey);
         }
+
+        public IEnumerable<Host> GetHostsList(Func<Host, bool> predicate = null)
+        {
+            if (predicate == null)
+                return DataSource.hostlist.AsEnumerable();
+            return DataSource.hostlist.Where(predicate).OrderByDescending(s=>s.HostKey);
+        }
     }
 }

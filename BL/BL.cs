@@ -72,7 +72,6 @@ namespace BL
 
         public void UpdateGuestRequest(GuestRequest guestRequest)
         {
-            //faut faire
             throw new NotImplementedException();
         }
 
@@ -186,5 +185,44 @@ namespace BL
                 return (int)(list[1] - list[0]).TotalDays + 1;
             }
         }
+        
+        public List<HostingUnit> HostingUnitPerHost(Host h)
+        {
+            List<HostingUnit> HostingUnitList = new List<HostingUnit>();
+
+            foreach (var item in d.GetHostingUnitList())
+            {
+                if (item.Owner.HostKey == h.HostKey)
+                {
+                    HostingUnitList.Add(item);
+                }
+            }
+            return HostingUnitList;
+        }
+        #region Grouping
+        public IGrouping<Area, GuestRequest> GetGuestReqGroupByArea(bool sorted = false)
+        {
+            return (IGrouping<Area, GuestRequest>)from gs in d.GetGuestRequestList()
+                                                  group gs by gs.area;
+        }
+
+        public IGrouping<int, GuestRequest> GetGuestRequestGroupByPersons(bool sorted = false)
+        {
+            return (IGrouping<int, GuestRequest>)from gs in d.GetGuestRequestList()
+                                                 group gs by gs.TotalNumPersons;
+        }
+
+        public IGrouping<int, Host> GetHostGroupByNumofHU(bool sorted = false)
+        {
+            return (IGrouping<int, Host>)from host in d.GetHostsList()
+                                         group host by HostingUnitPerHost(host).Count();
+        }
+
+        public IGrouping<Area, HostingUnit> GetHUGroupByArea(bool sorted = false)
+        {
+            return (IGrouping<Area, HostingUnit>)from hu in d.GetHostingUnitList()
+                                                             group hu by hu.area;
+        }
+        #endregion 
     }
 }

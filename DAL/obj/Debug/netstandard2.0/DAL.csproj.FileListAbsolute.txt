@@ -1,3 +1,16 @@
 C:\Users\td\source\repos\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
 C:\Users\td\source\repos\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
 C:\Users\td\source\repos\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\DAL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\DAL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\DAL\bin\Debug\netstandard2.0\BE.dll
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\DAL\bin\Debug\netstandard2.0\DS.dll
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\DAL\bin\Debug\netstandard2.0\BE.pdb
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\DAL\bin\Debug\netstandard2.0\DS.pdb
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\DAL\obj\Debug\netstandard2.0\DAL.dll
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\DAL\obj\Debug\netstandard2.0\DAL.pdb
