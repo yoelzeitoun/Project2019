@@ -168,9 +168,9 @@ namespace DAL
                     select new GuestRequest(); //default constructor!!
             
             if (predicate == null)
-                return v.AsEnumerable().OrderByDescending(s => s.FamilyName);
+                return v.AsEnumerable().OrderByDescending(s => s.LastName);
 
-            return v.Where(predicate).OrderByDescending(s => s.FamilyName);
+            return v.Where(predicate).OrderByDescending(s => s.LastName);
         }
         public IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicate = null)
         {

@@ -33,5 +33,10 @@ namespace PL
         {
 
         }
+
+        private void Add_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

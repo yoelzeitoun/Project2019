@@ -7,10 +7,10 @@ namespace BE
     {
         public GuestRequest(){}
         public long GuestRequestKey = 10000000;
-        public long NumGuestRequest { get; set; }
-        public string PrivateName { get; set;}
-        public string FamilyName { get; set; }
+        public string FirstName { get; set;}
+        public string LastName { get; set; }
         public string MailAddress { get; set; }
+        public string PhoneNumber { get; set; }
         public Status_client status_Client { get; set; }
         public DateTime RegistrationDate { get; set; }
         public DateTime EntryDate { get; set; }

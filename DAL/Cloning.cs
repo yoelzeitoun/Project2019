@@ -23,10 +23,10 @@ namespace DAL
         {
             GuestRequest target = new GuestRequest();
             target.GuestRequestKey = original.GuestRequestKey;
-            target.NumGuestRequest = original.NumGuestRequest;
-            target.PrivateName = original.PrivateName;
-            target.FamilyName = original.FamilyName;
+            target.FirstName = original.FirstName;
+            target.LastName = original.LastName;
             target.MailAddress = original.MailAddress;
+            target.PhoneNumber = original.PhoneNumber;
             target.status_Client = original.status_Client;
             target.RegistrationDate = original.RegistrationDate;
             target.EntryDate = original.EntryDate;
@@ -46,8 +46,8 @@ namespace DAL
         {
             Host target = new Host();
             target.HostKey = original.HostKey;
-            target.PrivateName = original.PrivateName;
-            target.FamilyName = original.FamilyName;
+            target.FirstName = original.FirstName;
+            target.LastName = original.LastName;
             target.PhoneNumber = original.PhoneNumber;
             target.MailAddress = original.MailAddress;
             target.bankBranchDetails = original.bankBranchDetails;
