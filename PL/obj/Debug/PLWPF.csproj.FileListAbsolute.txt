@@ -1,0 +1,11 @@
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\PLWPF.csprojAssemblyReference.cache
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\MainWindow.g.cs
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\Window1.g.cs
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\App.g.cs
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\PL_MarkupCompile.cache
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\PL_MarkupCompile.lref
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\MainWindow.baml
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\Window1.baml
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\PL.g.resources
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\PL.Properties.Resources.resources
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\PLWPF.csproj.GenerateResource.cache
