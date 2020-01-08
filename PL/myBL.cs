@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using BL;
 using BE;
 
-namespace PL
+namespace PLWPF
 {
     public class myBL : IBL
     {

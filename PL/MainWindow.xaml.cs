@@ -16,7 +16,7 @@ using BE;
 using BL;
 
 
-namespace PL
+namespace PLWPF
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -27,6 +27,26 @@ namespace PL
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Guest_Request_Button_Click(object sender, RoutedEventArgs e)
+        {
+            new GuestRequestWindows().ShowDialog();
+        }
+
+        private void Hosting_Units_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Administrator_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void More_Window_Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
