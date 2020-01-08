@@ -36,7 +36,7 @@ namespace PLWPF
 
         private void Hosting_Units_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            new GuestRequestWindows().ShowDialog();
         }
 
         private void Administrator_Button_Click(object sender, RoutedEventArgs e)
