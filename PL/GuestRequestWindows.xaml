@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Guest Request" Height="700" Width="800" >
-    <Window.Resources>
+    <!--<Window.Resources>
         <Style TargetType="{x:Type Label}">
             <Setter Property="Margin"
                     Value="10,10,10.4,9.8"/>
@@ -20,7 +20,7 @@
             <Setter Property="BorderBrush"
               Value="White" />
         </Style>
-    </Window.Resources>
+    </Window.Resources>-->
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -91,11 +91,10 @@
             </Grid>
             <Grid Grid.Column="1" >
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="1.5*"/>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition Height="1.2*"/>
+                    <RowDefinition Height="388*"/>
+                    <RowDefinition Height="133*"/>
                 </Grid.RowDefinitions>
-                <Grid x:Name="addressGrid" Grid.Row="2" Margin="9,5,3,0">
+                <Grid x:Name="addressGrid" Grid.Row="1" Margin="9,5,2.667,0.333">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
@@ -115,6 +114,10 @@
                     <TextBox x:Name="streetTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="2"  VerticalAlignment="Center" Width="120" TextChanged="streetTextBox_TextChanged"/>
                     <Label x:Name="streetLable" Content="" FontSize="11" Foreground="Red" HorizontalAlignment="Left" Margin="80,30,0,-9" Grid.Row="2" VerticalAlignment="Top" Width="301" Height="22" Grid.ColumnSpan="2"/>
                 </Grid>
+                <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="66,44,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="66,109,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="66,283,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="66,181,0,0" VerticalAlignment="Top"/>
             </Grid>
         </Grid>
     </Grid>

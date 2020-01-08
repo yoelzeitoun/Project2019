@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\App.xaml
-2-623303363
+4-424057579
 
-7-818423333
+9-558887791
 161766556435
-MainWindow.xaml;GuestRequestWindows.xaml;
+HostingUnitWindows.xaml;HostInterface.xaml;MainWindow.xaml;GuestRequestWindows.xaml;
 
 False
 

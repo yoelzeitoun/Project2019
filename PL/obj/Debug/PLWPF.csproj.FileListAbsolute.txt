@@ -22,3 +22,8 @@ C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\bin\Debug\DS.
 C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\PLWPF.csproj.CopyComplete
 C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\PL.exe
 C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\PL.pdb
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\HostingUnitWindows.g.cs
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\PL_MarkupCompile.lref
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\HostingUnitWindows.baml
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\HostInterface.g.cs
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\HostInterface.baml

@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BE;
 using BL;
-
+using PL;
 
 namespace PLWPF
 {
@@ -36,7 +36,7 @@ namespace PLWPF
 
         private void Hosting_Units_Button_Click(object sender, RoutedEventArgs e)
         {
-            new GuestRequestWindows().ShowDialog();
+            new HostingUnitWindows().ShowDialog();
         }
 
         private void Administrator_Button_Click(object sender, RoutedEventArgs e)
