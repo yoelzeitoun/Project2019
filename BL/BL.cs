@@ -16,6 +16,10 @@ namespace BL
             d = DAL.Factory.getDal();
         }
 
+        public void AddHost (Host host)
+        {
+            d.FindHost(host);
+        }
         public void AddGuestRequest(GuestRequest guestRequest)
         {
             // check if the release date is at least one day after entry day

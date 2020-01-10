@@ -11,6 +11,7 @@ namespace BE
         public string LastName { get; set; }
         public int PhoneNumber { get; set; }
         public string MailAddress { get; set; }
+        public string Password { get; set; }
         public BankBranch bankBranchDetails { get; set; }
         public int BankAccountNumber { get; set; }
         public bool CollectionClearance { get; set; }

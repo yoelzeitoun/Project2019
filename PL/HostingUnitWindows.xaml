@@ -11,11 +11,11 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBox HorizontalAlignment="Left" Height="30" Margin="124,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203"/>
+        <TextBox x:Name="email" HorizontalAlignment="Left" Height="30" Margin="124,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203"/>
         <TextBlock HorizontalAlignment="Center" Height="30" Margin="15,34,269.333,0" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="25" Text="  eMail:" VerticalAlignment="Top" Width="109" Foreground="SkyBlue"/>
         <TextBlock HorizontalAlignment="Center" Height="32" Margin="15,84,269.333,0" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="25" Text="  Password:" VerticalAlignment="Top" Width="109" Foreground="SkyBlue" RenderTransformOrigin="0.529,-0.062"/>
-        <TextBox HorizontalAlignment="Left" Height="30" Margin="124,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203"/>
-        <Button Content="Login / Register" FontSize="30" FontWeight="Bold" Background="SkyBlue" Foreground="#FFF1F3F4" FontFamily="Gabriola" HorizontalAlignment="Left" Margin="36,27.667,0,0" Grid.Row="1" VerticalAlignment="Top" Width="317" Height="70" Click="Button_Click"/>
+        <TextBox x:Name="pword" HorizontalAlignment="Left" Height="30" Margin="124,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203"/>
+        <Button x:Name="login_button" Content="Login / Register" FontSize="30" FontWeight="Bold" Background="SkyBlue" Foreground="#FFF1F3F4" FontFamily="Gabriola" HorizontalAlignment="Left" Margin="36,27.667,0,0" Grid.Row="1" VerticalAlignment="Top" Width="317" Height="70" Click="Button_Click"/>
 
     </Grid>
 </Window>

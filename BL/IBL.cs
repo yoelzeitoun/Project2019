@@ -116,6 +116,10 @@ namespace BL
         int Time_Span(params DateTime[] list);
         #endregion
 
+        #region Host
+        void AddHost(Host host);
+        #endregion
+
         #region Grouping
         IGrouping<Area, GuestRequest> GetGuestReqGroupByArea(bool sorted = false);
         IGrouping<int, GuestRequest> GetGuestRequestGroupByPersons(bool sorted = false);
