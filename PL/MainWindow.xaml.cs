@@ -27,6 +27,7 @@ namespace PLWPF
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
         private void Guest_Request_Button_Click(object sender, RoutedEventArgs e)

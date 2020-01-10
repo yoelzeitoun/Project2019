@@ -32,7 +32,15 @@ namespace DAL
         /// <returns></returns>
         IEnumerable<GuestRequest> GetGuestRequestList(Func<GuestRequest, bool> predicat = null);
         #endregion
-
+        #region HOST
+        void AddHost(Host host);
+        bool RemoveHost(int id);
+        void UpdateHost(Host host);
+        void SaveHostList(List<Host> HostList);
+        List<Host> GetHostList();
+        Host GetHost(int id);
+        string GetHostName(int id);
+        #endregion
         #region HostingUnit
         /// <summary>
         /// 

@@ -213,5 +213,40 @@ namespace DAL
                 return DataSource.hostlist.AsEnumerable();
             return DataSource.hostlist.Where(predicate).OrderByDescending(s=>s.HostKey);
         }
+
+        public void AddHost(Host host)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool RemoveHost(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateHost(Host host)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveHostList(List<Host> HostList)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Host> GetHostList()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Host GetHost(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetHostName(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

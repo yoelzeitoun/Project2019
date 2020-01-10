@@ -1,5 +1,6 @@
 ﻿using BE;
 using DS;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ using System.Xml.Serialization;
 
 namespace DAL
 {
-    public class XML
+    public class XML:IDal
     {
         XElement hostRoot;
         string hostPath = @"login_Xml.xml";
@@ -42,6 +43,7 @@ namespace DAL
                 throw new Exception("File upload problem");
             }
         }
+        #region HOST
         public void AddHost(Host host)
         {
             XElement hostKey = new XElement("hostKey", host.HostKey);
@@ -85,7 +87,7 @@ namespace DAL
 
             hostRoot.Save(hostPath);
         }
-        public void SaveHostLinq(List<Host> HostList)
+        public void SaveHostList(List<Host> HostList)
         {
             hostRoot = new XElement("hosts",
                                     from p in HostList
@@ -163,6 +165,96 @@ namespace DAL
                 hostName = null;
             }
             return hostName;
+        }
+        #endregion 
+        public void AddGuestRequest(GuestRequest guestRequest)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateGuestRequest(GuestRequest guestRequest)
+        {
+            throw new NotImplementedException();
+        }
+
+        public GuestRequest GetGuestRequest(long guestRequestKey)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<GuestRequest> GetGuestRequestList(Func<GuestRequest, bool> predicat = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddHostingUnit(HostingUnit hostingUnit)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool DeleteHostingUnit(HostingUnit hostingUnit)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateHostingUnit(HostingUnit hostingUnit)
+        {
+            throw new NotImplementedException();
+        }
+
+        public HostingUnit GetHostingUnit(long hostingUnitKey)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicat = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Host> GetHostsList(Func<Host, bool> predicat = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddOrder(Order order)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool UpdateOrder(Order order)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Order GetOrder(long orderKey)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Order> GetOrderList(Func<Order, bool> predicat = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public GuestRequest FindGuestRequest(Order order)
+        {
+            throw new NotImplementedException();
+        }
+
+        public HostingUnit FindHostingUnit(Order order)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Host FindHost(Order order)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DiaryChangeToOccuped(HostingUnit hu, GuestRequest gs)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -9,8 +9,7 @@ namespace BL
 {
     public class BL : IBL
     {
-       DAL.IDal d;
-        Host h;
+        IDal d;
         public BL()
         {
             d = DAL.Factory.getDal();
@@ -18,7 +17,8 @@ namespace BL
 
         public void AddHost (Host host)
         {
-            d.FindHost(host);
+            XML xml = new XML();
+            xml.AddHost(host);
         }
         public void AddGuestRequest(GuestRequest guestRequest)
         {

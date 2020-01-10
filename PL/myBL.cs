@@ -15,6 +15,11 @@ namespace PLWPF
             throw new NotImplementedException();
         }
 
+        public void AddHost(Host host)
+        {
+            throw new NotImplementedException();
+        }
+
         public void AddHostingUnit(HostingUnit hostingUnit)
         {
             throw new NotImplementedException();
