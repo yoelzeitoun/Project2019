@@ -14,6 +14,7 @@
         <TextBox x:Name="email" HorizontalAlignment="Center" Height="30" Margin="215,93,57,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194"/>
         <TextBlock Text="  Email Address:" HorizontalAlignment="Center" Height="30" Margin="63,93,265,0" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="25" VerticalAlignment="Top" Width="138" Foreground="SkyBlue"/>
         <TextBlock Text="  Password:" HorizontalAlignment="Center" Height="32" Margin="63,143,265,0" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="25" VerticalAlignment="Top" Width="138" Foreground="SkyBlue" RenderTransformOrigin="0.529,-0.062"/>
+        
         <TextBox x:Name="pword" HorizontalAlignment="Center" Height="30" Margin="215,145,57,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194"/>
         <Button x:Name="login_button" Content="Login / Register" FontSize="30" FontWeight="Bold" Background="SkyBlue" Foreground="#FFF1F3F4" FontFamily="Gabriola" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="317" Height="70" Click="Button_Click"/>
         <TextBlock HorizontalAlignment="Center" Margin="63,222,30,0" Height="30" Grid.Row="0" TextWrapping="Wrap" FontSize="15

@@ -9,11 +9,17 @@ namespace BE
         public long HostingUnitKey = 10000000;
         public long NumHostingUnit { get; set; }
         public Area area { get; set; }
+        public Type type { get; set; }
         public Pool pool { get; set; }
         public Jaccuzzi jacuzzi { get; set; }
         public Garden garden { get; set; }
         public ChildrensAttractions childrenAttractions { get; set; }
+        public int NumOfAdults { get; set; }
+        public int NumOfChildren { get; set; }
         public Host Owner{ get; set; }
+        public string City { get; set; }
+        public string HouseNumber { get; set; }
+        public string Street { get; set; }
         public string HostingUnitName { get; set; }
         public bool DebitAuthorization { get; set; }
         public bool[,] Diary = new bool[12, 31];

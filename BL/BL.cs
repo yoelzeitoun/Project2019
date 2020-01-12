@@ -14,10 +14,17 @@ namespace BL
         public static BL getMyBL()
         {
             if (instance == null)
+            {
                 instance = new BL();
+            }
             return instance;
         }
         #region Host XML
+        //public static long GetLastHostKey()
+        //{
+        //    XML xml = new XML();
+        //    return 1;
+        //}
         public void AddHost (Host host)
         {
             XML xml = new XML();
@@ -51,7 +58,9 @@ namespace BL
 
         public void AddHostingUnit(HostingUnit hostingUnit)
         {
-            d.AddHostingUnit(hostingUnit);
+            //d.AddHostingUnit(hostingUnit);
+            XML xml = new XML();
+            xml.AddHostingUnit(hostingUnit);
         }
 
         public void AddOrder(Order order)

@@ -22,14 +22,10 @@ namespace PL
     /// </summary>
     public partial class HostInterface : Window
     {
-        IBL bL;
-        HostingUnitWindows hostingUnitWindows = new HostingUnitWindows();
         public HostInterface()
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            bL = Factory_BL.getBL();
-            Host currentHost = bL.GetHost(hostingUnitWindows.email.Text);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -43,6 +39,8 @@ namespace PL
             //{
             //    myPicture.Source = new BitmapImage(new Uri(op.FileName));
             //}
+            this.Close();
+            new AddHostingUnit().ShowDialog();
         }
     }
 }

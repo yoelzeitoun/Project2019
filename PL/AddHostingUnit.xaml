@@ -1,0 +1,110 @@
+﻿<Window x:Class="PL.AddHostingUnit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        Title="AddHostingUnit" Height="700" Width="800" >
+    <!--<Window.Resources>
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="Margin"
+                    Value="10,10,10.4,9.8"/>
+            <Setter Property="FontSize"
+              Value="16" />
+            <Setter Property="FontFamily"
+              Value="Consolas" />
+            <Setter Property="FontWeight"
+              Value="Regular" />
+            <Setter Property="Foreground"
+              Value="DarkBlue" />
+            <Setter Property="BorderBrush"
+              Value="White" />
+        </Style>
+    </Window.Resources>-->
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock FontFamily="Gabriola"  Text="Add Hosting Unit" FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="DarkBlue"/>
+        <Button x:Name="addButton" FontFamily="Gabriola" Content="Add"  Grid.Row="2" FontSize="40" Margin="5,10,4.4,10" Foreground="#FFF4EFEF" Background="DarkGreen" Click="Add_Button_Click" FontWeight="Bold"  />
+        <Grid Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="addressGrid_Copy" Margin="2,0,396.333,396.333" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Content="City:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" />
+                <TextBox x:Name="cityTextBox1" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0"  VerticalAlignment="Center" Width="120"/>
+                <Label Content="House Number:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+                <TextBox x:Name="houseNumberTextBox1" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="1"  VerticalAlignment="Center" Width="120" />
+                <Label Content="Street:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
+                <TextBox x:Name="streetTextBox1" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="2"  VerticalAlignment="Center" Width="120" />
+            </Grid>
+            <Grid x:Name="testerDetalisGrid" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="ageTesterTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+                <Label Content="Hosting Unit Type:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,7.667,0,6.333" Grid.Row="7" VerticalAlignment="Center"/>
+                <ComboBox x:Name="HostingUnitTypeComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto"  Margin="3.333,7.667,0,10.333" Grid.Row="7" VerticalAlignment="Center" Width="120"/>
+                <Label Content="Numbers of Adults:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
+                <TextBox x:Name="NumOfAdultsTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="4" VerticalAlignment="Center" Width="120" />
+                <Label Content="Area:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="6" VerticalAlignment="Center"/>
+                <ComboBox x:Name="areaComboBox" Grid.Column="1"  HorizontalAlignment="Left" Height="Auto"  Margin="3" Grid.Row="6" VerticalAlignment="Center" Width="120" />
+                <Label Content="Numbers of Children:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,7.667,0,3.333" Grid.Row="5" VerticalAlignment="Center" Width="186"/>
+                <TextBox x:Name="NumOfChildrenTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3.333,12.667,0,5.333" Grid.Row="5"  VerticalAlignment="Center" Width="120" />
+                <Label Content="" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="9" VerticalAlignment="Center"/>
+                <CheckBox Name="childrenAttractionBox" Content="Children Attractions" HorizontalAlignment="Left" Margin="18,13.667,0,0" VerticalAlignment="Top" Height="16" Width="131" Grid.Row="9"/>
+                <CheckBox Name="gardenBox" Content="Garden" HorizontalAlignment="Left" Margin="10.333,10.667,0,0" VerticalAlignment="Top" Height="16" Width="59" Grid.Column="1" Grid.Row="9"/>
+                <CheckBox Name="jaccuziBox" Content="Jaccuzi" HorizontalAlignment="Left" Margin="18,16.667,0,0" VerticalAlignment="Top" Height="16" Width="57" Grid.Row="10"/>
+                <CheckBox Name="poolBox" Content="Pool" HorizontalAlignment="Left" Margin="10.333,13.667,0,0" VerticalAlignment="Top" Height="16" Width="44" Grid.Column="1" Grid.Row="10"/>
+            </Grid>
+            <Grid Grid.Column="1" >
+                <TextBlock Text="To add images, please add your links on the followings fields:" FontSize="20" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="61" Width="377"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,244,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,300,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,328,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,356,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,412,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
+
+ 

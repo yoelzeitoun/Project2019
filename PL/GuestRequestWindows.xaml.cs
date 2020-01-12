@@ -22,6 +22,13 @@ namespace PLWPF
         public GuestRequestWindows()
         {
             InitializeComponent();
+            InitializeComponent();
+            AreaComboBox.ItemsSource = Enum.GetValues(typeof(Area));
+            HostingUnitTypeComboBox.ItemsSource = Enum.GetValues(typeof(Type));
+            pool.ItemsSource = Enum.GetValues(typeof(Pool));
+            jacuzzi.ItemsSource = Enum.GetValues(typeof(Jaccuzzi));
+            garden.ItemsSource = Enum.GetValues(typeof(Garden));
+            childrensAttraction.ItemsSource = Enum.GetValues(typeof(ChildrensAttractions));
         }
 
         private void HostingUnitTypeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -95,6 +102,36 @@ namespace PLWPF
         }
 
         private void streetTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void AreaComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void totalNumOfPerson_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void pool_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void jacuzzi_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void garden_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void childrensAttraction_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

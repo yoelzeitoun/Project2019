@@ -51,20 +51,23 @@ namespace PL
             }
             else
             {
-                host.MailAddress = email.Text;
-                host.Password = pword.Text;
-                host.FirstName = First_name.Text;
-                host.LastName = Last_Name.Text;
-                host.PhoneNumber = Phone_number.Text;
                 if (email.Text == "" || pword.Text == "" || First_name.Text == "" || Last_Name.Text == "" || Phone_number.Text == "")
                     MessageBox.Show($"Please fill all the fields!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
                 else
                 {
+                    host.HostKey = ++Configuration._HostKey;
+                    host.MailAddress = email.Text;
+                    host.Password = pword.Text;
+                    host.FirstName = First_name.Text;
+                    host.LastName = Last_Name.Text;
+                    host.PhoneNumber = Phone_number.Text;
                     bL.AddHost(host);
                     this.Close();
                     new HostInterface().ShowDialog();
                 }
             }
         }
+
+        
     }
 }

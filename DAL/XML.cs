@@ -133,7 +133,8 @@ namespace DAL
             {
                 host = (from item in hostRoot.Elements()
                            where item.Element("login").Element("eMail").Value == email && item.Element("login").Element("password").Value== password
-                           select item).Any();
+                           select item
+                           ).Any();
             }
             catch
             {
@@ -201,7 +202,37 @@ namespace DAL
             }
             return hostName;
         }
-        #endregion 
+        #endregion
+
+        #region Hosting Unit
+        public void AddHostingUnit(HostingUnit hostingUnit)
+        {
+            try
+            {
+                XElement hostElement = (from item in hostRoot.Elements("hosts").Elements("host")
+                                        where item.Element("login").Element("eMail").Value == hostingUnit.Owner.MailAddress
+                                        select item).FirstOrDefault();
+
+                hostElement.Add(new XElement("hosting-unit", new XElement("city", hostingUnit.City),
+                                                                           new XElement("house-number", hostingUnit.HouseNumber),
+                                                                           new XElement("street", hostingUnit.Street),
+                                                                           new XElement("num-of-adults", Convert.ToString(hostingUnit.NumOfAdults)),
+                                                                           new XElement("num-of-children", Convert.ToString(hostingUnit.NumOfChildren)),
+                                                                           new XElement("area", Enum.GetNames(typeof(Area)), hostingUnit.area),
+                                                                           new XElement("hosting-unit-type", Enum.GetNames(typeof(Type)), hostingUnit.type),
+                                                                           new XElement("children-attractions", Enum.GetNames(typeof(ChildrensAttractions)), hostingUnit.childrenAttractions),
+                                                                           new XElement("garden", Enum.GetNames(typeof(Garden)), hostingUnit.garden),
+                                                                           new XElement("jaccuzi", Enum.GetNames(typeof(Jaccuzzi)), hostingUnit.jacuzzi),
+                                                                           new XElement("pool", Enum.GetNames(typeof(Pool)), hostingUnit.pool)));
+
+                hostRoot.Save(hostPath);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        #endregion
 
         #region fonctions
         public void AddGuestRequest(GuestRequest guestRequest)
@@ -220,11 +251,6 @@ namespace DAL
         }
 
         public IEnumerable<GuestRequest> GetGuestRequestList(Func<GuestRequest, bool> predicat = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void AddHostingUnit(HostingUnit hostingUnit)
         {
             throw new NotImplementedException();
         }

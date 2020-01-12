@@ -1,51 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <hosts>
   <host>
-    <hostKey>0</hostKey>
+    <hostKey>1</hostKey>
     <login>
-      <eMail>yoel@gmail.com</eMail>
-      <password>254345</password>
+      <eMail>a</eMail>
+      <password>a</password>
     </login>
     <name>
-      <firstName>yoel</firstName>
-      <lastName>zeitoun</lastName>
-      <phoneNumber>578456854</phoneNumber>
+      <firstName>a</firstName>
+      <lastName>a</lastName>
+      <phoneNumber>a</phoneNumber>
     </name>
   </host>
   <host>
-    <hostKey>0</hostKey>
+    <hostKey>2</hostKey>
     <login>
-      <eMail>yoel</eMail>
-      <password>abc</password>
+      <eMail>b</eMail>
+      <password>b</password>
     </login>
     <name>
-      <firstName></firstName>
-      <lastName></lastName>
-      <phoneNumber></phoneNumber>
+      <firstName>b</firstName>
+      <lastName>b</lastName>
+      <phoneNumber>b</phoneNumber>
     </name>
   </host>
   <host>
-    <hostKey>0</hostKey>
+    <hostKey>3</hostKey>
     <login>
-      <eMail>dbdrt</eMail>
-      <password>rbrt</password>
+      <eMail>e</eMail>
+      <password>e</password>
     </login>
     <name>
-      <firstName>srtb</firstName>
-      <lastName>rb</lastName>
-      <phoneNumber>srtb</phoneNumber>
+      <firstName>e</firstName>
+      <lastName>e</lastName>
+      <phoneNumber>e</phoneNumber>
     </name>
   </host>
   <host>
-    <hostKey>0</hostKey>
+    <hostKey>1</hostKey>
     <login>
       <eMail>roul</eMail>
-      <password>hgfjh</password>
+      <password>roul</password>
     </login>
     <name>
-      <firstName>hjgfgf</firstName>
-      <lastName>vyutvy</lastName>
-      <phoneNumber>uiygiuy</phoneNumber>
+      <firstName>sev</firstName>
+      <lastName>ev</lastName>
+      <phoneNumber>efv</phoneNumber>
     </name>
   </host>
 </hosts>

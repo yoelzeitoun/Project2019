@@ -6,6 +6,7 @@ namespace BE
 {
     public static class Configuration
     {
+        public static long _HostKey = 0;
         public static long _GuestRequestKey = 0;
         public static long _HostingUnitKey = 0;
         public static int _OrderKey = 0;
