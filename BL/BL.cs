@@ -10,16 +10,36 @@ namespace BL
     public class BL : IBL
     {
         IDal d;
-        public BL()
+        private static BL instance = null;
+        public static BL getMyBL()
         {
-            d = DAL.Factory.getDal();
+            if (instance == null)
+                instance = new BL();
+            return instance;
         }
-
+        #region Host XML
         public void AddHost (Host host)
         {
             XML xml = new XML();
             xml.AddHost(host);
         }
+        public bool IsExists(string email, string password)
+        {
+            XML xml = new XML();
+            return xml.IsExists(email, password);
+        }
+        public bool CheckPass(string email, string password)
+        {
+            XML xml = new XML();
+            return xml.CheckPass(email, password);
+        }
+        public Host GetHost(string email)
+        {
+            XML xml = new XML();
+            return xml.GetHost(email);
+        }
+        #endregion
+        #region other
         public void AddGuestRequest(GuestRequest guestRequest)
         {
             // check if the release date is at least one day after entry day
@@ -208,6 +228,7 @@ namespace BL
             }
             return HostingUnitList;
         }
+        #endregion
         #region Grouping
         public IGrouping<Area, GuestRequest> GetGuestReqGroupByArea(bool sorted = false)
         {
@@ -232,6 +253,7 @@ namespace BL
             return (IGrouping<Area, HostingUnit>)from hu in d.GetHostingUnitList()
                                                              group hu by hu.area;
         }
-        #endregion 
+
+        #endregion
     }
 }

@@ -17,7 +17,7 @@ namespace DAL
     public class XML:IDal
     {
         XElement hostRoot;
-        string hostPath = @"login_Xml.xml";
+        string hostPath = @"login_XML.xml";
 
         public XML()
         {
@@ -52,7 +52,8 @@ namespace DAL
             XElement login = new XElement("login", email, password);
             XElement firstName = new XElement("firstName", host.FirstName);
             XElement lastName = new XElement("lastName", host.LastName);
-            XElement name = new XElement("name", firstName, lastName);
+            XElement phoneNumber = new XElement("phoneNumber", host.PhoneNumber);
+            XElement name = new XElement("name", firstName, lastName, phoneNumber);
 
             hostRoot.Add(new XElement("host", hostKey, login, name));
             hostRoot.Save(hostPath);
@@ -124,14 +125,48 @@ namespace DAL
             }
             return hosts;
         }
-        public Host GetHost(int id)
+        public bool CheckPass(string email, string password)
+        {
+            LoadData();
+            bool host;
+            try
+            {
+                host = (from item in hostRoot.Elements()
+                           where item.Element("login").Element("eMail").Value == email && item.Element("login").Element("password").Value== password
+                           select item).Any();
+            }
+            catch
+            {
+                host = false;
+                return host;
+            }
+            return host;
+        }
+        public bool IsExists(string email, string password)
+        {
+            LoadData();
+            bool host;
+            try
+            {
+                host = (from item in hostRoot.Elements()
+                           where item.Element("login").Element("eMail").Value == email
+                           select item).Any();
+            }
+            catch
+            {
+                host = false;
+                return host;
+            }
+            return host;
+        }
+        public Host GetHost(string email)
         {
             LoadData();
             Host host;
             try
             {
                 host = (from item in hostRoot.Elements()
-                        where int.Parse(item.Element("hostKey").Value) == id
+                        where item.Element("login").Element("eMail").Value == email
                         select new Host()
                         {
                             HostKey = int.Parse(item.Element("hostKey").Value),
@@ -167,6 +202,8 @@ namespace DAL
             return hostName;
         }
         #endregion 
+
+        #region fonctions
         public void AddGuestRequest(GuestRequest guestRequest)
         {
             throw new NotImplementedException();
@@ -256,5 +293,6 @@ namespace DAL
         {
             throw new NotImplementedException();
         }
+        #endregion
     }
 }

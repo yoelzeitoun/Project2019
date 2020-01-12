@@ -38,7 +38,7 @@ namespace DAL
         void UpdateHost(Host host);
         void SaveHostList(List<Host> HostList);
         List<Host> GetHostList();
-        Host GetHost(int id);
+        Host GetHost(string email);
         string GetHostName(int id);
         #endregion
         #region HostingUnit

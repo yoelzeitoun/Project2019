@@ -30,6 +30,11 @@ namespace PLWPF
             throw new NotImplementedException();
         }
 
+        public bool CheckPass(string email, string password)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool DeleteHostingUnit(HostingUnit hostingUnit)
         {
             throw new NotImplementedException();
@@ -56,6 +61,11 @@ namespace PLWPF
         }
 
         public IEnumerable<GuestRequest> GetGuestRequestList(Func<GuestRequest, bool> predicat = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Host GetHost(string email)
         {
             throw new NotImplementedException();
         }
@@ -91,6 +101,11 @@ namespace PLWPF
         }
 
         public List<HostingUnit> HostingUnitPerHost(Host h)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsExists(string email, string password)
         {
             throw new NotImplementedException();
         }

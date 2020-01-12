@@ -118,6 +118,9 @@ namespace BL
 
         #region Host
         void AddHost(Host host);
+        bool IsExists(string email, string password);
+        bool CheckPass(string email, string password);
+        Host GetHost(string email);
         #endregion
 
         #region Grouping

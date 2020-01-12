@@ -26,7 +26,7 @@ namespace PL
     /// </summary>
     public partial class HostingUnitWindows : Window
     {
-        BL.IBL bL;
+        IBL bL; 
         public HostingUnitWindows()
         {
             InitializeComponent();
@@ -35,34 +35,36 @@ namespace PL
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            bL = Factory_BL.getBL();
             Host host = new Host();
-            host.MailAddress = email.Text;
-            host.Password = pword.Text;
-            host.FirstName = "yoel";
-            host.LastName = "zeitoun";
-            bL.AddHost(host);
-            Console.WriteLine("bravo!");
-            //var UName = email.Text;
-            //var PWord = pword.Text;
-            //XElement config = XElement.Load("../Resources/config.xml");
-            //var query = from o in config.Root.Elements("user")
-            //            where (string)o.Element("username") == UName
-            //            select (string)o.Element("username").Value;
-            //var query2 = from o in config.Root.Elements("user")
-            //             where (string)o.Element("username") == UName
-            //             select o.Element("password").Value;
-            //var password = query2.ToString();
-            //if (PWord == password)
-            //{
-            //    NavigationService service = NavigationService.GetNavigationService(this);
-            //    service.Navigate(new Uri("MainMenu.xaml", UriKind.RelativeOrAbsolute));
-            //}
-            //else
-            //{
-            //    LblError.Content = "Username or Password Incorrect !";
-            //}
-            new HostInterface().ShowDialog();
+            if (bL.IsExists(email.Text, pword.Text))
+            {
+                if (bL.CheckPass(email.Text, pword.Text))
+                {
+                    this.Close();
+                    new HostInterface().ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show($"The combination of email address and password you entered does not match.","ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else
+            {
+                host.MailAddress = email.Text;
+                host.Password = pword.Text;
+                host.FirstName = First_name.Text;
+                host.LastName = Last_Name.Text;
+                host.PhoneNumber = Phone_number.Text;
+                if (email.Text == "" || pword.Text == "" || First_name.Text == "" || Last_Name.Text == "" || Phone_number.Text == "")
+                    MessageBox.Show($"Please fill all the fields!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+                else
+                {
+                    bL.AddHost(host);
+                    this.Close();
+                    new HostInterface().ShowDialog();
+                }
+            }
         }
     }
 }

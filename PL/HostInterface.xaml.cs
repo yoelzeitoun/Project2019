@@ -12,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BL;
+using BE;
 
 namespace PL
 {
@@ -20,10 +22,14 @@ namespace PL
     /// </summary>
     public partial class HostInterface : Window
     {
+        IBL bL;
+        HostingUnitWindows hostingUnitWindows = new HostingUnitWindows();
         public HostInterface()
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            bL = Factory_BL.getBL();
+            Host currentHost = bL.GetHost(hostingUnitWindows.email.Text);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

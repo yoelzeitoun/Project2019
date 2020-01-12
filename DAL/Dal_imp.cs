@@ -248,5 +248,10 @@ namespace DAL
         {
             throw new NotImplementedException();
         }
+
+        public Host GetHost(string email)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

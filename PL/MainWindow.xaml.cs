@@ -42,7 +42,7 @@ namespace PLWPF
 
         private void Administrator_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void More_Window_Button_Click(object sender, RoutedEventArgs e)

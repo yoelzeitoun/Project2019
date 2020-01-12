@@ -5,17 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL"
         mc:Ignorable="d"
-        Title="HostingUnitWindows" Height="300" Width="400">
-    <Grid>
+        Title="HostingUnitWindows" Height="652.667" Width="571.333">
+    <Grid Margin="0,10,3.667,-19.667">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="email" HorizontalAlignment="Left" Height="30" Margin="124,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203"/>
-        <TextBlock HorizontalAlignment="Center" Height="30" Margin="15,34,269.333,0" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="25" Text="  eMail:" VerticalAlignment="Top" Width="109" Foreground="SkyBlue"/>
-        <TextBlock HorizontalAlignment="Center" Height="32" Margin="15,84,269.333,0" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="25" Text="  Password:" VerticalAlignment="Top" Width="109" Foreground="SkyBlue" RenderTransformOrigin="0.529,-0.062"/>
-        <TextBox x:Name="pword" HorizontalAlignment="Left" Height="30" Margin="124,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203"/>
-        <Button x:Name="login_button" Content="Login / Register" FontSize="30" FontWeight="Bold" Background="SkyBlue" Foreground="#FFF1F3F4" FontFamily="Gabriola" HorizontalAlignment="Left" Margin="36,27.667,0,0" Grid.Row="1" VerticalAlignment="Top" Width="317" Height="70" Click="Button_Click"/>
+        <TextBox x:Name="email" HorizontalAlignment="Center" Height="30" Margin="215,93,57,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194"/>
+        <TextBlock Text="  Email Address:" HorizontalAlignment="Center" Height="30" Margin="63,93,265,0" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="25" VerticalAlignment="Top" Width="138" Foreground="SkyBlue"/>
+        <TextBlock Text="  Password:" HorizontalAlignment="Center" Height="32" Margin="63,143,265,0" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="25" VerticalAlignment="Top" Width="138" Foreground="SkyBlue" RenderTransformOrigin="0.529,-0.062"/>
+        <TextBox x:Name="pword" HorizontalAlignment="Center" Height="30" Margin="215,145,57,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194"/>
+        <Button x:Name="login_button" Content="Login / Register" FontSize="30" FontWeight="Bold" Background="SkyBlue" Foreground="#FFF1F3F4" FontFamily="Gabriola" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="317" Height="70" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Center" Margin="63,222,30,0" Height="30" Grid.Row="0" TextWrapping="Wrap" FontSize="15
+                   " Text=" If you are a new Host, please add these informations!" VerticalAlignment="Top" Foreground="SteelBlue" Width="373"/>
+        <TextBox x:Name="First_name" HorizontalAlignment="Center" Height="30" Margin="215,282,57,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194" Grid.Row="0"/>
+        <TextBlock Text="  First Name:" HorizontalAlignment="Center" Height="30" Margin="63,282,265,0" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="25" VerticalAlignment="Top" Width="138" Foreground="SkyBlue" Grid.Row="0"/>
+        <TextBlock Text="  Last Name:" HorizontalAlignment="Center" Height="32" Margin="63,327,265,0" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="25" VerticalAlignment="Top" Width="138" Foreground="SkyBlue" RenderTransformOrigin="0.529,-0.062" Grid.Row="0"/>
+        <TextBox x:Name="Last_Name" HorizontalAlignment="Center" Height="30" Margin="215,327,57,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194" Grid.Row="0"/>
+        <TextBlock Text="  Phone Number:" HorizontalAlignment="Center" Height="32" Margin="63,374,265,0" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="25" VerticalAlignment="Top" Width="138" Foreground="SkyBlue" RenderTransformOrigin="0.529,-0.062" Grid.Row="0"/>
+        <TextBox x:Name="Phone_number" HorizontalAlignment="Center" Height="30" Margin="215,374,57,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194" Grid.Row="0"/>
+        <TextBlock Text=" Welcome!" HorizontalAlignment="Center" Height="30" TextWrapping="Wrap" FontSize="25"  VerticalAlignment="Top" Foreground="SteelBlue" Width="134"/>
 
     </Grid>
 </Window>
