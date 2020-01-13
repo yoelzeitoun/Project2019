@@ -218,12 +218,12 @@ namespace DAL
                                                                            new XElement("street", hostingUnit.Street),
                                                                            new XElement("num-of-adults", Convert.ToString(hostingUnit.NumOfAdults)),
                                                                            new XElement("num-of-children", Convert.ToString(hostingUnit.NumOfChildren)),
-                                                                           new XElement("area", Enum.GetNames(typeof(Area)), hostingUnit.area),
-                                                                           new XElement("hosting-unit-type", Enum.GetNames(typeof(Type)), hostingUnit.type),
-                                                                           new XElement("children-attractions", Enum.GetNames(typeof(ChildrensAttractions)), hostingUnit.childrenAttractions),
-                                                                           new XElement("garden", Enum.GetNames(typeof(Garden)), hostingUnit.garden),
-                                                                           new XElement("jaccuzi", Enum.GetNames(typeof(Jaccuzzi)), hostingUnit.jacuzzi),
-                                                                           new XElement("pool", Enum.GetNames(typeof(Pool)), hostingUnit.pool)));
+                                                                           new XElement("area", hostingUnit.area.ToString()),
+                                                                           new XElement("hosting-unit-type", hostingUnit.type.ToString()),
+                                                                           new XElement("children-attractions", hostingUnit.childrenAttractions.ToString()),
+                                                                           new XElement("garden", hostingUnit.garden.ToString()),
+                                                                           new XElement("jaccuzi", hostingUnit.jacuzzi.ToString()),
+                                                                           new XElement("pool", hostingUnit.pool.ToString())));
 
                 hostRoot.Save(hostPath);
             }
