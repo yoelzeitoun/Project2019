@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BE;
+using BL;
 
 namespace PLWPF
 {
@@ -38,7 +40,7 @@ namespace PLWPF
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            GuestRequest guestRequest = new GuestRequest();
         }
 
         private void firstNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
