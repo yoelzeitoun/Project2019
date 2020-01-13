@@ -22,10 +22,15 @@ namespace PL
     /// </summary>
     public partial class HostInterface : Window
     {
+        string eMail;
         public HostInterface()
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
+        }
+        public HostInterface(string email) :this()
+        {
+            eMail = email;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -40,7 +45,8 @@ namespace PL
             //    myPicture.Source = new BitmapImage(new Uri(op.FileName));
             //}
             this.Close();
-            new AddHostingUnit().ShowDialog();
+            AddHostingUnit addHostingUnit = new AddHostingUnit(eMail);
+            addHostingUnit.ShowDialog();
         }
     }
 }

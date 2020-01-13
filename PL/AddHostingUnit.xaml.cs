@@ -23,13 +23,17 @@ namespace PL
     {
         IBL bL;
         Host currentHost;
-        HostingUnitWindows hostingUnitWindows = new HostingUnitWindows();
+        string eMail;
         public AddHostingUnit()
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             bL = Factory_BL.getBL();
-            currentHost = bL.GetHost(hostingUnitWindows.email.Text);
+            
+        }
+        public AddHostingUnit(string email) :this()
+        {
+            currentHost = bL.GetHost(email);
         }
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)

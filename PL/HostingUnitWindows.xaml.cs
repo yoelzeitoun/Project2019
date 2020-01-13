@@ -42,7 +42,8 @@ namespace PL
                 if (bL.CheckPass(email.Text, pword.Text))
                 {
                     this.Close();
-                    new HostInterface().ShowDialog();
+                    HostInterface hostInterface = new HostInterface(email.Text);
+                    hostInterface.ShowDialog();
                 }
                 else
                 {
@@ -62,12 +63,11 @@ namespace PL
                     host.LastName = Last_Name.Text;
                     host.PhoneNumber = Phone_number.Text;
                     bL.AddHost(host);
-                    this.Close();
-                    new HostInterface().ShowDialog();
+                    this.Close(); 
+                    HostInterface hostInterface = new HostInterface(email.Text);
+                    hostInterface.ShowDialog();
                 }
             }
         }
-
-        
     }
 }

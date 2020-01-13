@@ -209,7 +209,7 @@ namespace DAL
         {
             try
             {
-                XElement hostElement = (from item in hostRoot.Elements("hosts").Elements("host")
+                XElement hostElement = (from item in hostRoot.Elements()
                                         where item.Element("login").Element("eMail").Value == hostingUnit.Owner.MailAddress
                                         select item).FirstOrDefault();
 
