@@ -3,19 +3,107 @@
   <host>
     <hostKey>1</hostKey>
     <login>
-      <eMail>trtr</eMail>
-      <password>trtr</password>
+      <eMail>yoel</eMail>
+      <password>aaa</password>
     </login>
     <name>
-      <firstName>ve</firstName>
-      <lastName>ve</lastName>
-      <phoneNumber>v</phoneNumber>
+      <firstName>r</firstName>
+      <lastName>r</lastName>
+      <phoneNumber>r</phoneNumber>
     </name>
     <hosting-unit>
-      <city>aa</city>
-      <house-number>bb</house-number>
-      <street>cc</street>
+      <city>rdfgv</city>
+      <house-number>rv</house-number>
+      <street>rfgbv</street>
+      <num-of-adults>234</num-of-adults>
+      <num-of-children>5</num-of-children>
+      <area>South</area>
+      <hosting-unit-type>Hotel_room</hosting-unit-type>
+      <children-attractions>No</children-attractions>
+      <garden>Yes</garden>
+      <jaccuzi>Yes</jaccuzi>
+      <pool>No</pool>
+    </hosting-unit>
+    <hosting-unit>
+      <city>iolollo</city>
+      <house-number>loplo</house-number>
+      <street>olloil</street>
+      <num-of-adults>77</num-of-adults>
+      <num-of-children>66</num-of-children>
+      <area>All</area>
+      <hosting-unit-type>Tent</hosting-unit-type>
+      <children-attractions>Yes</children-attractions>
+      <garden>No</garden>
+      <jaccuzi>No</jaccuzi>
+      <pool>No</pool>
+    </hosting-unit>
+  </host>
+  <host>
+    <hostKey>2</hostKey>
+    <login>
+      <eMail>e</eMail>
+      <password>e</password>
+    </login>
+    <name>
+      <firstName>e</firstName>
+      <lastName>ee</lastName>
+      <phoneNumber>e</phoneNumber>
+    </name>
+  </host>
+  <host>
+    <hostKey>1</hostKey>
+    <login>
+      <eMail>wc</eMail>
+      <password>wec</password>
+    </login>
+    <name>
+      <firstName>we</firstName>
+      <lastName>w</lastName>
+      <phoneNumber>w</phoneNumber>
+    </name>
+    <hosting-unit>
+      <city>cd</city>
+      <house-number>ewr</house-number>
+      <street>ewr</street>
+      <num-of-adults>43</num-of-adults>
+      <num-of-children>34</num-of-children>
+      <area>North</area>
+      <hosting-unit-type>Guest_room</hosting-unit-type>
+      <children-attractions>No</children-attractions>
+      <garden>Yes</garden>
+      <jaccuzi>No</jaccuzi>
+      <pool>No</pool>
+    </hosting-unit>
+  </host>
+  <host>
+    <hostKey>1</hostKey>
+    <login>
+      <eMail>a</eMail>
+      <password>a</password>
+    </login>
+    <name>
+      <firstName>a</firstName>
+      <lastName>a</lastName>
+      <phoneNumber>a</phoneNumber>
+    </name>
+    <hosting-unit>
+      <city>fv</city>
+      <house-number>df</house-number>
+      <street>d</street>
       <num-of-adults>1</num-of-adults>
+      <num-of-children>1</num-of-children>
+      <area>North</area>
+      <hosting-unit-type>Guest_room</hosting-unit-type>
+      <children-attractions>No</children-attractions>
+      <garden>No</garden>
+      <jaccuzi>No</jaccuzi>
+      <pool>Yes</pool>
+    </hosting-unit>
+    <hosting-unit>
+      <city>ec</city>
+      <house-number>erfc</house-number>
+      <street>erfv</street>
+      <num-of-adults>121</num-of-adults>
       <num-of-children>2</num-of-children>
       <area>North</area>
       <hosting-unit-type>Hotel_room</hosting-unit-type>

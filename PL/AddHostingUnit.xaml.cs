@@ -54,6 +54,8 @@ namespace PL
             hostingUnit.HouseNumber = houseNumberTextBox1.Text;
             bL.AddHostingUnit(hostingUnit);
             MessageBox.Show($"You successfully added the Hosting Unit!", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
+            this.Close();
+            new HostInterface().ShowDialog();
         }
     }
 }
