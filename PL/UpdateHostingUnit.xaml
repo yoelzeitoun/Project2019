@@ -11,7 +11,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBlock TextWrapping="Wrap" FontSize="20" Text=" Please choose which Hosting unit to update:" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="49" Width="412" Margin="56,24,34,0"/>
-        <ComboBox Name="comboB" HorizontalAlignment="Center" VerticalAlignment="Center" Width="375" Height="64" SelectionChanged="comboB_SelectionChanged"/>
+        <ComboBox Name="comboB" HorizontalAlignment="Center" VerticalAlignment="Center" Width="382" Height="34" SelectionChanged="comboB_SelectionChanged" Margin="64,130,56,160"/>
 
     </Grid>
 </Window>

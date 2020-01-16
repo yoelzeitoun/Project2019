@@ -63,9 +63,10 @@ namespace PL
                     host.LastName = Last_Name.Text;
                     host.PhoneNumber = Phone_number.Text;
                     bL.AddHost(host);
-                    this.Close(); 
-                    HostInterface hostInterface = new HostInterface(email.Text);
-                    hostInterface.ShowDialog();
+                    this.Close();
+                    //HostInterface hostInterface = new HostInterface(email.Text);
+                    //hostInterface.ShowDialog();
+                    new HostInterface(email.Text).ShowDialog();
                 }
             }
         }

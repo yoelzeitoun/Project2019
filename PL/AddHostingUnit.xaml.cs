@@ -66,7 +66,7 @@ namespace PL
             bL.AddHostingUnit(hostingUnit);
             MessageBox.Show($"You successfully added the Hosting Unit!", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
             this.Close();
-            //new HostInterface().ShowDialog();
+            new HostInterface(currentHost.MailAddress).ShowDialog();
         }
     }
 }
