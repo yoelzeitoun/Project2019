@@ -45,13 +45,12 @@ namespace PL
             //    myPicture.Source = new BitmapImage(new Uri(op.FileName));
             //}
             this.Close();
-            AddHostingUnit addHostingUnit = new AddHostingUnit(eMail);
-            addHostingUnit.ShowDialog();
+            new AddHostingUnit(eMail).ShowDialog();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            new UpdateHostingUnit().ShowDialog();
+            new UpdateHostingUnit(eMail).ShowDialog();
         }
     }
 }

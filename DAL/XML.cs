@@ -54,8 +54,9 @@ namespace DAL
             XElement lastName = new XElement("lastName", host.LastName);
             XElement phoneNumber = new XElement("phoneNumber", host.PhoneNumber);
             XElement name = new XElement("name", firstName, lastName, phoneNumber);
+            XElement hostingUnits = new XElement("hosting-units");
 
-            hostRoot.Add(new XElement("host", hostKey, login, name));
+            hostRoot.Add(new XElement("host", hostKey, login, name, hostingUnits));
             hostRoot.Save(hostPath);
         }
         public bool RemoveHost(int id)
@@ -211,7 +212,7 @@ namespace DAL
             {
                 XElement hostElement = (from item in hostRoot.Elements()
                                         where item.Element("login").Element("eMail").Value == hostingUnit.Owner.MailAddress
-                                        select item).FirstOrDefault();
+                                        select item.Element("hosting-units")).FirstOrDefault();
 
                 hostElement.Add(new XElement("hosting-unit", 
                                             new XElement("name", hostingUnit.HostingUnitName),
@@ -280,14 +281,19 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public IEnumerable<string> HostingUnitList()
+        public IEnumerable<string> HostingUnitList(string email)
         {
             LoadData();
-            List<string> hostingUnitName;
+            IEnumerable<string> hostingUnitName;
             try
             {
-                hostingUnitName = (from item in hostRoot.Elements()
-                                   select item.Element("hosting-unit").Element("name").Value
+                var selectHost = (from item in hostRoot.Elements()
+                                  where item.Element("login").Element("eMail").Value == email
+                                  select item.Element("hosting-units")).FirstOrDefault();
+
+                
+                hostingUnitName = (from item in selectHost.Elements()
+                                   select item.Element("name").Value
                                    ).ToList();
             }
             catch

@@ -62,7 +62,7 @@ namespace BL
         /// 
         /// </summary>
         /// <returns></returns>
-        IEnumerable<string> HostingUnitList();
+        IEnumerable<string> HostingUnitList(string email);
 
         /// <summary>
         /// quantity of hosting units per host

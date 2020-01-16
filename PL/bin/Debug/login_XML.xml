@@ -3,7 +3,7 @@
   <host>
     <hostKey>1</hostKey>
     <login>
-      <eMail>a</eMail>
+      <eMail>yoel</eMail>
       <password>a</password>
     </login>
     <name>
@@ -11,59 +11,95 @@
       <lastName>a</lastName>
       <phoneNumber>a</phoneNumber>
     </name>
-    <hosting-unit>
-      <name>a</name>
-      <city>a</city>
-      <house-number>a</house-number>
-      <street>a</street>
-      <num-of-adults>1</num-of-adults>
-      <num-of-children>1</num-of-children>
-      <price-of-adult>1</price-of-adult>
-      <price-of-child>1</price-of-child>
-      <area>North</area>
-      <hosting-unit-type>Guest_room</hosting-unit-type>
-      <children-attractions>No</children-attractions>
-      <garden>No</garden>
-      <jaccuzi>No</jaccuzi>
-      <pool>Yes</pool>
-      <pictures>
-        <pic1>ecaewv23@</pic1>
-        <pic8>dfvse@evr</pic8>
-      </pictures>
-    </hosting-unit>
-    <hosting-unit>
-      <name>b</name>
-      <city>b</city>
-      <house-number>b</house-number>
-      <street>b</street>
-      <num-of-adults>1</num-of-adults>
-      <num-of-children>1</num-of-children>
-      <price-of-adult>1</price-of-adult>
-      <price-of-child>1</price-of-child>
-      <area>North</area>
-      <hosting-unit-type>Guest_room</hosting-unit-type>
-      <children-attractions>No</children-attractions>
-      <garden>Yes</garden>
-      <jaccuzi>No</jaccuzi>
-      <pool>No</pool>
-      <pictures />
-    </hosting-unit>
-    <hosting-unit>
-      <name>c</name>
-      <city>c</city>
-      <house-number>c</house-number>
-      <street>c</street>
-      <num-of-adults>4</num-of-adults>
-      <num-of-children>4</num-of-children>
-      <price-of-adult>1</price-of-adult>
-      <price-of-child>1</price-of-child>
-      <area>South</area>
-      <hosting-unit-type>Guest_room</hosting-unit-type>
-      <children-attractions>No</children-attractions>
-      <garden>No</garden>
-      <jaccuzi>No</jaccuzi>
-      <pool>Yes</pool>
-      <pictures />
-    </hosting-unit>
+    <hosting-units>
+      <hosting-unit>
+        <name>yoel1</name>
+        <city>df</city>
+        <house-number>fvd</house-number>
+        <street>fvd</street>
+        <num-of-adults>12</num-of-adults>
+        <num-of-children>12</num-of-children>
+        <price-of-adult>12</price-of-adult>
+        <price-of-child>12</price-of-child>
+        <area>North</area>
+        <hosting-unit-type>Guest_room</hosting-unit-type>
+        <children-attractions>No</children-attractions>
+        <garden>No</garden>
+        <jaccuzi>No</jaccuzi>
+        <pool>Yes</pool>
+        <pictures>
+          <pic7>12e</pic7>
+          <pic5>3f4</pic5>
+        </pictures>
+      </hosting-unit>
+      <hosting-unit>
+        <name>yoel2</name>
+        <city>vsd</city>
+        <house-number>v</house-number>
+        <street>ev</street>
+        <num-of-adults>3</num-of-adults>
+        <num-of-children>43</num-of-children>
+        <price-of-adult>4</price-of-adult>
+        <price-of-child>3</price-of-child>
+        <area>North</area>
+        <hosting-unit-type>Guest_room</hosting-unit-type>
+        <children-attractions>No</children-attractions>
+        <garden>No</garden>
+        <jaccuzi>No</jaccuzi>
+        <pool>Yes</pool>
+        <pictures />
+      </hosting-unit>
+    </hosting-units>
+  </host>
+  <host>
+    <hostKey>1</hostKey>
+    <login>
+      <eMail>toto</eMail>
+      <password>a</password>
+    </login>
+    <name>
+      <firstName>ev</firstName>
+      <lastName>e</lastName>
+      <phoneNumber>v</phoneNumber>
+    </name>
+    <hosting-units>
+      <hosting-unit>
+        <name>toto1</name>
+        <city>vr</city>
+        <house-number>evr</house-number>
+        <street>vre</street>
+        <num-of-adults>34</num-of-adults>
+        <num-of-children>34</num-of-children>
+        <price-of-adult>34</price-of-adult>
+        <price-of-child>43</price-of-child>
+        <area>North</area>
+        <hosting-unit-type>Guest_room</hosting-unit-type>
+        <children-attractions>No</children-attractions>
+        <garden>No</garden>
+        <jaccuzi>No</jaccuzi>
+        <pool>Yes</pool>
+        <pictures>
+          <pic6>43</pic6>
+          <pic7>3f</pic7>
+        </pictures>
+      </hosting-unit>
+      <hosting-unit>
+        <name>toto2</name>
+        <city>vse</city>
+        <house-number>ev</house-number>
+        <street>ev</street>
+        <num-of-adults>34</num-of-adults>
+        <num-of-children>43</num-of-children>
+        <price-of-adult>43</price-of-adult>
+        <price-of-child>43</price-of-child>
+        <area>North</area>
+        <hosting-unit-type>Guest_room</hosting-unit-type>
+        <children-attractions>No</children-attractions>
+        <garden>No</garden>
+        <jaccuzi>No</jaccuzi>
+        <pool>Yes</pool>
+        <pictures />
+      </hosting-unit>
+    </hosting-units>
   </host>
 </hosts>

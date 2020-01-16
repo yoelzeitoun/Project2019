@@ -27,7 +27,11 @@ namespace PL
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             bL = Factory_BL.getBL();
-            comboB.ItemsSource = bL.HostingUnitList();
+            
+        }
+        public UpdateHostingUnit(string eMail) :this()
+        {
+            comboB.ItemsSource = bL.HostingUnitList(eMail);
         }
 
         private void comboB_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -56,10 +56,10 @@ namespace BL
             d.AddGuestRequest(guestRequest);
         }
 
-        public IEnumerable<string> HostingUnitList()
+        public IEnumerable<string> HostingUnitList(string email)
         {
             XML xml = new XML();
-            return xml.HostingUnitList();
+            return xml.HostingUnitList(email);
         }
 
         public void AddHostingUnit(HostingUnit hostingUnit)
