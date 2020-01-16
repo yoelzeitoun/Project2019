@@ -59,6 +59,12 @@ namespace BL
         HostingUnit GetHostingUnit(long hostingUnitKey);
 
         /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<string> HostingUnitList();
+
+        /// <summary>
         /// quantity of hosting units per host
         /// </summary>
         /// <param name="h"></param>

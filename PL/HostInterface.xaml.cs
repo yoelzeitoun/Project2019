@@ -48,5 +48,10 @@ namespace PL
             AddHostingUnit addHostingUnit = new AddHostingUnit(eMail);
             addHostingUnit.ShowDialog();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            new UpdateHostingUnit().ShowDialog();
+        }
     }
 }

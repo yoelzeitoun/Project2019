@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:PL"
         mc:Ignorable="d"
         Title="HostInterface" Height="700" Width="800">
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -18,15 +19,13 @@
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <ScrollViewer>
-                <Image x:Name="myPicture" Source="https://i.imgur.com/tm2yGpu.jpg" Grid.Row="2" Grid.Column="0"/>
-            </ScrollViewer>
+            <Image x:Name="myPicture" Source="https://i.imgur.com/tm2yGpu.jpg" Grid.Row="2" Grid.Column="0"/>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Button Content="UPDATE" FontFamily="Gabriola" Grid.Row="0" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Margin="0,101,-0.333,39.333"  />
+                <Button Content="UPDATE" FontFamily="Gabriola" Grid.Row="0" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Margin="0,101,-0.333,39.333" Click="Button_Click_1"  />
                 <Button Content="REMOVE" FontFamily="Gabriola" Grid.Row="1" Background="Red" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Margin="0,34.667,-0.333,108.667"  />
             </Grid>
             

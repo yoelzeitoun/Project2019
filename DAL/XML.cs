@@ -213,17 +213,27 @@ namespace DAL
                                         where item.Element("login").Element("eMail").Value == hostingUnit.Owner.MailAddress
                                         select item).FirstOrDefault();
 
-                hostElement.Add(new XElement("hosting-unit", new XElement("city", hostingUnit.City),
-                                                                           new XElement("house-number", hostingUnit.HouseNumber),
-                                                                           new XElement("street", hostingUnit.Street),
-                                                                           new XElement("num-of-adults", Convert.ToString(hostingUnit.NumOfAdults)),
-                                                                           new XElement("num-of-children", Convert.ToString(hostingUnit.NumOfChildren)),
-                                                                           new XElement("area", hostingUnit.area.ToString()),
-                                                                           new XElement("hosting-unit-type", hostingUnit.type.ToString()),
-                                                                           new XElement("children-attractions", hostingUnit.childrenAttractions.ToString()),
-                                                                           new XElement("garden", hostingUnit.garden.ToString()),
-                                                                           new XElement("jaccuzi", hostingUnit.jacuzzi.ToString()),
-                                                                           new XElement("pool", hostingUnit.pool.ToString())));
+                hostElement.Add(new XElement("hosting-unit", 
+                                            new XElement("name", hostingUnit.HostingUnitName),
+                                            new XElement("city", hostingUnit.City),
+                                            new XElement("house-number", hostingUnit.HouseNumber),
+                                            new XElement("street", hostingUnit.Street),
+                                            new XElement("num-of-adults", Convert.ToString(hostingUnit.NumOfAdults)),
+                                            new XElement("num-of-children", Convert.ToString(hostingUnit.NumOfChildren)),
+                                            new XElement("price-of-adult", Convert.ToString(hostingUnit.PriceForAdult)),
+                                            new XElement("price-of-child", Convert.ToString(hostingUnit.PriceForChild)),
+                                            new XElement("area", hostingUnit.area.ToString()),
+                                            new XElement("hosting-unit-type", hostingUnit.type.ToString()),
+                                            new XElement("children-attractions", hostingUnit.childrenAttractions.ToString()),
+                                            new XElement("garden", hostingUnit.garden.ToString()),
+                                            new XElement("jaccuzi", hostingUnit.jacuzzi.ToString()),
+                                            new XElement("pool", hostingUnit.pool.ToString()),
+                                            new XElement("pictures")));
+                for (int i = 0; i < 10; i++)
+                {
+                    if (hostingUnit.Pictures[i] != "")
+                        hostElement.Element("hosting-unit").Element("pictures").Add(new XElement("pic" + i, hostingUnit.Pictures[i]));
+                }
 
                 hostRoot.Save(hostPath);
             }
@@ -270,9 +280,21 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicat = null)
+        public IEnumerable<string> HostingUnitList()
         {
-            throw new NotImplementedException();
+            LoadData();
+            List<string> hostingUnitName;
+            try
+            {
+                hostingUnitName = (from item in hostRoot.Elements()
+                                   select item.Element("hosting-unit").Element("name").Value
+                                   ).ToList();
+            }
+            catch
+            {
+                hostingUnitName = null;
+            }
+            return hostingUnitName;
         }
 
         public IEnumerable<Host> GetHostsList(Func<Host, bool> predicat = null)
@@ -316,6 +338,11 @@ namespace DAL
         }
 
         public void DiaryChangeToOccuped(HostingUnit hu, GuestRequest gs)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicat = null)
         {
             throw new NotImplementedException();
         }

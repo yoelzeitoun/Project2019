@@ -21,7 +21,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button Content="Guest Request" FontFamily="Gabriola" Margin="9.8,27,9.6,22" Grid.Column="0" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Click="Guest_Request_Button_Click" RenderTransformOrigin="0.5,0.502" />
-            <Button Content="Hosting Units" FontFamily="Gabriola" Margin="9.8,27,9.6,22" Grid.Column="1" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Click="Hosting_Units_Button_Click" />
+            <Button Content="Host Enter" FontFamily="Gabriola" Margin="9.8,27,9.6,22" Grid.Column="1" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Click="Hosting_Units_Button_Click" RenderTransformOrigin="0.5,0.503" />
             <Button Content="Administrator" FontFamily="Gabriola" Margin="9.8,27,9.6,22" Grid.Column="2" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Click="Administrator_Button_Click" />
             <Button Content="More..." FontFamily="Gabriola" Margin="9.8,27,9.6,22" Grid.Column="3" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="35" FontWeight="Bold" Click="More_Window_Button_Click" />
         </Grid>

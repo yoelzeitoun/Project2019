@@ -41,6 +41,7 @@ namespace PLWPF
         private void Add_Button_Click(object sender, RoutedEventArgs e)
         {
             GuestRequest guestRequest = new GuestRequest();
+            guestRequest.FirstName = firstNameTextBox.Text;
         }
 
         private void firstNameTextBox_TextChanged(object sender, TextChangedEventArgs e)

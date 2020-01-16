@@ -29,3 +29,5 @@ C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\Hos
 C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\HostInterface.baml
 C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\AddHostingUnit.g.cs
 C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\AddHostingUnit.baml
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\UpdateHostingUnit.g.cs
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\UpdateHostingUnit.baml

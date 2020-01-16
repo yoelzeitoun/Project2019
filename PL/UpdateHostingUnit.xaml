@@ -1,0 +1,17 @@
+﻿<Window x:Class="PL.UpdateHostingUnit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        Title="UpdateHostingUnit" Height="350" Width="500">
+    <Grid Margin="-6,0,-2.667,-3.333">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock TextWrapping="Wrap" FontSize="20" Text=" Please choose which Hosting unit to update:" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="49" Width="412" Margin="56,24,34,0"/>
+        <ComboBox Name="comboB" HorizontalAlignment="Center" VerticalAlignment="Center" Width="375" Height="64" SelectionChanged="comboB_SelectionChanged"/>
+
+    </Grid>
+</Window>

@@ -56,6 +56,12 @@ namespace BL
             d.AddGuestRequest(guestRequest);
         }
 
+        public IEnumerable<string> HostingUnitList()
+        {
+            XML xml = new XML();
+            return xml.HostingUnitList();
+        }
+
         public void AddHostingUnit(HostingUnit hostingUnit)
         {
             //d.AddHostingUnit(hostingUnit);
@@ -262,6 +268,11 @@ namespace BL
             return (IGrouping<Area, HostingUnit>)from hu in d.GetHostingUnitList()
                                                              group hu by hu.area;
         }
+
+        //public IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicat = null)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         #endregion
     }

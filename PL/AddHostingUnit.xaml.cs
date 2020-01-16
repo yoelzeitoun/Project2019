@@ -40,6 +40,7 @@ namespace PL
         private void Add_Button_Click(object sender, RoutedEventArgs e)
         {
             HostingUnit hostingUnit = new HostingUnit();
+            hostingUnit.HostingUnitName = hostingUnitNameTextBox.Text;
             hostingUnit.Owner = currentHost;
             hostingUnit.area = (Area)areaComboBox.SelectedItem;
             hostingUnit.jacuzzi = (bool)jaccuziBox.IsChecked ? Jaccuzzi.Yes : Jaccuzzi.No;
@@ -52,10 +53,20 @@ namespace PL
             hostingUnit.City = cityTextBox1.Text;
             hostingUnit.Street = streetTextBox1.Text;
             hostingUnit.HouseNumber = houseNumberTextBox1.Text;
+            hostingUnit.PriceForAdult = int.Parse(adultPrice.Text);
+            hostingUnit.PriceForChild = int.Parse(childPrice.Text);
+            hostingUnit.Pictures = new string[10];
+            for (int i = 0; i < 10; i++) 
+            {
+                var textBoxName = string.Format("pic{0}", i);
+                var textBox = (TextBox)this.FindName(textBoxName);
+                hostingUnit.Pictures[i] = textBox.Text;
+            }
+
             bL.AddHostingUnit(hostingUnit);
             MessageBox.Show($"You successfully added the Hosting Unit!", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
             this.Close();
-            new HostInterface().ShowDialog();
+            //new HostInterface().ShowDialog();
         }
     }
 }
