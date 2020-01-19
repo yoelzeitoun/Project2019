@@ -52,6 +52,8 @@ namespace BL
             // check if the release date is at least one day after entry day
             if (DateTime.Compare(guestRequest.EntryDate, guestRequest.ReleaseDate) >= 0)
                 throw new DuplicateWaitObjectException("Error in the interval date");
+                XML xml = new XML();
+            xml.AddGuestRequest(guestRequest);
 
             d.AddGuestRequest(guestRequest);
         }
