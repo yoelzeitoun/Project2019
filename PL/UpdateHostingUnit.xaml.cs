@@ -21,22 +21,24 @@ namespace PL
     /// </summary>
     public partial class UpdateHostingUnit : Window
     {
+        string email;
         IBL bL;
         public UpdateHostingUnit()
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             bL = Factory_BL.getBL();
-            
         }
         public UpdateHostingUnit(string eMail) :this()
         {
+            email = eMail;
             comboB.ItemsSource = bL.HostingUnitList(eMail);
         }
 
         private void comboB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            
+            new AddHostingUnit(email, comboB.SelectedItem.ToString()).ShowDialog();
         }
     }
 }

@@ -32,9 +32,13 @@ namespace PL
             bL = Factory_BL.getBL();
 
         }
-        public AddHostingUnit(string email) : this()
+        public AddHostingUnit(string email, string hu = null) : this()
         {
             currentHost = bL.GetHost(email);
+            if(hu!=null)
+            {
+                bL.GetHostingUnit()
+            }
         }
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)

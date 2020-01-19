@@ -121,6 +121,25 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\AddHostingUnit.datasource" />
+    <None Include="Properties\DataSources\BE.BankBranch.datasource" />
+    <None Include="Properties\DataSources\BE.Configuration.datasource" />
+    <None Include="Properties\DataSources\BE.GuestRequest.datasource" />
+    <None Include="Properties\DataSources\BE.HelpClass.datasource" />
+    <None Include="Properties\DataSources\BE.Host.datasource" />
+    <None Include="Properties\DataSources\BE.HostingUnit.datasource" />
+    <None Include="Properties\DataSources\BE.Order.datasource" />
+    <None Include="Properties\DataSources\BL.BL.datasource" />
+    <None Include="Properties\DataSources\BL.Factory_BL.datasource" />
+    <None Include="Properties\DataSources\BL.IBL.datasource" />
+    <None Include="Properties\DataSources\HostingUnitWindows.datasource" />
+    <None Include="Properties\DataSources\HostInterface.datasource" />
+    <None Include="Properties\DataSources\PLWPF.App.datasource" />
+    <None Include="Properties\DataSources\PLWPF.GuestRequestWindows.datasource" />
+    <None Include="Properties\DataSources\PLWPF.MainWindow.datasource" />
+    <None Include="Properties\DataSources\PLWPF.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\PLWPF.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\UpdateHostingUnit.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
