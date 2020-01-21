@@ -17,19 +17,19 @@ using BL;
 namespace PL
 {
     /// <summary>
-    /// Interaction logic for UpdateHostingUnit.xaml
+    /// Interaction logic for RemoveHostingUnit.xaml
     /// </summary>
-    public partial class UpdateHostingUnit : Window
+    public partial class RemoveHostingUnit : Window
     {
         string email;
         IBL bL;
-        public UpdateHostingUnit()
+        public RemoveHostingUnit()
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             bL = Factory_BL.getBL();
         }
-        public UpdateHostingUnit(string eMail) :this()
+        public RemoveHostingUnit(string eMail) : this()
         {
             email = eMail;
             comboB.ItemsSource = bL.HostingUnitList(eMail);
@@ -37,7 +37,16 @@ namespace PL
 
         private void comboB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            new AddHostingUnit(email, comboB.SelectedItem.ToString()).ShowDialog();
+            MessageBoxResult result = MessageBox.Show($"Are you sure to remove this Hosting Unit?", "OK!", MessageBoxButton.YesNo, MessageBoxImage.Information);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    if(bL.DeleteHostingUnit(email, comboB.SelectedItem.ToString()))
+                        MessageBox.Show($"You Successfully removed the Hosting Unit", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
+                    break;
+                case MessageBoxResult.No:
+                    break;
+            }
         }
     }
 }

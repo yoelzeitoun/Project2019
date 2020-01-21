@@ -52,7 +52,7 @@ namespace DAL
         /// </summary>
         /// <param name="hostingUnit"></param>
         /// <returns></returns>
-        bool DeleteHostingUnit(HostingUnit hostingUnit);
+        bool DeleteHostingUnit(string email, string hu);
         /// <summary>
         /// 
         /// </summary>
@@ -63,7 +63,13 @@ namespace DAL
         /// </summary>
         /// <param name="hostingUnitKey"></param>
         /// <returns></returns>
-        HostingUnit GetHostingUnit(long hostingUnitKey);
+        HostingUnit GetHostingUnit(string email, string hu);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="hostingUnit"></param>
+        /// <returns></returns>
+        bool IsHostingUnitExists(HostingUnit hostingUnit);
 
         /// <summary>
         /// returns copy of the Hosting Unit collection which answer a specific predicate or null

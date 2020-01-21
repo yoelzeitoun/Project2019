@@ -37,7 +37,27 @@ namespace PL
             currentHost = bL.GetHost(email);
             if(hu!=null)
             {
-                bL.GetHostingUnit()
+                HostingUnit hostingUnit = bL.GetHostingUnit(email, hu);
+                hostingUnitNameTextBox.Text = hostingUnit.HostingUnitName;
+                areaComboBox.SelectedItem = hostingUnit.area;
+                jaccuziBox.IsChecked = hostingUnit.jacuzzi.ToString() == "Yes" ? true : false;
+                poolBox.IsChecked = hostingUnit.pool.ToString() == "Yes" ? true : false;
+                childrenAttractionBox.IsChecked = hostingUnit.childrenAttractions.ToString() == "Yes" ? true : false;
+                gardenBox.IsChecked = hostingUnit.garden.ToString() == "Yes" ? true : false;
+                HostingUnitTypeComboBox.SelectedItem = hostingUnit.type;
+                NumOfAdultsTextBox.Text = hostingUnit.NumOfAdults.ToString();
+                NumOfChildrenTextBox.Text = hostingUnit.NumOfChildren.ToString();
+                cityTextBox1.Text = hostingUnit.City;
+                streetTextBox1.Text = hostingUnit.Street;
+                houseNumberTextBox1.Text=hostingUnit.HouseNumber;
+                adultPrice.Text = hostingUnit.PriceForAdult.ToString();
+                childPrice.Text = hostingUnit.PriceForChild.ToString();
+                //for (int i = 0; i < 10; i++)
+                //{
+                //    var textBoxName = string.Format("pic{0}", i);
+                //    var textBox = (TextBox)this.FindName(textBoxName);
+                //    textBox.Text = hostingUnit.Pictures[i];
+                //}
             }
         }
 
@@ -68,7 +88,7 @@ namespace PL
             }
 
             bL.AddHostingUnit(hostingUnit);
-            MessageBox.Show($"You successfully added the Hosting Unit!", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show($"You successfully saved the Hosting Unit!", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
             this.Close();
             new HostInterface(currentHost.MailAddress).ShowDialog();
         }

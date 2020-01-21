@@ -8,7 +8,6 @@ namespace BE
     {
         public long HostingUnitKey = 10000000;
         public string HostingUnitName { get; set; }
-        public long NumHostingUnit { get; set; }
         public Area area { get; set; }
         public Type type { get; set; }
         public Pool pool { get; set; }

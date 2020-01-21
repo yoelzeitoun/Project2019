@@ -52,5 +52,10 @@ namespace PL
         {
             new UpdateHostingUnit(eMail).ShowDialog();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            new RemoveHostingUnit(eMail).ShowDialog();
+        }
     }
 }

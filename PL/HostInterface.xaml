@@ -26,7 +26,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Button Content="UPDATE" FontFamily="Gabriola" Grid.Row="0" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Margin="0,101,-0.333,39.333" Click="Button_Click_1"  />
-                <Button Content="REMOVE" FontFamily="Gabriola" Grid.Row="1" Background="Red" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Margin="0,34.667,-0.333,108.667"  />
+                <Button Content="REMOVE" FontFamily="Gabriola" Grid.Row="1" Background="Red" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Margin="0,34.667,-0.333,108.667" Click="Button_Click_2"  />
             </Grid>
             
         </Grid>

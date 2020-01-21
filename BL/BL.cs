@@ -30,10 +30,10 @@ namespace BL
             XML xml = new XML();
             xml.AddHost(host);
         }
-        public bool IsExists(string email, string password)
+        public bool IsHostExists(string email)
         {
             XML xml = new XML();
-            return xml.IsExists(email, password);
+            return xml.IsHostExists(email);
         }
         public bool CheckPass(string email, string password)
         {
@@ -76,12 +76,16 @@ namespace BL
             d.AddOrder(order);
         }
 
-        public bool DeleteHostingUnit(HostingUnit hostingUnit)
+        public bool DeleteHostingUnit(string email, string hu)
         {
-            Order order = DataSource.orderList.FirstOrDefault(o => o.HostingUnitKey == hostingUnit.HostingUnitKey);
-            if (order.status_Order== Status_order.In_progress)
-                throw new Exception("This hosting Unit has an open order!");
-            if (d.DeleteHostingUnit(hostingUnit))
+            //Order order = DataSource.orderList.FirstOrDefault(o => o.HostingUnitKey == hostingUnit.HostingUnitKey);
+            //if (order.status_Order== Status_order.In_progress)
+            //    throw new Exception("This hosting Unit has an open order!");
+            //if (d.DeleteHostingUnit(hostingUnit))
+            //    return true;
+            //return false;
+            XML xml = new XML();
+            if (xml.DeleteHostingUnit(email, hu))
                 return true;
             return false;
         }
@@ -96,9 +100,10 @@ namespace BL
             return d.GetGuestRequestList(predicate);
         }
 
-        public HostingUnit GetHostingUnit(long hostingUnitKey)
+        public HostingUnit GetHostingUnit(string email, string hu)
         {
-            return d.GetHostingUnit(hostingUnitKey);
+            XML xml = new XML();
+            return xml.GetHostingUnit(email, hu);
         }
 
         public IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicate = null)

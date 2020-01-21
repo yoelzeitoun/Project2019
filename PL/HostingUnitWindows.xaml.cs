@@ -37,7 +37,7 @@ namespace PL
         {
             bL = Factory_BL.getBL();
             Host host = new Host();
-            if (bL.IsExists(email.Text, pword.Text))
+            if (bL.IsHostExists(email.Text))
             {
                 if (bL.CheckPass(email.Text, pword.Text))
                 {

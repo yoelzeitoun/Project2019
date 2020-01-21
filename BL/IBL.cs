@@ -45,7 +45,7 @@ namespace BL
         /// </summary>
         /// <param name="hostingUnit"></param>
         /// <returns></returns>
-        bool DeleteHostingUnit(HostingUnit hostingUnit);
+        bool DeleteHostingUnit(string email, string hu);
         /// <summary>
         /// 
         /// </summary>
@@ -56,7 +56,7 @@ namespace BL
         /// </summary>
         /// <param name="hostingUnitKey"></param>
         /// <returns></returns>
-        HostingUnit GetHostingUnit(long hostingUnitKey);
+        HostingUnit GetHostingUnit(string email, string hu);
 
         /// <summary>
         /// 
@@ -124,7 +124,7 @@ namespace BL
 
         #region Host
         void AddHost(Host host);
-        bool IsExists(string email, string password);
+        bool IsHostExists(string email);
         bool CheckPass(string email, string password);
         Host GetHost(string email);
         #endregion

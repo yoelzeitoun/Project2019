@@ -95,16 +95,16 @@
             </Grid>
             <Grid Grid.Column="1" >
                 <TextBlock Text="To add images, please add your links on the followings fields:" FontSize="20" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="61" Width="377"/>
-                <TextBox Name="pic1" HorizontalAlignment="Left" Height="23" Margin="10,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
-                <TextBox Name="pic2" HorizontalAlignment="Left" Height="23" Margin="10,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
-                <TextBox Name="pic3" HorizontalAlignment="Left" Height="23" Margin="10,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
-                <TextBox Name="pic4" HorizontalAlignment="Left" Height="23" Margin="10,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
-                <TextBox Name="pic5" HorizontalAlignment="Left" Height="23" Margin="10,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
-                <TextBox Name="pic6" HorizontalAlignment="Left" Height="23" Margin="10,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
-                <TextBox Name="pic7" HorizontalAlignment="Left" Height="23" Margin="10,244,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
-                <TextBox Name="pic8" HorizontalAlignment="Left" Height="23" Margin="10,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
-                <TextBox Name="pic9" HorizontalAlignment="Left" Height="23" Margin="10,300,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
-                <TextBox Name="pic0" HorizontalAlignment="Left" Height="23" Margin="10,328,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox Name="pic0" HorizontalAlignment="Left" Height="23" Margin="10,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox Name="pic1" HorizontalAlignment="Left" Height="23" Margin="10,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox Name="pic2" HorizontalAlignment="Left" Height="23" Margin="10,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox Name="pic3" HorizontalAlignment="Left" Height="23" Margin="10,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox Name="pic4" HorizontalAlignment="Left" Height="23" Margin="10,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox Name="pic5" HorizontalAlignment="Left" Height="23" Margin="10,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox Name="pic6" HorizontalAlignment="Left" Height="23" Margin="10,244,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox Name="pic7" HorizontalAlignment="Left" Height="23" Margin="10,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox Name="pic8" HorizontalAlignment="Left" Height="23" Margin="10,300,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
+                <TextBox Name="pic9" HorizontalAlignment="Left" Height="23" Margin="10,328,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="336"/>
             </Grid>
         </Grid>
     </Grid>

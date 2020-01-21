@@ -52,15 +52,15 @@ namespace DAL
                 throw new Exception("DAL: Hosting Unit with the same key not found!");
             return DataSource.hostingUnitList.FirstOrDefault(t => t.HostingUnitKey == hostingUnitKey);
         }
-        public bool DeleteHostingUnit(HostingUnit hostingUnit)
-        {
-            HostingUnit h = GetHostingUnit(hostingUnit.HostingUnitKey);
-            // verify if this hosting unit has an order, so don't allow delete
-            if (DataSource.orderList.Exists(hu => hu.HostingUnitKey == hostingUnit.HostingUnitKey))
-                throw new Exception("DAL: Order has been determinated for this Hosting Unit!");
+        //public bool DeleteHostingUnit(string email, string hu)
+        //{
+        //    HostingUnit h = GetHostingUnit(hostingUnit.HostingUnitKey);
+        //    // verify if this hosting unit has an order, so don't allow delete
+        //    if (DataSource.orderList.Exists(hu => hu.HostingUnitKey == hostingUnit.HostingUnitKey))
+        //        throw new Exception("DAL: Order has been determinated for this Hosting Unit!");
 
-            return DataSource.hostingUnitList.Remove(h);
-        }
+        //    return DataSource.hostingUnitList.Remove(h);
+        //}
         public void UpdateHostingUnit(HostingUnit hostingUnit)
         {
             int index = DataSource.hostingUnitList.FindIndex(t => t.HostingUnitKey == hostingUnit.HostingUnitKey);
@@ -250,6 +250,21 @@ namespace DAL
         }
 
         public Host GetHost(string email)
+        {
+            throw new NotImplementedException();
+        }
+
+        public HostingUnit GetHostingUnit(string email, string hu)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsHostingUnitExists(HostingUnit hostingUnit)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool DeleteHostingUnit(string email, string hu)
         {
             throw new NotImplementedException();
         }
