@@ -41,8 +41,11 @@ namespace PL
             switch (result)
             {
                 case MessageBoxResult.Yes:
-                    if(bL.DeleteHostingUnit(email, comboB.SelectedItem.ToString()))
+                    if (bL.DeleteHostingUnit(email, comboB.SelectedItem.ToString()))
+                    { 
                         MessageBox.Show($"You Successfully removed the Hosting Unit", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
+                        this.Close();
+                    }
                     break;
                 case MessageBoxResult.No:
                     break;

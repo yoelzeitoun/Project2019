@@ -253,12 +253,12 @@ namespace DAL
                                                 new XElement("pool", hostingUnit.pool.ToString()),
                                                 new XElement("pictures")));
 
-                    hostElement = (from item in hostElement.Elements()
+                    var hostingElement = (from item in hostElement.Elements()
                                    where item.Element("name").Value == hostingUnit.HostingUnitName
                                    select item).FirstOrDefault();
                     for (int i = 0; i < 10; i++)
                     {
-                        hostElement.Element("pictures").Add(new XElement("pic" + i, hostingUnit.Pictures[i]));
+                        hostingElement.Element("pictures").Add(new XElement("pic" + i, hostingUnit.Pictures[i]));
                     }
 
                     hostRoot.Save(hostPath);
@@ -310,9 +310,8 @@ namespace DAL
                                         select item.Element("hosting-units")).FirstOrDefault();
                 hostingUnitElement = (from item1 in hostElement.Elements()
                                       where item1.Element("name").Value == hu
-                                      select item1
-                                      ).FirstOrDefault();
-                hostElement.Remove();
+                                      select item1).FirstOrDefault();
+                hostingUnitElement.Remove();
                 hostRoot.Save(hostPath);
                 return true;
             }

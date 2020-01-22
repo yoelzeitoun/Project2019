@@ -7,9 +7,67 @@
       <password>a</password>
     </login>
     <name>
-      <firstName>a</firstName>
+      <firstName>aa</firstName>
       <lastName>a</lastName>
       <phoneNumber>a</phoneNumber>
     </name>
+    <hosting-units>
+      <hosting-unit>
+        <name>a</name>
+        <city>es</city>
+        <house-number>se</house-number>
+        <street>se</street>
+        <num-of-adults>2323</num-of-adults>
+        <num-of-children>23</num-of-children>
+        <price-of-adult>23</price-of-adult>
+        <price-of-child>23</price-of-child>
+        <area>North</area>
+        <hosting-unit-type>Hotel_room</hosting-unit-type>
+        <children-attractions>No</children-attractions>
+        <garden>No</garden>
+        <jaccuzi>No</jaccuzi>
+        <pool>Yes</pool>
+        <pictures>
+          <pic0>case0</pic0>
+          <pic1></pic1>
+          <pic2></pic2>
+          <pic3></pic3>
+          <pic4></pic4>
+          <pic5></pic5>
+          <pic6></pic6>
+          <pic7></pic7>
+          <pic8></pic8>
+          <pic9></pic9>
+        </pictures>
+      </hosting-unit>
+      <hosting-unit>
+        <name>a2</name>
+        <city>ev</city>
+        <house-number>ev</house-number>
+        <street>erv3</street>
+        <num-of-adults>34</num-of-adults>
+        <num-of-children>34</num-of-children>
+        <price-of-adult>34</price-of-adult>
+        <price-of-child>34</price-of-child>
+        <area>All</area>
+        <hosting-unit-type>Guest_room</hosting-unit-type>
+        <children-attractions>No</children-attractions>
+        <garden>No</garden>
+        <jaccuzi>No</jaccuzi>
+        <pool>Yes</pool>
+        <pictures>
+          <pic0></pic0>
+          <pic1></pic1>
+          <pic2></pic2>
+          <pic3></pic3>
+          <pic4></pic4>
+          <pic5></pic5>
+          <pic6></pic6>
+          <pic7></pic7>
+          <pic8></pic8>
+          <pic9>caswe9</pic9>
+        </pictures>
+      </hosting-unit>
+    </hosting-units>
   </host>
 </hosts>
