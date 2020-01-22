@@ -371,8 +371,9 @@ namespace DAL
                                    childrenAttractions = (ChildrensAttractions)Enum.Parse(typeof(ChildrensAttractions), item.Element("children-attractions").Value, true),
                                    garden = (Garden)Enum.Parse(typeof(Garden), item.Element("garden").Value, true),
                                    jacuzzi = (Jaccuzzi)Enum.Parse(typeof(Jaccuzzi), item.Element("jaccuzi").Value, true),
-                                   pool = (Pool)Enum.Parse(typeof(Pool), item.Element("pool").Value, true)
-                                   //Pictures = item.Element("pictures").Element("pic0").Value
+                                   pool = (Pool)Enum.Parse(typeof(Pool), item.Element("pool").Value, true),
+                                   Pictures = (from pic in item.Element("pictures").Elements()
+                                               select pic.Value ).ToArray() 
                                }).FirstOrDefault();
             }
             catch

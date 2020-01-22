@@ -52,12 +52,12 @@ namespace PL
                 houseNumberTextBox1.Text=hostingUnit.HouseNumber;
                 adultPrice.Text = hostingUnit.PriceForAdult.ToString();
                 childPrice.Text = hostingUnit.PriceForChild.ToString();
-                //for (int i = 0; i < 10; i++)
-                //{
-                //    var textBoxName = string.Format("pic{0}", i);
-                //    var textBox = (TextBox)this.FindName(textBoxName);
-                //    textBox.Text = hostingUnit.Pictures[i];
-                //}
+                for (int i = 0; i < 10; i++)
+                {
+                    var textBoxName = string.Format("pic{0}", i);
+                    var textBox = (TextBox)this.FindName(textBoxName);
+                    textBox.Text = hostingUnit.Pictures[i];
+                }
             }
         }
 
