@@ -37,6 +37,7 @@ namespace PL
 
         private void comboB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            this.Close();
             new AddHostingUnit(email, comboB.SelectedItem.ToString()).ShowDialog();
         }
     }
