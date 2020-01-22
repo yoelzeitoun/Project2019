@@ -61,6 +61,9 @@
     <Compile Include="GuestRequestWindows.xaml.cs">
       <DependentUpon>GuestRequestWindows.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HostOrder.xaml.cs">
+      <DependentUpon>HostOrder.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RemoveHostingUnit.xaml.cs">
       <DependentUpon>RemoveHostingUnit.xaml</DependentUpon>
     </Compile>
@@ -76,6 +79,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="HostInterface.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HostOrder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

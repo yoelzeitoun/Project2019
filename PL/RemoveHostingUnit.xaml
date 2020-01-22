@@ -10,7 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock TextWrapping="Wrap" FontSize="20" Text=" Choose a Hosting unit to remove:" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="49" Width="412" Margin="56,24,34,0"/>
+        <TextBlock TextWrapping="Wrap" FontSize="20" Text=" Choose a Hosting unit to remove:" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="49" Width="338" Margin="96,28,68,0"/>
         <ComboBox Name="comboB" HorizontalAlignment="Center" VerticalAlignment="Center" Width="382" Height="34" SelectionChanged="comboB_SelectionChanged" Margin="64,130,56,160"/>
 
     </Grid>

@@ -6,38 +6,30 @@
         xmlns:local="clr-namespace:PL"
         mc:Ignorable="d"
         Title="HostInterface" Height="700" Width="800">
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="textBlockWelcome"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="65" Foreground="SkyBlue" Text="Welcome Host!"></TextBlock>
-        <Grid  Grid.Row="1" >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Image x:Name="myPicture" Source="https://i.imgur.com/tm2yGpu.jpg" Grid.Row="2" Grid.Column="0"/>
-            <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Button Content="UPDATE" FontFamily="Gabriola" Grid.Row="0" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Margin="0,101,-0.333,39.333" Click="Button_Click_1"  />
-                <Button Content="REMOVE" FontFamily="Gabriola" Grid.Row="1" Background="Red" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Margin="0,34.667,-0.333,108.667" Click="Button_Click_2"  />
-            </Grid>
-            
+
+        <Grid  Grid.Row="0" >
+            <TextBlock x:Name="textBlockWelcome"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="65" Foreground="SkyBlue" Text="Welcome Host!" ></TextBlock>
         </Grid>
         <Grid  Grid.Row="2" >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Button Content="ADD HOSTING UNIT" FontFamily="Gabriola" Margin="29,27,29.667,22" Grid.Column="0" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" RenderTransformOrigin="0.5,0.502" Click="Button_Click" />
-
-            <Button Content="ORDERS" FontFamily="Gabriola" Margin="22.333,26,26.333,23" Grid.Column="1" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="35" FontWeight="Bold" />
+            <Button Content="UPDATE HOSTING UNIT" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontFamily="Gabriola" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold"  Click="Button_Click_1" Margin="64,27,54.333,30" Height="77"    />
+        </Grid>
+        <Grid  Grid.Row="3" >
+            <Button Content="REMOVE HOSTING UNIT" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontFamily="Gabriola" Background="Red" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Click="Button_Click_2" Margin="67,23,56.333,28" Height="83"    />
+        </Grid>
+        <Grid  Grid.Row="1" >
+            <Button Content="ADD HOSTING UNIT" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontFamily="Gabriola" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" RenderTransformOrigin="0.5,0.502" Click="Button_Click" Margin="71,19,61.333,31" Height="84" />
+        </Grid>
+        <Grid  Grid.Row="4" >
+            <Button Content="ORDERS" FontFamily="Gabriola"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="35" FontWeight="Bold" Margin="59,24,54.333,32" Height="78" Click="Button_Click_3"  />
         </Grid>
     </Grid>
 </Window>

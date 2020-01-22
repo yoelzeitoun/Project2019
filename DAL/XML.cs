@@ -17,26 +17,49 @@ namespace DAL
     public class XML:IDal
     {
         XElement hostRoot;
+        XElement guestRoot;
         string hostPath = @"login_XML.xml";
+        string guestPath = @"guest_XML.xml";
 
         public XML()
         {
             if (!File.Exists(hostPath))
-                CreateFiles();
+                CreateHostFiles();
             else
-                LoadData();
+                LoadHostData();
+
+            if (!File.Exists(guestPath))
+                CreateGuestFiles();
+            else
+                LoadGuestData();
         }
 
-        private void CreateFiles()
+        private void CreateHostFiles()
         {
             hostRoot = new XElement("hosts");
             hostRoot.Save(hostPath);
         }
-        private void LoadData()
+        private void LoadHostData()
         {
             try
             {
                 hostRoot = XElement.Load(hostPath);
+            }
+            catch
+            {
+                throw new Exception("File upload problem");
+            }
+        }
+        private void CreateGuestFiles()
+        {
+            guestRoot = new XElement("guest");
+            guestRoot.Save(guestPath);
+        }
+        private void LoadGuestData()
+        {
+            try
+            {
+                guestRoot = XElement.Load(guestPath);
             }
             catch
             {
@@ -106,7 +129,7 @@ namespace DAL
         }
         public List<Host> GetHostList()
         {
-            LoadData();
+            LoadHostData();
             List<Host> hosts;
             try
             {
@@ -128,7 +151,7 @@ namespace DAL
         }
         public bool CheckPass(string email, string password)
         {
-            LoadData();
+            LoadHostData();
             bool host;
             try
             {
@@ -146,7 +169,7 @@ namespace DAL
         }
         public bool IsHostExists(string email)
         {
-            LoadData();
+            LoadHostData();
             bool host;
             try
             {
@@ -163,7 +186,7 @@ namespace DAL
         }
         public Host GetHost(string email)
         {
-            LoadData();
+            LoadHostData();
             Host host;
             try
             {
@@ -186,7 +209,7 @@ namespace DAL
         }
         public string GetHostName(int id)
         {
-            LoadData();
+            LoadHostData();
             string hostName;
             try
             {
@@ -207,7 +230,7 @@ namespace DAL
         #region Hosting Unit
         public bool IsHostingUnitExists(HostingUnit hostingUnit)
         {
-            LoadData();
+            LoadHostData();
             bool hosting;
             try
             {
@@ -323,7 +346,7 @@ namespace DAL
 
         public HostingUnit GetHostingUnit(string email, string hu)
         {
-            LoadData();
+            LoadHostData();
             HostingUnit hostingUnit;
             try
             {
@@ -361,7 +384,7 @@ namespace DAL
 
         public IEnumerable<string> HostingUnitList(string email)
         {
-            LoadData();
+            LoadHostData();
             IEnumerable<string> hostingUnitName;
             try
             {

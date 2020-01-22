@@ -57,5 +57,10 @@ namespace PL
         {
             new RemoveHostingUnit(eMail).ShowDialog();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            new HostOrder().ShowDialog();
+        }
     }
 }
