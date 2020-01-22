@@ -405,11 +405,18 @@ namespace DAL
             return hostingUnitName;
         }
         #endregion
-
-        #region fonctions
+        #region guestRequest
         public void AddGuestRequest(GuestRequest guestRequest)
         {
-            throw new NotImplementedException();
+            XElement guestRequestkey = new XElement("GuestRequestKey", guestRequest.GuestRequestKey);
+            XElement email = new XElement("eMail", guestRequest.MailAddress);
+            XElement firstName = new XElement("firstName", guestRequest.FirstName);
+            XElement lastName = new XElement("lastName", guestRequest.LastName);
+            XElement phoneNumber = new XElement("phoneNumber", guestRequest.PhoneNumber);
+            XElement name = new XElement("name", firstName, lastName, phoneNumber);
+
+            guestRoot.Add(new XElement("GuestRequest", guestRequestkey, email, name));
+            guestRoot.Save(guestPath);
         }
 
         public void UpdateGuestRequest(GuestRequest guestRequest)
@@ -426,8 +433,14 @@ namespace DAL
         {
             throw new NotImplementedException();
         }
+        #endregion
 
-        
+        #region fonctions
+
+
+
+
+
 
         public IEnumerable<Host> GetHostsList(Func<Host, bool> predicat = null)
         {

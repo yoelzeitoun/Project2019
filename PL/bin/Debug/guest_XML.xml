@@ -1,2 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<guest />
+<guest>
+  <GuestRequest>
+    <GuestRequestKey>10000000</GuestRequestKey>
+    <eMail>rbt</eMail>
+    <name>
+      <firstName>jfy</firstName>
+      <lastName>rtb</lastName>
+      <phoneNumber>352</phoneNumber>
+    </name>
+  </GuestRequest>
+</guest>

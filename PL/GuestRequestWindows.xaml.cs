@@ -45,8 +45,6 @@ namespace PLWPF
             garden.SelectedIndex = 2;
             childrensAttraction.ItemsSource = Enum.GetValues(typeof(ChildrensAttractions));
             childrensAttraction.SelectedIndex = 2;
-
-
         }
 
         private void HostingUnitTypeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
