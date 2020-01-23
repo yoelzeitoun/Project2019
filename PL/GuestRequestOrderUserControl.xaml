@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="PL.GuestRequestOrderUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PL"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="800" BorderThickness="1" FontFamily="Arial" FontSize="20">
+    <Grid Name="UserControlGrid" Margin="0,0,-1.6,-1.6" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="533*"/>
+            <ColumnDefinition Width="266*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox Name="huName" Text="{Binding Path=HostingUnitName}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="39" Margin="13,8,289.667,0" TextWrapping="Wrap"  Width="230" Padding="5"  />
+        <Label Content="מספר חדרים" HorizontalAlignment="Left" Margin="151,81,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.694,-0.362"/>
+        <TextBox Name="tbRooms" Text="{Binding Path=Rooms}" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="21" RenderTransformOrigin="0.653,1.413" Margin="125,81,0,0" />
+        <CheckBox Name="IsSwimmingPool" Content="בריכה;" HorizontalAlignment="Left" Margin="40,142,0,0" VerticalAlignment="Top"  IsChecked="{Binding Path=IsSwimmingPool}"    />
+        <Button Name="btOrder" Content="ORDER" HorizontalAlignment="Left" Margin="338,162,0,0" VerticalAlignment="Top" Width="133" Click="btOrder_Click"/>
+
+    </Grid>
+</UserControl>

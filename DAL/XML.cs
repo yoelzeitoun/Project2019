@@ -414,8 +414,18 @@ namespace DAL
             XElement lastName = new XElement("lastName", guestRequest.LastName);
             XElement phoneNumber = new XElement("phoneNumber", guestRequest.PhoneNumber);
             XElement name = new XElement("name", firstName, lastName, phoneNumber);
+            XElement pool = new XElement("pool", guestRequest.pool.ToString());
+            XElement childrenAttractions = new XElement("childrenAttractions", guestRequest.childrenAttractions.ToString());
+            XElement jaccuzzi = new XElement("jaccuzzi", guestRequest.jacuzzi.ToString());
+            XElement garden = new XElement("garden", guestRequest.garden.ToString());
+            XElement area = new XElement("area", guestRequest.area.ToString());
+            XElement hostingUnitType = new XElement("hostingUnitType", guestRequest.type.ToString());
+            XElement options = new XElement("options", pool, childrenAttractions, jaccuzzi, garden, hostingUnitType, area);
+            XElement entryDate = new XElement("entryDate", guestRequest.EntryDate);
+            XElement releaseDate = new XElement("releaseDate", guestRequest.ReleaseDate);
+            XElement date = new XElement("date", entryDate, releaseDate);
 
-            guestRoot.Add(new XElement("GuestRequest", guestRequestkey, email, name));
+            guestRoot.Add(new XElement("GuestRequest", guestRequestkey, email, name, date, options));
             guestRoot.Save(guestPath);
         }
 

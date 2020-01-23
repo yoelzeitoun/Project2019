@@ -46,7 +46,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
             </Grid>
-            <Grid x:Name="testerDetalisGrid" >
+            <Grid x:Name="hostingUnitDetailsGrid" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -66,7 +66,6 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <TextBlock x:Name="ageTesterTextBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
                 <Label Content="Hosting Unit Type:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,7.667,0,6.333" Grid.Row="7" VerticalAlignment="Center"/>
                 <ComboBox x:Name="HostingUnitTypeComboBox" Grid.Column="1" HorizontalAlignment="Center" Height="Auto"  Margin="3.333,7.667,0,10.333" Grid.Row="7" VerticalAlignment="Center" Width="120"/>
                 <Label Content="Numbers of Adults:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
@@ -83,7 +82,7 @@
                 <Label Content="Street:" Grid.Column="0" HorizontalAlignment="Left" Margin="4,7.667,0,6.333" Grid.Row="3" VerticalAlignment="Center"/>
                 <TextBox x:Name="streetTextBox1" Grid.Column="1" HorizontalAlignment="Center" Height="24" Grid.Row="3"  VerticalAlignment="Center" Width="120" />
                 <TextBox x:Name="houseNumberTextBox1" Grid.Column="1" HorizontalAlignment="Center" Height="23"  Grid.Row="2"  VerticalAlignment="Center" Width="120"/>
-                <Label Content="House Number:" Grid.Column="0" HorizontalAlignment="Left" Margin="7,7.333,0,7.333" Grid.Row="2" VerticalAlignment="Center"/>
+                <Label Content="House Number:" Grid.Column="0" HorizontalAlignment="Left" Margin="4,4.333,0,10.333" Grid.Row="2" VerticalAlignment="Center"/>
                 <Label Content="City:" Grid.Column="0" HorizontalAlignment="Left" Margin="6,5,0,9.667" Grid.Row="1" VerticalAlignment="Center" />
                 <TextBox x:Name="cityTextBox1" Grid.Column="1" HorizontalAlignment="Center" Height="23" Grid.Row="1"  VerticalAlignment="Center" Width="120"/>
                 <Label Content="Hosting Unit Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="7,7,0,9" VerticalAlignment="Center" />

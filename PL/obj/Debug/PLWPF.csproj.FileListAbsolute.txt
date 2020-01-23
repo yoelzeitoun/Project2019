@@ -35,3 +35,5 @@ C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\Rem
 C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\RemoveHostingUnit.baml
 C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\HostOrder.g.cs
 C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\HostOrder.baml
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\GuestRequestOrder.g.cs
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\GuestRequestOrder.baml

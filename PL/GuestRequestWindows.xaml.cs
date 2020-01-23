@@ -31,6 +31,8 @@ namespace PLWPF
         public GuestRequestWindows()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
             DataContext = this;
             bL = Factory_BL.getBL();
             AreaComboBox.ItemsSource = Enum.GetValues(typeof(Area));
@@ -68,10 +70,20 @@ namespace PLWPF
             guestRequest.childrenAttractions = (ChildrensAttractions)childrensAttraction.SelectedItem;
             guestRequest.garden = (Garden)garden.SelectedItem;
             guestRequest.type = (Type)HostingUnitTypeComboBox.SelectedItem;
+
             bL.AddGuestRequest(guestRequest);
-            MessageBox.Show($"You successfully added the Hosting Unit!", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            //MessageBox.Show($"your request has been successfully added,\n" + " one of us Hosts will contact you in the brief delay!  ", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
+            //if (MessageBox.Show("Are you happy of our services?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Exclamation) == MessageBoxResult.No)
+            //{
+            //    MessageBox.Show("please explain us your issues. \nthank you!");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("THANK YOU!");
+            //}
             this.Close();
-            //new Orders().ShowDialog();
+            new GuestRequestOrder().ShowDialog();
 
         }
 
