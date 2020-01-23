@@ -126,4 +126,25 @@
       <area>All</area>
     </options>
   </GuestRequest>
+  <GuestRequest>
+    <GuestRequestKey>10000000</GuestRequestKey>
+    <eMail>d</eMail>
+    <name>
+      <firstName>d</firstName>
+      <lastName>d</lastName>
+      <phoneNumber>3</phoneNumber>
+    </name>
+    <date>
+      <entryDate>2020-01-10T00:00:00</entryDate>
+      <releaseDate>2020-02-07T00:00:00</releaseDate>
+    </date>
+    <options>
+      <pool>Option</pool>
+      <childrenAttractions>Option</childrenAttractions>
+      <jaccuzzi>Option</jaccuzzi>
+      <garden>Option</garden>
+      <hostingUnitType>Zimmer</hostingUnitType>
+      <area>All</area>
+    </options>
+  </GuestRequest>
 </guest>

@@ -63,7 +63,6 @@
                 <TextBox x:Name="numbersOfAdultsTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="4" VerticalAlignment="Center" Width="120" />
                 <Label Content="First Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,8,0,3" VerticalAlignment="Center"/>
                 <TextBox x:Name="firstNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3.333,7,0,10"  VerticalAlignment="Center" Width="120" TextChanged="firstNameTextBox_TextChanged"/>
-                <Label  Name="totalNumOfPerson" Content="Total Num Of Persons" Margin="0,2,0.4,0.4" Grid.Row="9"/>
 
 
 
@@ -117,7 +116,6 @@
                 </Label>
                 <Label Content="Please choose your center of interrest: " HorizontalAlignment="Left" VerticalAlignment="Top" Width="396" Grid.ColumnSpan="2" FontSize="20" FontStyle="Normal" Height="66" Grid.RowSpan="2" />
                 <TextBlock Name="TotalNumOfPerson" HorizontalAlignment="Left" Margin="-196,107.2,0,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                <TextBox Height="23" Margin="-196,35.8,0,0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60"/>
                 <Label  Content="Area:" FontSize="15" HorizontalAlignment="Left" Margin="3,9.8,0,0" Grid.Row="5" VerticalAlignment="Top"/>
                 <Label Content="Hosting Unit Type:" FontSize="15" HorizontalAlignment="Left" Margin="0,10.2,0,0" Grid.Row="6" VerticalAlignment="Top" RenderTransformOrigin="0.38,0.586"/>
                 <ComboBox Name="HostingUnitTypeComboBox" Grid.Column="1" HorizontalAlignment="Left" Margin="9.6,10.2,0,0" Grid.Row="6" VerticalAlignment="Top" Width="120"/>

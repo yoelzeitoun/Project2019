@@ -12,11 +12,18 @@
             <ColumnDefinition Width="266*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox Name="huName" Text="{Binding Path=HostingUnitName}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="39" Margin="13,8,289.667,0" TextWrapping="Wrap"  Width="230" Padding="5"  />
-        <Label Content="מספר חדרים" HorizontalAlignment="Left" Margin="151,81,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.694,-0.362"/>
-        <TextBox Name="tbRooms" Text="{Binding Path=Rooms}" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="21" RenderTransformOrigin="0.653,1.413" Margin="125,81,0,0" />
-        <CheckBox Name="IsSwimmingPool" Content="בריכה;" HorizontalAlignment="Left" Margin="40,142,0,0" VerticalAlignment="Top"  IsChecked="{Binding Path=IsSwimmingPool}"    />
-        <Button Name="btOrder" Content="ORDER" HorizontalAlignment="Left" Margin="338,162,0,0" VerticalAlignment="Top" Width="133" Click="btOrder_Click"/>
+        <TextBox Name="huName" Text="{Binding Path=HostingUnitName}" HorizontalAlignment="Center" VerticalAlignment="Top" Height="39" Margin="13,8,200.667,0" TextWrapping="Wrap"  Width="319" Padding="5"  />
+        <Label Content=" Number of Beds:" HorizontalAlignment="Left" Margin="17,68,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.694,-0.362" Width="171"/>
+        <TextBox Name="tbRooms" Text="{Binding Path=Rooms}" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.653,1.413" Margin="213,70,0,0" />
+        <CheckBox Name="IsSwimmingPool" Content="Swimming-Pool" HorizontalAlignment="Left" Margin="362,63,0,0" VerticalAlignment="Top"  IsChecked="{Binding Path=IsSwimmingPool}" Grid.ColumnSpan="2" Width="171"    />
+        <Button Name="btOrder" Content="ORDER" HorizontalAlignment="Left" Margin="73.333,165,0,0" VerticalAlignment="Top" Width="133" Click="btOrder_Click" Grid.Column="1"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="23,112,0,0" VerticalAlignment="Top" Height="35" Width="145"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="25,155,0,0" VerticalAlignment="Top" Height="35" Width="145"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="212,117,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="212,160,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox Content="Jaccuzi" HorizontalAlignment="Left" Margin="362,97,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="Garden" HorizontalAlignment="Left" Margin="362,166,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="Childrens Attractions" HorizontalAlignment="Left" Margin="362,131,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </UserControl>

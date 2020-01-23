@@ -29,5 +29,10 @@ namespace PL
             this.CurrentHostingUnit = hostUnit;
             UserControlGrid.DataContext = hostUnit;
         }
+
+        private void btOrder_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
