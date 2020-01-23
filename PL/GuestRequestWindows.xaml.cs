@@ -73,17 +73,10 @@ namespace PLWPF
 
             bL.AddGuestRequest(guestRequest);
 
-            //MessageBox.Show($"your request has been successfully added,\n" + " one of us Hosts will contact you in the brief delay!  ", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
-            //if (MessageBox.Show("Are you happy of our services?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Exclamation) == MessageBoxResult.No)
-            //{
-            //    MessageBox.Show("please explain us your issues. \nthank you!");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("THANK YOU!");
-            //}
+            MessageBox.Show($"your request has been successfully added,\n" + " one of us Hosts will contact you in the brief delay!  ", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
+
             this.Close();
-            new GuestRequestOrder().ShowDialog();
+            //new GuestRequestOrder().ShowDialog();
 
         }
 

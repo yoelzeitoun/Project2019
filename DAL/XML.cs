@@ -447,10 +447,32 @@ namespace DAL
 
         #region fonctions
 
-
-
-
-
+        public string SetDiary(HostingUnit hostingUnit)
+        {
+            string result = "";
+            for (int i = 0; i < 12; i++)
+                for (int j = 0; j < 31; j++)
+                {
+                    if (hostingUnit.Diary[i, j] == true)
+                        result += 1 + ",";
+                    else result += 0 + ",";
+                }
+            return result;
+        }
+        public bool[,] GetDiary( string strDiary)
+        {
+            bool[,] diary = new bool[12, 31];
+            int index = 0;
+            string[] strArr = strDiary.Split(',');
+            for (int i = 0; i < 12; i++)
+                for (int j = 0; j < 31; j++)
+                {
+                    if (int.Parse(strArr[index++]) == 1)
+                        diary[i, j] = true;
+                    else diary[i, j] = false;
+                }
+            return diary;
+        }
 
         public IEnumerable<Host> GetHostsList(Func<Host, bool> predicat = null)
         {
