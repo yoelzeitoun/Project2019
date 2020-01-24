@@ -78,7 +78,7 @@ namespace DAL
             XElement phoneNumber = new XElement("phoneNumber", host.PhoneNumber);
             XElement name = new XElement("name", firstName, lastName, phoneNumber);
             XElement hostingUnits = new XElement("hosting-units");
-
+            
             hostRoot.Add(new XElement("host", hostKey, login, name, hostingUnits));
             hostRoot.Save(hostPath);
         }
@@ -274,6 +274,7 @@ namespace DAL
                                                 new XElement("garden", hostingUnit.garden.ToString()),
                                                 new XElement("jaccuzi", hostingUnit.jacuzzi.ToString()),
                                                 new XElement("pool", hostingUnit.pool.ToString()),
+                                                new XElement("diary", SetDiary(hostingUnit)),
                                                 new XElement("pictures")));
 
                     var hostingElement = (from item in hostElement.Elements()
@@ -317,6 +318,7 @@ namespace DAL
             hostingUnitElement.Element("garden").Value = hostingUnit.garden.ToString();
             hostingUnitElement.Element("jaccuzi").Value = hostingUnit.jacuzzi.ToString();
             hostingUnitElement.Element("pool").Value = hostingUnit.pool.ToString();
+            hostingUnitElement.Element("diary").Value = SetDiary(hostingUnit);
             for (int i = 0; i < 10; i++)
             {
                 hostingUnitElement.Element("pictures").Element("pic" + i).Value = hostingUnit.Pictures[i];
@@ -372,6 +374,7 @@ namespace DAL
                                    garden = (Garden)Enum.Parse(typeof(Garden), item.Element("garden").Value, true),
                                    jacuzzi = (Jaccuzzi)Enum.Parse(typeof(Jaccuzzi), item.Element("jaccuzi").Value, true),
                                    pool = (Pool)Enum.Parse(typeof(Pool), item.Element("pool").Value, true),
+                                   Diary = GetDiary(item.Element("diary").Value),
                                    Pictures = (from pic in item.Element("pictures").Elements()
                                                select pic.Value ).ToArray() 
                                }).FirstOrDefault();

@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BE;
+using BL;
 
 namespace PL
 {
@@ -19,14 +21,31 @@ namespace PL
     /// </summary>
     public partial class HostOrder : Window
     {
+        string email;
+        IBL bL;
         public HostOrder()
         {
             InitializeComponent();
-            for (int i = 0; i < 10; ++i)
+            
+            //for (int i = 0; i < 10; ++i)
+            //{
+            //    ListBoxItem newItem = new ListBoxItem();
+            //    newItem.Content = "Item " + i;
+            //    hostListBox.Items.Add(newItem);
+            //}
+        }
+        public HostOrder(string eMail):this()
+        {
+            bL = Factory_BL.getBL();
+            var hostingUnits = bL.HostingUnitList(eMail);
+            int index = 0;
+            foreach (var item in hostingUnits)
             {
-                ListBoxItem newItem = new ListBoxItem();
-                newItem.Content = "Item " + i;
-                hostListBox.Items.Add(newItem);
+                HostingUnit hostingUnit = bL.GetHostingUnit(eMail, item);
+                GuestRequestOrderUserControl a = new GuestRequestOrderUserControl(hostingUnit);
+                MainGrid.Children.Add(a);
+                Grid.SetRow(a, index + 1);
+                index++;
             }
         }
 

@@ -7,65 +7,67 @@
       <password>a</password>
     </login>
     <name>
-      <firstName>aa</firstName>
+      <firstName>a</firstName>
       <lastName>a</lastName>
       <phoneNumber>a</phoneNumber>
     </name>
     <hosting-units>
       <hosting-unit>
-        <name>a</name>
-        <city>es</city>
-        <house-number>se</house-number>
-        <street>se</street>
-        <num-of-adults>2323</num-of-adults>
-        <num-of-children>23</num-of-children>
-        <price-of-adult>23</price-of-adult>
-        <price-of-child>23</price-of-child>
+        <name>a1</name>
+        <city>a</city>
+        <house-number>a</house-number>
+        <street>a</street>
+        <num-of-adults>1</num-of-adults>
+        <num-of-children>2</num-of-children>
+        <price-of-adult>1</price-of-adult>
+        <price-of-child>1</price-of-child>
+        <area>North</area>
+        <hosting-unit-type>Guest_room</hosting-unit-type>
+        <children-attractions>No</children-attractions>
+        <garden>No</garden>
+        <jaccuzi>No</jaccuzi>
+        <pool>Yes</pool>
+        <diary>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,</diary>
+        <pictures>
+          <pic0>https://i.imgur.com/tm2yGpu.jpg</pic0>
+          <pic1>https://i.imgur.com/tm2yGpu.jpg</pic1>
+          <pic2>https://i.imgur.com/tm2yGpu.jpg</pic2>
+          <pic3>https://i.imgur.com/tm2yGpu.jpg</pic3>
+          <pic4>https://i.imgur.com/tm2yGpu.jpg</pic4>
+          <pic5>https://i.imgur.com/tm2yGpu.jpg</pic5>
+          <pic6>https://i.imgur.com/tm2yGpu.jpg</pic6>
+          <pic7>https://i.imgur.com/tm2yGpu.jpg</pic7>
+          <pic8>https://i.imgur.com/tm2yGpu.jpg</pic8>
+          <pic9>https://i.imgur.com/tm2yGpu.jpg</pic9>
+        </pictures>
+      </hosting-unit>
+      <hosting-unit>
+        <name>a2</name>
+        <city>w</city>
+        <house-number>w</house-number>
+        <street>w</street>
+        <num-of-adults>4</num-of-adults>
+        <num-of-children>4</num-of-children>
+        <price-of-adult>1</price-of-adult>
+        <price-of-child>1</price-of-child>
         <area>North</area>
         <hosting-unit-type>Hotel_room</hosting-unit-type>
         <children-attractions>No</children-attractions>
         <garden>No</garden>
         <jaccuzi>No</jaccuzi>
         <pool>Yes</pool>
+        <diary>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,</diary>
         <pictures>
-          <pic0>case0</pic0>
-          <pic1>e</pic1>
-          <pic2>ed</pic2>
-          <pic3>e</pic3>
-          <pic4>e</pic4>
-          <pic5>e</pic5>
-          <pic6>e</pic6>
-          <pic7>e</pic7>
-          <pic8>yo</pic8>
-          <pic9>e</pic9>
-        </pictures>
-      </hosting-unit>
-      <hosting-unit>
-        <name>a3</name>
-        <city>e</city>
-        <house-number>d</house-number>
-        <street>d</street>
-        <num-of-adults>3</num-of-adults>
-        <num-of-children>4</num-of-children>
-        <price-of-adult>12</price-of-adult>
-        <price-of-child>12</price-of-child>
-        <area>South</area>
-        <hosting-unit-type>Guest_room</hosting-unit-type>
-        <children-attractions>Yes</children-attractions>
-        <garden>Yes</garden>
-        <jaccuzi>Yes</jaccuzi>
-        <pool>Yes</pool>
-        <pictures>
-          <pic0>aa</pic0>
-          <pic1>bb</pic1>
-          <pic2>cc</pic2>
-          <pic3>dd</pic3>
-          <pic4>ee</pic4>
-          <pic5>ffercsrecer</pic5>
-          <pic6>gg</pic6>
-          <pic7>hh</pic7>
-          <pic8>iijk</pic8>
-          <pic9>jjws</pic9>
+          <pic0>https://i.imgur.com/tm2yGpu.jpg</pic0>
+          <pic1>https://i.imgur.com/tm2yGpu.jpg</pic1>
+          <pic2>https://i.imgur.com/tm2yGpu.jpg</pic2>
+          <pic3>https://i.imgur.com/tm2yGpu.jpg</pic3>
+          <pic4>https://i.imgur.com/tm2yGpu.jpg</pic4>
+          <pic5>https://i.imgur.com/tm2yGpu.jpg</pic5>
+          <pic6>https://i.imgur.com/tm2yGpu.jpg</pic6>
+          <pic7>https://i.imgur.com/tm2yGpu.jpg</pic7>
+          <pic8>https://i.imgur.com/tm2yGpu.jpg</pic8>
+          <pic9>https://i.imgur.com/tm2yGpu.jpg</pic9>
         </pictures>
       </hosting-unit>
     </hosting-units>
