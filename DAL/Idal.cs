@@ -31,6 +31,11 @@ namespace DAL
         /// <param name="predicat"></param>
         /// <returns></returns>
         IEnumerable<GuestRequest> GetGuestRequestList(Func<GuestRequest, bool> predicat = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<GuestRequest> GuestRequestList();
         #endregion
         #region HOST
         void AddHost(Host host);

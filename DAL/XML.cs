@@ -424,33 +424,51 @@ namespace DAL
             XElement area = new XElement("area", guestRequest.area.ToString());
             XElement hostingUnitType = new XElement("hostingUnitType", guestRequest.type.ToString());
             XElement options = new XElement("options", pool, childrenAttractions, jaccuzzi, garden, hostingUnitType, area);
-            XElement entryDate = new XElement("entryDate", guestRequest.EntryDate);
-            XElement releaseDate = new XElement("releaseDate", guestRequest.ReleaseDate);
-            XElement date = new XElement("date", entryDate, releaseDate);
+            XElement entryDate = new XElement("entryDate", guestRequest.EntryDate.ToString("dd/MM/yyyy"));
+            XElement releaseDate = new XElement("releaseDate", guestRequest.ReleaseDate.ToString("dd/MM/yyyy"));
+            XElement registrationDate = new XElement("registrationDate", guestRequest.RegistrationDate.ToString("dd/MM/yyyy"));
+            XElement date = new XElement("date", entryDate, releaseDate, registrationDate);
+            XElement numAdults = new XElement("numAdults", guestRequest.NumAdults);
+            XElement numChildren = new XElement("numChildren", guestRequest.NumChildren);
+            XElement totalNumPersons = new XElement("totalNumPersons", guestRequest.TotalNumPersons);
+            XElement numbers = new XElement("numbers", numAdults, numChildren, totalNumPersons);
 
-            guestRoot.Add(new XElement("GuestRequest", guestRequestkey, email, name, date, options));
+            guestRoot.Add(new XElement("GuestRequest", guestRequestkey, email, name, date, options,numbers));
             guestRoot.Save(guestPath);
         }
-        public IEnumerable<string> GuestRequestList(string email)
+        public IEnumerable<GuestRequest> GuestRequestList()
         {
-            LoadHostData();
-            IEnumerable<string> hostingUnitName;
+            LoadGuestData();
+            IEnumerable<GuestRequest> guestRequestList;
             try
             {
-                var selectHost = (from item in hostRoot.Elements()
-                                  where item.Element("login").Element("eMail").Value == email
-                                  select item.Element("hosting-units")).FirstOrDefault();
-
-
-                hostingUnitName = (from item in selectHost.Elements()
-                                   select item.Element("name").Value
-                                   ).ToList();
+                guestRequestList = (from item in guestRoot.Elements()
+                                  select new GuestRequest()
+                                  {
+                                      GuestRequestKey = int.Parse(item.Element("GuestRequestKey").Value),
+                                      MailAddress = item.Element("eMail").Value,
+                                      FirstName = item.Element("name").Element("firstName").Value,
+                                      LastName = item.Element("name").Element("lastName").Value,
+                                      PhoneNumber = item.Element("name").Element("phoneNumber").Value,
+                                      EntryDate = DateTime.Parse(item.Element("date").Element("entryDate").Value),
+                                      ReleaseDate = DateTime.Parse(item.Element("date").Element("releaseDate").Value),
+                                      RegistrationDate = DateTime.Parse(item.Element("date").Element("registrationDate").Value),
+                                      pool = (Pool)Enum.Parse(typeof(Pool), item.Element("options").Element("pool").Value, true),
+                                      childrenAttractions = (ChildrensAttractions)Enum.Parse(typeof(ChildrensAttractions), item.Element("options").Element("childrenAttractions").Value, true),
+                                      jacuzzi = (Jaccuzzi)Enum.Parse(typeof(Jaccuzzi), item.Element("options").Element("jaccuzzi").Value, true),
+                                      garden = (Garden)Enum.Parse(typeof(Garden), item.Element("options").Element("garden").Value, true),
+                                      type = (Type)Enum.Parse(typeof(Type), item.Element("options").Element("hostingUnitType").Value, true),
+                                      area = (Area)Enum.Parse(typeof(Area), item.Element("options").Element("area").Value, true),
+                                      NumAdults = int.Parse(item.Element("numbers").Element("numAdults").Value),
+                                      NumChildren = int.Parse(item.Element("numbers").Element("numChildren").Value),
+                                  }
+                                  ).ToList();
             }
             catch
             {
-                hostingUnitName = null;
+                guestRequestList = null;
             }
-            return hostingUnitName;
+            return guestRequestList;
         }
         public void UpdateGuestRequest(GuestRequest guestRequest)
         {

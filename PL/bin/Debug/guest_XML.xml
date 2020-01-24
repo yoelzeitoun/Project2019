@@ -2,183 +2,16 @@
 <guest>
   <GuestRequest>
     <GuestRequestKey>10000000</GuestRequestKey>
-    <eMail>g</eMail>
+    <eMail>a</eMail>
     <name>
-      <firstName>e</firstName>
-      <lastName>y</lastName>
-      <phoneNumber>5</phoneNumber>
-    </name>
-    <date>
-      <entryDate>2020-01-24T00:00:00</entryDate>
-      <releaseDate>2020-03-05T00:00:00</releaseDate>
-    </date>
-    <options>
-      <pool>Option</pool>
-      <childrenAttractions>Option</childrenAttractions>
-      <jaccuzzi>Option</jaccuzzi>
-      <garden>Option</garden>
-      <hostingUnitType>Zimmer</hostingUnitType>
-      <area>All</area>
-    </options>
-  </GuestRequest>
-  <GuestRequest>
-    <GuestRequestKey>10000000</GuestRequestKey>
-    <eMail>yft</eMail>
-    <name>
-      <firstName>fyt</firstName>
-      <lastName>jgy</lastName>
-      <phoneNumber>75</phoneNumber>
-    </name>
-    <date>
-      <entryDate>2020-01-24T00:00:00</entryDate>
-      <releaseDate>2020-03-05T00:00:00</releaseDate>
-    </date>
-    <options>
-      <pool>Option</pool>
-      <childrenAttractions>Option</childrenAttractions>
-      <jaccuzzi>Option</jaccuzzi>
-      <garden>Option</garden>
-      <hostingUnitType>Zimmer</hostingUnitType>
-      <area>All</area>
-    </options>
-  </GuestRequest>
-  <GuestRequest>
-    <GuestRequestKey>10000000</GuestRequestKey>
-    <eMail>ht</eMail>
-    <name>
-      <firstName>fht</firstName>
-      <lastName>ufy</lastName>
-      <phoneNumber>76</phoneNumber>
-    </name>
-    <date>
-      <entryDate>2020-01-17T00:00:00</entryDate>
-      <releaseDate>2020-01-31T00:00:00</releaseDate>
-    </date>
-    <options>
-      <pool>Option</pool>
-      <childrenAttractions>Option</childrenAttractions>
-      <jaccuzzi>Option</jaccuzzi>
-      <garden>Option</garden>
-      <hostingUnitType>Zimmer</hostingUnitType>
-      <area>All</area>
-    </options>
-  </GuestRequest>
-  <GuestRequest>
-    <GuestRequestKey>10000000</GuestRequestKey>
-    <eMail>d</eMail>
-    <name>
-      <firstName>d</firstName>
-      <lastName>d</lastName>
-      <phoneNumber>3</phoneNumber>
-    </name>
-    <date>
-      <entryDate>2020-01-09T00:00:00</entryDate>
-      <releaseDate>2020-01-31T00:00:00</releaseDate>
-    </date>
-    <options>
-      <pool>Option</pool>
-      <childrenAttractions>Option</childrenAttractions>
-      <jaccuzzi>Option</jaccuzzi>
-      <garden>Option</garden>
-      <hostingUnitType>Zimmer</hostingUnitType>
-      <area>All</area>
-    </options>
-  </GuestRequest>
-  <GuestRequest>
-    <GuestRequestKey>10000000</GuestRequestKey>
-    <eMail>f</eMail>
-    <name>
-      <firstName>f</firstName>
-      <lastName>f</lastName>
-      <phoneNumber>3</phoneNumber>
-    </name>
-    <date>
-      <entryDate>2020-01-09T00:00:00</entryDate>
-      <releaseDate>2020-01-30T00:00:00</releaseDate>
-    </date>
-    <options>
-      <pool>Option</pool>
-      <childrenAttractions>Option</childrenAttractions>
-      <jaccuzzi>Option</jaccuzzi>
-      <garden>Option</garden>
-      <hostingUnitType>Zimmer</hostingUnitType>
-      <area>All</area>
-    </options>
-  </GuestRequest>
-  <GuestRequest>
-    <GuestRequestKey>10000000</GuestRequestKey>
-    <eMail>e</eMail>
-    <name>
-      <firstName>e</firstName>
-      <lastName>e</lastName>
-      <phoneNumber>3</phoneNumber>
-    </name>
-    <date>
-      <entryDate>2020-01-08T00:00:00</entryDate>
-      <releaseDate>2020-01-31T00:00:00</releaseDate>
-    </date>
-    <options>
-      <pool>Option</pool>
-      <childrenAttractions>Option</childrenAttractions>
-      <jaccuzzi>Option</jaccuzzi>
-      <garden>Option</garden>
-      <hostingUnitType>Zimmer</hostingUnitType>
-      <area>All</area>
-    </options>
-  </GuestRequest>
-  <GuestRequest>
-    <GuestRequestKey>10000000</GuestRequestKey>
-    <eMail>d</eMail>
-    <name>
-      <firstName>d</firstName>
-      <lastName>d</lastName>
-      <phoneNumber>3</phoneNumber>
-    </name>
-    <date>
-      <entryDate>2020-01-10T00:00:00</entryDate>
-      <releaseDate>2020-02-07T00:00:00</releaseDate>
-    </date>
-    <options>
-      <pool>Option</pool>
-      <childrenAttractions>Option</childrenAttractions>
-      <jaccuzzi>Option</jaccuzzi>
-      <garden>Option</garden>
-      <hostingUnitType>Zimmer</hostingUnitType>
-      <area>All</area>
-    </options>
-  </GuestRequest>
-  <GuestRequest>
-    <GuestRequestKey>10000000</GuestRequestKey>
-    <eMail>r</eMail>
-    <name>
-      <firstName>r</firstName>
-      <lastName>r</lastName>
-      <phoneNumber>3</phoneNumber>
-    </name>
-    <date>
-      <entryDate>2020-01-02T00:00:00</entryDate>
-      <releaseDate>2020-01-31T00:00:00</releaseDate>
-    </date>
-    <options>
-      <pool>Option</pool>
-      <childrenAttractions>Option</childrenAttractions>
-      <jaccuzzi>Option</jaccuzzi>
-      <garden>Option</garden>
-      <hostingUnitType>Zimmer</hostingUnitType>
-      <area>All</area>
-    </options>
-  </GuestRequest>
-  <GuestRequest>
-    <GuestRequestKey>10000000</GuestRequestKey>
-    <eMail>f</eMail>
-    <name>
-      <firstName>f</firstName>
-      <lastName>f</lastName>
+      <firstName>a</firstName>
+      <lastName>a</lastName>
       <phoneNumber>1</phoneNumber>
     </name>
     <date>
-      <entryDate>2020-01-10T00:00:00</entryDate>
-      <releaseDate>2020-01-31T00:00:00</releaseDate>
+      <entryDate>18-01-2020</entryDate>
+      <releaseDate>01-02-2020</releaseDate>
+      <registrationDate>24-01-2020</registrationDate>
     </date>
     <options>
       <pool>Option</pool>
@@ -188,18 +21,24 @@
       <hostingUnitType>Zimmer</hostingUnitType>
       <area>All</area>
     </options>
+    <numbers>
+      <numAdults>1</numAdults>
+      <numChildren>1</numChildren>
+      <totalNumPersons>2</totalNumPersons>
+    </numbers>
   </GuestRequest>
   <GuestRequest>
     <GuestRequestKey>10000000</GuestRequestKey>
-    <eMail>h</eMail>
+    <eMail>b</eMail>
     <name>
-      <firstName>h</firstName>
-      <lastName>h</lastName>
-      <phoneNumber>4</phoneNumber>
+      <firstName>b</firstName>
+      <lastName>b</lastName>
+      <phoneNumber>1</phoneNumber>
     </name>
     <date>
-      <entryDate>2020-01-01T00:00:00</entryDate>
-      <releaseDate>2020-01-31T00:00:00</releaseDate>
+      <entryDate>02-02-2020</entryDate>
+      <releaseDate>08-02-2020</releaseDate>
+      <registrationDate>24-01-2020</registrationDate>
     </date>
     <options>
       <pool>Option</pool>
@@ -209,5 +48,10 @@
       <hostingUnitType>Zimmer</hostingUnitType>
       <area>All</area>
     </options>
+    <numbers>
+      <numAdults>1</numAdults>
+      <numChildren>1</numChildren>
+      <totalNumPersons>2</totalNumPersons>
+    </numbers>
   </GuestRequest>
 </guest>

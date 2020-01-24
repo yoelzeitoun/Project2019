@@ -51,6 +51,7 @@ namespace PLWPF
 
         private void HostingUnitTypeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
         }
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)
@@ -61,9 +62,9 @@ namespace PLWPF
             guestRequest.PhoneNumber = phoneNumberTextBox.Text;
             guestRequest.NumAdults = int.Parse(numbersOfAdultsTextBox.Text);
             guestRequest.NumChildren = int.Parse(NumOfChildrentextBox.Text);
-            guestRequest.TotalNumPersons = int.Parse(numbersOfAdultsTextBox.Text + NumOfChildrentextBox.Text);
             guestRequest.EntryDate = entryDate.SelectedDate.Value;
-            guestRequest.ReleaseDate = ReleaseDateDatePicker_Copy.SelectedDate.Value;
+            guestRequest.ReleaseDate = releaseDate.SelectedDate.Value;
+            guestRequest.RegistrationDate = DateTime.Now;
             guestRequest.area = (Area)AreaComboBox.SelectedItem;
             guestRequest.jacuzzi = (Jaccuzzi)jacuzzi.SelectedItem;
             guestRequest.pool = (Pool)pool.SelectedItem;

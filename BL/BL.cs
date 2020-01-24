@@ -278,6 +278,12 @@ namespace BL
                                                              group hu by hu.area;
         }
 
+        public IEnumerable<GuestRequest> GuestRequestList()
+        {
+            XML xml = new XML();
+            return xml.GuestRequestList();
+        }
+
         //public IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicat = null)
         //{
         //    throw new NotImplementedException();

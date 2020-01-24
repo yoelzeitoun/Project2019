@@ -268,5 +268,10 @@ namespace DAL
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<GuestRequest> GuestRequestList()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

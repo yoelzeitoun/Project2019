@@ -34,21 +34,21 @@ namespace PL
             //    hostListBox.Items.Add(newItem);
             //}
         }
-        public HostOrder(string eMail):this()
+        public HostOrder(string eMail) : this()
         {
             bL = Factory_BL.getBL();
             var hostingUnits = bL.HostingUnitList(eMail);
-            var guestRequests = bL.GetGuestRequestList();
+            var guestRequests = bL.GuestRequestList();
             int index = 0;
-            foreach (var item in hostingUnits)
-            {
-                HostingUnit hostingUnit = bL.GetHostingUnit(eMail, item);
-
-                GuestRequestOrderUserControl a = new GuestRequestOrderUserControl(hostingUnit);
-                MainGrid.Children.Add(a);
-                Grid.SetRow(a, index + 1);
-                index++;
-            }
+            foreach (var guest in guestRequests)
+                foreach (var hosting in hostingUnits)
+                {
+                    HostingUnit hostingUnit = bL.GetHostingUnit(eMail, hosting);
+                    GuestRequestOrderUserControl a = new GuestRequestOrderUserControl(hostingUnit);
+                    MainGrid.Children.Add(a);
+                    Grid.SetRow(a, index + 1);
+                    index++;
+                }
         }
 
         private void hostListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
