@@ -18,6 +18,8 @@ namespace BE
         public int PriceForAdult { get; set; }
         public int PriceForChild { get; set; }
         public int NumOfChildren { get; set; }
+        public int NumTotalPerson
+        { get { return NumOfAdults + NumOfChildren;} }
         public Host Owner{ get; set; }
         public string City { get; set; }
         public string HouseNumber { get; set; }

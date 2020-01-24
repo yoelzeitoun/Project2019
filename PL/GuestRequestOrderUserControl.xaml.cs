@@ -23,21 +23,12 @@ namespace PL
     public partial class GuestRequestOrderUserControl : UserControl
     {
         public HostingUnit CurrentHostingUnit { get; set; }
-        int imageIndex;
-        Viewbox vbImage;
         Image MyImage;
         public GuestRequestOrderUserControl(HostingUnit hostUnit)
         {
-            vbImage = new Viewbox();
             InitializeComponent();
             this.CurrentHostingUnit = hostUnit;
             UserControlGrid.DataContext = hostUnit;
-
-            imageIndex = 0;
-            vbImage.Width = 75;
-            vbImage.Height = 75;
-            vbImage.Stretch = Stretch.Fill;
-            UserControlGrid.Children.Add(vbImage);
             Grid.SetColumn(vbImage, 1);
             Grid.SetRow(vbImage, 0);
 
@@ -52,14 +43,15 @@ namespace PL
             bitmap.BeginInit();
             bitmap.UriSource = new Uri(CurrentHostingUnit.Pictures[0]);
             bitmap.EndInit();
-            // Set Image.Source
             dynamicImage.Source = bitmap;
-            // Add Image to Window
             return dynamicImage;
         }
+        private void approveBtn_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
 
-        private void btOrder_Click(object sender, RoutedEventArgs e)
+        private void rejectBtn_Click(object sender, RoutedEventArgs e)
         {
 
         }

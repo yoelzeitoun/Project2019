@@ -38,10 +38,12 @@ namespace PL
         {
             bL = Factory_BL.getBL();
             var hostingUnits = bL.HostingUnitList(eMail);
+            var guestRequests = bL.GetGuestRequestList();
             int index = 0;
             foreach (var item in hostingUnits)
             {
                 HostingUnit hostingUnit = bL.GetHostingUnit(eMail, item);
+
                 GuestRequestOrderUserControl a = new GuestRequestOrderUserControl(hostingUnit);
                 MainGrid.Children.Add(a);
                 Grid.SetRow(a, index + 1);

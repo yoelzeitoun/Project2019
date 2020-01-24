@@ -6,26 +6,28 @@
              xmlns:local="clr-namespace:PL"
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="800" BorderThickness="1" FontFamily="Arial" FontSize="20">
-    <Grid Name="UserControlGrid" Margin="0,0,-1.6,-1.6" >
+    <Grid Name="UserControlGrid" Margin="0,0,-1.667,-35.667" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="553*"/>
             <ColumnDefinition Width="246*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox Name="huNameTB" Text="{Binding Path=HostingUnitName}" IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Top" Height="39" Margin="8,5,10.667,0" TextWrapping="Wrap"  Width="534" Padding="5"  />
+        <TextBox Name="huNameTB" Text="{Binding Path=HostingUnitName}" TextAlignment="Center" BorderThickness="0" IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Top" Height="39" Margin="8,5,6.333,0" TextWrapping="Wrap"  Width="785" Padding="5" Grid.ColumnSpan="2"  />
         <Label Content=" Number of Beds:" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.694,-0.362" Width="171" Height="33"/>
-        <TextBox Name="numOfBedsTB" Text="{Binding Path=Rooms}" IsHitTestVisible="False" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.653,1.413" Margin="200,55,0,0" />
+        <TextBox Name="numOfBedsTB" Text="{Binding Path=HostingUnitName}" BorderThickness="0" IsHitTestVisible="False" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.653,1.413" Margin="200,55,0,0" />
         <CheckBox Name="swimmingPoolCB" IsHitTestVisible="False" Content="Swimming-Pool" HorizontalAlignment="Left" Margin="350,63,0,0" VerticalAlignment="Top"  IsChecked="{Binding Path=IsSwimmingPool}" Width="171" Height="21"    />
-        <Button Name="btOrder" Content="ORDER" HorizontalAlignment="Left" Margin="73.333,165,0,0" VerticalAlignment="Top" Width="133" Click="btOrder_Click" Grid.Column="1" Height="27"/>
+        <Button Name="approveBtn" Content="APPROVE" Background="Green" HorizontalAlignment="Left" Margin="147,203,0,0" VerticalAlignment="Top" Width="171" Grid.Column="0" Height="27" Click="approveBtn_Click"/>
         <Label Content=" City" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Height="35" Width="145"/>
         <Label Content=" Area" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Height="35" Width="145"/>
-        <TextBox Name="cityTB" HorizontalAlignment="Left" IsHitTestVisible="False" Height="30" Margin="200,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="areaTB" HorizontalAlignment="Left" IsHitTestVisible="False" Height="30" Margin="200,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="cityTB" Text="{Binding Path=HostingUnitName}" HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="200,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="areaTB" Text="{Binding Path=HostingUnitName}" HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="200,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <CheckBox Name="jacuzziCB" Content="Jaccuzi" IsHitTestVisible="False" HorizontalAlignment="Left" Margin="350,97,0,0" VerticalAlignment="Top" Height="21" Width="87"/>
         <CheckBox Name="gardenCB" Content="Garden" HorizontalAlignment="Left" IsHitTestVisible="False" Margin="350,166,0,0" VerticalAlignment="Top" Height="21" Width="87"/>
         <CheckBox Name="childrenAttractionsTB" Content="Children Attractions" IsHitTestVisible="False" HorizontalAlignment="Left" Margin="350,131,0,0" VerticalAlignment="Top" Height="21" Width="198"/>
         <Label Content=" Type" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" Height="35" Width="145"/>
-        <TextBox Name="typeTB" HorizontalAlignment="Left" IsHitTestVisible="False" Height="30" Margin="200,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="typeTB" Text="{Binding Path=HostingUnitName}" HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="200,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Viewbox x:Name="vbImage" Width="226" Height="145" Stretch="Fill"  Grid.Column="1" HorizontalAlignment="Left" Margin="13.667,49,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="rejectBtn" Content="REJECT" Background="Red" HorizontalAlignment="Left" Margin="446,204,0,0" VerticalAlignment="Top" Width="171" Grid.Column="0" Height="27" Grid.ColumnSpan="2" Click="rejectBtn_Click"/>
 
     </Grid>
 </UserControl>

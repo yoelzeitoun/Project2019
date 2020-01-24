@@ -13,7 +13,7 @@
     </name>
     <hosting-units>
       <hosting-unit>
-        <name>a1</name>
+        <name>Best Hosting Unit</name>
         <city>a</city>
         <house-number>a</house-number>
         <street>a</street>
@@ -42,7 +42,7 @@
         </pictures>
       </hosting-unit>
       <hosting-unit>
-        <name>a2</name>
+        <name>Hosting Unit Roul</name>
         <city>w</city>
         <house-number>w</house-number>
         <street>w</street>

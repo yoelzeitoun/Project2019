@@ -431,7 +431,27 @@ namespace DAL
             guestRoot.Add(new XElement("GuestRequest", guestRequestkey, email, name, date, options));
             guestRoot.Save(guestPath);
         }
+        public IEnumerable<string> GuestRequestList(string email)
+        {
+            LoadHostData();
+            IEnumerable<string> hostingUnitName;
+            try
+            {
+                var selectHost = (from item in hostRoot.Elements()
+                                  where item.Element("login").Element("eMail").Value == email
+                                  select item.Element("hosting-units")).FirstOrDefault();
 
+
+                hostingUnitName = (from item in selectHost.Elements()
+                                   select item.Element("name").Value
+                                   ).ToList();
+            }
+            catch
+            {
+                hostingUnitName = null;
+            }
+            return hostingUnitName;
+        }
         public void UpdateGuestRequest(GuestRequest guestRequest)
         {
             throw new NotImplementedException();
