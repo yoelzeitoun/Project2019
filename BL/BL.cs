@@ -284,6 +284,18 @@ namespace BL
             return xml.GuestRequestList();
         }
 
+        public bool SendGuestToHost (GuestRequest guest, HostingUnit hosting)
+        {
+            if ((guest.jacuzzi != Jaccuzzi.Option && guest.jacuzzi != hosting.jacuzzi)
+                || (guest.pool != Pool.Option && guest.pool != hosting.pool)
+                || (guest.childrenAttractions != ChildrensAttractions.Option && guest.childrenAttractions != hosting.childrenAttractions)
+                || (guest.garden != Garden.Option && guest.garden != hosting.garden)
+                || (guest.area != Area.All && guest.area != hosting.area)
+                || (guest.type != Type.All && guest.type!= hosting.type)
+                )
+                return false;
+            return true;
+        }
         //public IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicat = null)
         //{
         //    throw new NotImplementedException();

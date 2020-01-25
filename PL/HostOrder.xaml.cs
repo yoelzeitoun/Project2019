@@ -26,7 +26,8 @@ namespace PL
         public HostOrder()
         {
             InitializeComponent();
-            
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
             //for (int i = 0; i < 10; ++i)
             //{
             //    ListBoxItem newItem = new ListBoxItem();
@@ -44,14 +45,18 @@ namespace PL
                 foreach (var hosting in hostingUnits)
                 {
                     HostingUnit hostingUnit = bL.GetHostingUnit(eMail, hosting);
-                    GuestRequestOrderUserControl a = new GuestRequestOrderUserControl(hostingUnit);
-                    MainGrid.Children.Add(a);
-                    Grid.SetRow(a, index + 1);
-                    index++;
+                    if (bL.SendGuestToHost(guest, hostingUnit))
+                    {
+                        GuestRequestOrderUserControl a = new GuestRequestOrderUserControl(hostingUnit);
+                        MainGrid.Children.Add(a);
+                        MainGrid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+                        Grid.SetRow(a, index + 1);
+                        index++;
+                    }
                 }
         }
 
-        private void hostListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void MainGrid_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
         {
 
         }

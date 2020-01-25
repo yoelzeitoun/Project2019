@@ -27,8 +27,8 @@ namespace PL
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            areaComboBox.ItemsSource = Enum.GetValues(typeof(Area));
-            HostingUnitTypeComboBox.ItemsSource = Enum.GetValues(typeof(Type));
+            areaComboBox.ItemsSource = Enum.GetValues(typeof(Area)).Cast<Area>().Where(i=>i.ToString()!="All");
+            HostingUnitTypeComboBox.ItemsSource = Enum.GetValues(typeof(Type)).Cast<Type>().Where(i => i.ToString() != "All");
             bL = Factory_BL.getBL();
 
         }

@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:PL"
         mc:Ignorable="d"
         Title="HostOrder" Height="700" Width="800">
-    <Grid x:Name="MainGrid">
+    <ScrollViewer>
+    <Grid x:Name="MainGrid" >
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
-        <ListBox x:Name="hostListBox" HorizontalAlignment="Center" VerticalAlignment="Top" Width="791" Height="557" Grid.Row="1" Margin="0,2,2.333,-0.333" SelectionChanged="hostListBox_SelectionChanged"/>
-        <TextBlock x:Name="orders" Text="Orders" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="65" Foreground="SkyBlue"></TextBlock>
+        <TextBlock x:Name="orders" TextAlignment="Center" Text="Orders" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="65" Foreground="SkyBlue" Margin="180,1,197.333,0" Width="416"></TextBlock>
 
     </Grid>
+    </ScrollViewer>
 </Window>

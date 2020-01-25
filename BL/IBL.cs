@@ -132,6 +132,7 @@ namespace BL
         bool IsHostExists(string email);
         bool CheckPass(string email, string password);
         Host GetHost(string email);
+        bool SendGuestToHost(GuestRequest guest, HostingUnit hosting);
         #endregion
 
         #region Grouping

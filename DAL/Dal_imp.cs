@@ -273,5 +273,10 @@ namespace DAL
         {
             throw new NotImplementedException();
         }
+
+        public bool SendGuestToHost(GuestRequest guest, HostingUnit hosting)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

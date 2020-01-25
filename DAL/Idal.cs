@@ -142,6 +142,13 @@ namespace DAL
         /// <param name="hu"></param>
         /// <param name="gs"></param>
         void DiaryChangeToOccuped(HostingUnit hu, GuestRequest gs);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="guest"></param>
+        /// <param name="hosting"></param>
+        /// <returns></returns>
+        bool SendGuestToHost(GuestRequest guest, HostingUnit hosting);
         #endregion
     }
 }

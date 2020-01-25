@@ -9,16 +9,16 @@
       <phoneNumber>1</phoneNumber>
     </name>
     <date>
-      <entryDate>18-01-2020</entryDate>
-      <releaseDate>01-02-2020</releaseDate>
-      <registrationDate>24-01-2020</registrationDate>
+      <entryDate>09-01-2020</entryDate>
+      <releaseDate>23-01-2020</releaseDate>
+      <registrationDate>25-01-2020</registrationDate>
     </date>
     <options>
       <pool>Option</pool>
       <childrenAttractions>Option</childrenAttractions>
       <jaccuzzi>Option</jaccuzzi>
       <garden>Option</garden>
-      <hostingUnitType>Zimmer</hostingUnitType>
+      <hostingUnitType>All</hostingUnitType>
       <area>All</area>
     </options>
     <numbers>
@@ -36,16 +36,16 @@
       <phoneNumber>1</phoneNumber>
     </name>
     <date>
-      <entryDate>02-02-2020</entryDate>
-      <releaseDate>08-02-2020</releaseDate>
-      <registrationDate>24-01-2020</registrationDate>
+      <entryDate>23-01-2020</entryDate>
+      <releaseDate>30-01-2020</releaseDate>
+      <registrationDate>25-01-2020</registrationDate>
     </date>
     <options>
-      <pool>Option</pool>
-      <childrenAttractions>Option</childrenAttractions>
-      <jaccuzzi>Option</jaccuzzi>
-      <garden>Option</garden>
-      <hostingUnitType>Zimmer</hostingUnitType>
+      <pool>Yes</pool>
+      <childrenAttractions>Yes</childrenAttractions>
+      <jaccuzzi>Yes</jaccuzzi>
+      <garden>Yes</garden>
+      <hostingUnitType>All</hostingUnitType>
       <area>All</area>
     </options>
     <numbers>
