@@ -23,12 +23,14 @@ namespace PL
     public partial class GuestRequestOrderUserControl : UserControl
     {
         public HostingUnit CurrentHostingUnit { get; set; }
+        public GuestRequest CurrentGuestRequest { get; set; }
         Image MyImage;
         public IBL bl;
         public GuestRequestOrderUserControl(HostingUnit hostUnit, GuestRequest guest)
         {
             InitializeComponent();
             this.CurrentHostingUnit = hostUnit;
+            this.CurrentGuestRequest = guest;
             UserDataContext userDataContext = new UserDataContext();
             userDataContext.hostUnit = hostUnit;
             userDataContext.guest = guest;
@@ -67,7 +69,16 @@ namespace PL
         }
         private void approveBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            Order order = new Order();
+            bl.SetOrderKey(order);
+            order.HostingUnitKey = CurrentHostingUnit.HostingUnitKey;
+            order.GuestRequestKey = CurrentGuestRequest.GuestRequestKey;
+            order.status_Order = Status_order.Email_sent;
+            order.OrderDate = DateTime.Now;
+            order.CreateDate = DateTime.Now;
+            bl.AddOrder(order);
+            bl.DiaryChangeToOccuped(CurrentHostingUnit, CurrentGuestRequest);
+            bl.UpdateHostingUnit(CurrentHostingUnit);
         }
 
         private void rejectBtn_Click(object sender, RoutedEventArgs e)

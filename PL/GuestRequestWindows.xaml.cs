@@ -27,7 +27,7 @@ namespace PLWPF
     public partial class GuestRequestWindows : Window
     {
         IBL bL;
-        GuestRequest guestRequest = new GuestRequest();
+        
         public GuestRequestWindows()
         {
             InitializeComponent();
@@ -56,6 +56,8 @@ namespace PLWPF
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)
         {
+            GuestRequest guestRequest = new GuestRequest();
+            bL.SetGuestRequestKey(guestRequest);
             guestRequest.FirstName = firstNameTextBox.Text;
             guestRequest.LastName = lastNameTextBox.Text;
             guestRequest.MailAddress = emailTextBox.Text;

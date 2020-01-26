@@ -5,8 +5,7 @@ namespace BE
     [Serializable]
     public class GuestRequest 
     {
-        public GuestRequest(){}
-        public long GuestRequestKey = 10000000;
+        public long GuestRequestKey { get; set; }
         public string FirstName { get; set;}
         public string LastName { get; set; }
         public string MailAddress { get; set; }

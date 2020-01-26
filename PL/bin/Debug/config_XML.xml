@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <HostKey>4</HostKey>
+  <GuestRequestKey>3</GuestRequestKey>
+  <HostingUnitKey>3</HostingUnitKey>
+  <OrderKey>0</OrderKey>
+  <NumStaticOrderExpiration>0</NumStaticOrderExpiration>
+  <Commission>10</Commission>
+  <Admin_PASSWORD />
+</Configuration>

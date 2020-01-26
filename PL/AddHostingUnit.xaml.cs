@@ -64,6 +64,7 @@ namespace PL
         private void Add_Button_Click(object sender, RoutedEventArgs e)
         {
             HostingUnit hostingUnit = new HostingUnit();
+            bL.SetHostingUnitKey(hostingUnit);
             hostingUnit.HostingUnitName = hostingUnitNameTextBox.Text;
             hostingUnit.Owner = currentHost;
             hostingUnit.area = (Area)areaComboBox.SelectedItem;

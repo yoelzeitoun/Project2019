@@ -37,6 +37,7 @@ namespace PL
         {
             bL = Factory_BL.getBL();
             Host host = new Host();
+            
             if (bL.IsHostExists(email.Text))
             {
                 if (bL.CheckPass(email.Text, pword.Text))
@@ -56,7 +57,7 @@ namespace PL
                     MessageBox.Show($"Please fill all the fields!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
                 else
                 {
-                    host.HostKey = ++Configuration._HostKey;
+                    bL.SetHostKey(host);
                     host.MailAddress = email.Text;
                     host.Password = pword.Text;
                     host.FirstName = First_name.Text;

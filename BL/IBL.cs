@@ -128,11 +128,16 @@ namespace BL
         #endregion
 
         #region Host
+        void SetHostKey(Host host);
+        void SetHostingUnitKey(HostingUnit hostingUnit);
+        void SetGuestRequestKey(GuestRequest guestRequest);
+        void SetOrderKey(Order order);
         void AddHost(Host host);
         bool IsHostExists(string email);
         bool CheckPass(string email, string password);
         Host GetHost(string email);
         bool SendGuestToHost(GuestRequest guest, HostingUnit hosting);
+        void DiaryChangeToOccuped(HostingUnit hostingUnit, GuestRequest guest);
         #endregion
 
         #region Grouping

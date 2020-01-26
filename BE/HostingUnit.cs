@@ -6,7 +6,7 @@ namespace BE
 {
     public class HostingUnit
     {
-        public long HostingUnitKey = 10000000;
+        public long HostingUnitKey { get; set; }
         public string HostingUnitName { get; set; }
         public Area area { get; set; }
         public Type type { get; set; }

@@ -18,9 +18,12 @@ namespace DAL
     {
         XElement hostRoot;
         XElement guestRoot;
+        XElement orderRoot;
+        XElement configRoot;
         string hostPath = @"login_XML.xml";
         string guestPath = @"guest_XML.xml";
-
+        string orderPath = @"order_XML.xml";
+        string configPath = @"config_XML.xml";
         public XML()
         {
             if (!File.Exists(hostPath))
@@ -32,6 +35,16 @@ namespace DAL
                 CreateGuestFiles();
             else
                 LoadGuestData();
+
+            if (!File.Exists(orderPath))
+                CreateOrderFiles();
+            else
+                LoadOrderData();
+
+            if (!File.Exists(configPath))
+                CreateConfigFiles();
+            else
+                LoadConfigData();
         }
 
         private void CreateHostFiles()
@@ -52,7 +65,7 @@ namespace DAL
         }
         private void CreateGuestFiles()
         {
-            guestRoot = new XElement("guest");
+            guestRoot = new XElement("guests");
             guestRoot.Save(guestPath);
         }
         private void LoadGuestData()
@@ -66,7 +79,101 @@ namespace DAL
                 throw new Exception("File upload problem");
             }
         }
+        private void CreateOrderFiles()
+        {
+            orderRoot = new XElement("orders");
+            orderRoot.Save(orderPath);
+        }
+
+        private void LoadOrderData()
+        {
+            try
+            {
+                orderRoot = XElement.Load(orderPath);
+            }
+            catch
+            {
+                throw new Exception("File upload problem");
+            }
+        }
+
+        private void CreateConfigFiles()
+        {
+            configRoot = new XElement("Configuration",
+                new XElement("HostKey", Configuration._HostKey),
+                new XElement("GuestRequestKey", Configuration._GuestRequestKey),
+                new XElement("HostingUnitKey", Configuration._HostingUnitKey),
+                new XElement("OrderKey", Configuration._OrderKey),
+                new XElement("NumStaticOrderExpiration", Configuration.NumStaticOrderExpiration),
+                new XElement("Commission", Configuration.Commission),
+                new XElement("Admin_PASSWORD", Configuration.Admin_PASSWORD));
+            configRoot.Save(configPath);
+        }
+
+        private void LoadConfigData()
+        {
+            try
+            {
+                configRoot = XElement.Load(configPath);
+            }
+            catch
+            {
+                throw new Exception("File upload problem");
+            }
+        }
+        #region Configuration
+        public void UpdateConfiguration()
+        {
+
+        }
+        #endregion
+        #region Order
+        public void AddOrder(Order order)
+        {
+            XElement HostingUnitKey = new XElement("hostingUnitKey", order.HostingUnitKey);
+            XElement GuestRequestKey = new XElement("guestRequestKey", order.GuestRequestKey);
+            XElement OrderKey = new XElement("orderKey", order.OrderKey);
+            XElement status_Order = new XElement("status_Order", order.status_Order);
+            XElement CreateDate = new XElement("createDate", order.CreateDate);
+            XElement OrderDate = new XElement("orderDate", order.OrderDate);
+
+            hostRoot.Add(new XElement("order", HostingUnitKey, GuestRequestKey, OrderKey, status_Order, CreateDate, OrderDate));
+            hostRoot.Save(orderPath);
+        }
+        #endregion
         #region HOST
+        public void SetHostKey(Host host)
+        {
+            LoadConfigData();
+            int newValue = int.Parse(configRoot.Element("HostKey").Value) + 1;
+            configRoot.Element("HostKey").Value = newValue.ToString();
+            host.HostKey = newValue;
+            configRoot.Save(configPath);
+        }
+        public void SetHostingUnitKey(HostingUnit hostingUnit)
+        {
+            LoadConfigData();
+            int newValue = int.Parse(configRoot.Element("HostingUnitKey").Value) + 1;
+            configRoot.Element("HostingUnitKey").Value = newValue.ToString();
+            hostingUnit.HostingUnitKey = newValue;
+            configRoot.Save(configPath);
+        }
+        public void SetGuestRequestKey(GuestRequest guest)
+        {
+            LoadConfigData();
+            int newValue = int.Parse(configRoot.Element("GuestRequestKey").Value) + 1;
+            configRoot.Element("GuestRequestKey").Value = newValue.ToString();
+            guest.GuestRequestKey = newValue;
+            configRoot.Save(configPath);
+        }
+        public void SetOrderKey(Order order)
+        {
+            LoadConfigData();
+            int newValue = int.Parse(configRoot.Element("OrderKey").Value) + 1;
+            configRoot.Element("OrderKey").Value = newValue.ToString();
+            order.OrderKey = newValue;
+            configRoot.Save(configPath);
+        }
         public void AddHost(Host host)
         {
             XElement hostKey = new XElement("hostKey", host.HostKey);
@@ -260,6 +367,7 @@ namespace DAL
                                             select item.Element("hosting-units")).FirstOrDefault();
 
                     hostElement.Add(new XElement("hosting-unit",
+                                                new XElement("HostingUnitKey", hostingUnit.HostingUnitKey),
                                                 new XElement("name", hostingUnit.HostingUnitName),
                                                 new XElement("city", hostingUnit.City),
                                                 new XElement("house-number", hostingUnit.HouseNumber),
@@ -296,14 +404,15 @@ namespace DAL
         }
         public void UpdateHostingUnit(HostingUnit hostingUnit)
         {
-            XElement hostElement = (from item in hostRoot.Elements()
+            LoadHostData();
+            var hostElement = (from item in hostRoot.Elements()
                              where item.Element("login").Element("eMail").Value == hostingUnit.Owner.MailAddress
                              select item.Element("hosting-units")).FirstOrDefault();
-            XElement hostingUnitElement = (from item1 in hostElement.Elements()
+            var hostingUnitElement = (from item1 in hostElement.Elements()
                                            where item1.Element("name").Value == hostingUnit.HostingUnitName
                                            select item1
                                            ).FirstOrDefault();
-
+            hostingUnitElement.Element("HostingUnitKey").Value = hostingUnit.HostingUnitKey.ToString();
             hostingUnitElement.Element("name").Value = hostingUnit.HostingUnitName;
             hostingUnitElement.Element("city").Value = hostingUnit.City;
             hostingUnitElement.Element("house-number").Value = hostingUnit.HouseNumber;
@@ -360,6 +469,8 @@ namespace DAL
                                where item.Element("name").Value == hu
                                select new HostingUnit()
                                {
+                                   Owner = GetHost(email),
+                                   HostingUnitKey = int.Parse(item.Element("HostingUnitKey").Value),
                                    HostingUnitName = item.Element("name").Value,
                                    City = item.Element("city").Value,
                                    HouseNumber = item.Element("house-number").Value,
@@ -520,11 +631,6 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public void AddOrder(Order order)
-        {
-            throw new NotImplementedException();
-        }
-
         public bool UpdateOrder(Order order)
         {
             throw new NotImplementedException();
@@ -555,9 +661,13 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public void DiaryChangeToOccuped(HostingUnit hu, GuestRequest gs)
+        public void DiaryChangeToOccuped(HostingUnit hostingUnit, GuestRequest guest)
         {
-            throw new NotImplementedException();
+            LoadHostData();
+            for (var date = guest.EntryDate; date < guest.ReleaseDate; date = date.AddDays(1))
+            {
+                hostingUnit.Diary[date.Month, date.Day] = true;
+            }
         }
 
         public IEnumerable<HostingUnit> GetHostingUnitList()

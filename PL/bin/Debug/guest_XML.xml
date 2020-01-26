@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<guest>
+<guests>
   <GuestRequest>
-    <GuestRequestKey>10000000</GuestRequestKey>
+    <GuestRequestKey>1</GuestRequestKey>
     <eMail>a</eMail>
     <name>
       <firstName>Julien</firstName>
@@ -28,7 +28,7 @@
     </numbers>
   </GuestRequest>
   <GuestRequest>
-    <GuestRequestKey>10000000</GuestRequestKey>
+    <GuestRequestKey>2</GuestRequestKey>
     <eMail>b</eMail>
     <name>
       <firstName>david</firstName>
@@ -54,4 +54,31 @@
       <totalNumPersons>2</totalNumPersons>
     </numbers>
   </GuestRequest>
-</guest>
+  <GuestRequest>
+    <GuestRequestKey>3</GuestRequestKey>
+    <eMail>fwe</eMail>
+    <name>
+      <firstName>wef</firstName>
+      <lastName>fwe</lastName>
+      <phoneNumber>23</phoneNumber>
+    </name>
+    <date>
+      <entryDate>16-01-2020</entryDate>
+      <releaseDate>24-01-2020</releaseDate>
+      <registrationDate>26-01-2020</registrationDate>
+    </date>
+    <options>
+      <pool>Option</pool>
+      <childrenAttractions>Option</childrenAttractions>
+      <jaccuzzi>Option</jaccuzzi>
+      <garden>Option</garden>
+      <hostingUnitType>All</hostingUnitType>
+      <area>All</area>
+    </options>
+    <numbers>
+      <numAdults>2</numAdults>
+      <numChildren>2</numChildren>
+      <totalNumPersons>4</totalNumPersons>
+    </numbers>
+  </GuestRequest>
+</guests>

@@ -19,12 +19,29 @@ namespace BL
             }
             return instance;
         }
+        #region SetKey
+        public void SetHostKey(Host host)
+        {
+            XML xml = new XML();
+            xml.SetHostKey(host);
+        }
+        public void SetHostingUnitKey(HostingUnit hostingUnit)
+        {
+            XML xml = new XML();
+            xml.SetHostingUnitKey(hostingUnit);
+        }
+        public void SetGuestRequestKey(GuestRequest guestRequest)
+        {
+            XML xml = new XML();
+            xml.SetGuestRequestKey(guestRequest);
+        }
+        public void SetOrderKey(Order order)
+        {
+            XML xml = new XML();
+            xml.SetOrderKey(order);
+        }
+        #endregion
         #region Host XML
-        //public static long GetLastHostKey()
-        //{
-        //    XML xml = new XML();
-        //    return 1;
-        //}
         public void AddHost (Host host)
         {
             XML xml = new XML();
@@ -75,7 +92,8 @@ namespace BL
 
         public void AddOrder(Order order)
         {
-            d.AddOrder(order);
+            XML xml = new XML();
+            xml.AddOrder(order);
         }
 
         public bool DeleteHostingUnit(string email, string hu)
@@ -131,11 +149,13 @@ namespace BL
 
         public void UpdateHostingUnit(HostingUnit hostingUnit)
         {
-            HostingUnit hu = DataSource.hostingUnitList.FirstOrDefault(h => h.HostingUnitKey == hostingUnit.HostingUnitKey);
-            Order order = DataSource.orderList.FirstOrDefault(o => o.HostingUnitKey == hostingUnit.HostingUnitKey);
+            //HostingUnit hu = DataSource.hostingUnitList.FirstOrDefault(h => h.HostingUnitKey == hostingUnit.HostingUnitKey);
+            //Order order = DataSource.orderList.FirstOrDefault(o => o.HostingUnitKey == hostingUnit.HostingUnitKey);
             //if an order is in progress we can't cancel the Debit Authorisation
-            if (!hostingUnit.DebitAuthorization && hu.DebitAuthorization && order.status_Order==Status_order.In_progress)
-                throw new Exception("You can't cancel the Debit Authorisation as an order is in progress!");
+            //if (!hostingUnit.DebitAuthorization && hu.DebitAuthorization && order.status_Order==Status_order.In_progress)
+            //    throw new Exception("You can't cancel the Debit Authorisation as an order is in progress!");
+            XML xml = new XML();
+            xml.UpdateHostingUnit(hostingUnit);
         }
 
         public bool UpdateOrder(Order order)
@@ -239,7 +259,15 @@ namespace BL
                 return (int)(list[1] - list[0]).TotalDays + 1;
             }
         }
-        
+
+        public void DiaryChangeToOccuped(HostingUnit hostingUnit, GuestRequest guest)
+        {
+            for (var date = guest.EntryDate; date < guest.ReleaseDate; date = date.AddDays(1))
+            {
+                hostingUnit.Diary[date.Month, date.Day] = true;
+            }
+        }
+
         public List<HostingUnit> HostingUnitPerHost(Host h)
         {
             List<HostingUnit> HostingUnitList = new List<HostingUnit>();
@@ -292,7 +320,8 @@ namespace BL
                 || (guest.childrenAttractions != ChildrensAttractions.Option && guest.childrenAttractions != hosting.childrenAttractions)
                 || (guest.garden != Garden.Option && guest.garden != hosting.garden)
                 || (guest.area != Area.All && guest.area != hosting.area)
-                || (guest.type != Type.All && guest.type!= hosting.type)
+                || (guest.type != Type.All && guest.type != hosting.type)
+                || !CheckDatesAvailable(hosting, guest)
                 )
                 return false;
             return true;
