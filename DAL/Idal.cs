@@ -76,14 +76,12 @@ namespace DAL
         /// <returns></returns>
         bool IsHostingUnitExists(HostingUnit hostingUnit);
 
-        /// <summary>
-        /// returns copy of the Hosting Unit collection which answer a specific predicate or null
-        /// </summary>
-        /// <param name="predicat"></param>
-        /// <returns></returns>
-        IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicat = null);
-
         IEnumerable<Host> GetHostsList(Func<Host, bool> predicat = null);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<HostingUnit> GetHostingUnitList();
         #endregion
 
         #region Order

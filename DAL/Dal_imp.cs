@@ -278,5 +278,10 @@ namespace DAL
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<HostingUnit> GetHostingUnitList()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -108,9 +108,10 @@ namespace BL
             return xml.GetHostingUnit(email, hu);
         }
 
-        public IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicate = null)
+        public IEnumerable<HostingUnit> GetHostingUnitList()
         {
-            return d.GetHostingUnitList(predicate);
+            XML xml = new XML();
+            return xml.GetHostingUnitList();
         }
 
         public Order GetOrder(long orderKey)

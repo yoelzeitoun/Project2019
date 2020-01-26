@@ -81,7 +81,7 @@ namespace BL
         /// </summary>
         /// <param name="predicat"></param>
         /// <returns></returns>
-        IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicat = null);
+        IEnumerable<HostingUnit> GetHostingUnitList();
         #endregion
 
         #region Order

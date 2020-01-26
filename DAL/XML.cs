@@ -560,12 +560,51 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicat = null)
+        public IEnumerable<HostingUnit> GetHostingUnitList()
         {
-            throw new NotImplementedException();
-        }
+            LoadHostData();
+            IEnumerable<HostingUnit> hostingUnitName = new List<HostingUnit>();
+            try
+            {
+                var selectHost = (from item in hostRoot.Elements()
 
-        public bool SendGuestToHost(GuestRequest guest, HostingUnit hosting)
+                                  select item.Element("hosting-units")).ToList();
+
+
+                hostingUnitName = (from item in selectHost.Elements()
+                                   select new HostingUnit()
+                                   {
+                                       //  HostingUnitKey=long.Parse(item.Element("HostingUnitKey").Value),
+                                       HostingUnitName = item.Element("name").Value,
+                                       City = item.Element("city").Value,
+                                       HouseNumber = item.Element("house-number").Value,
+                                       Street = item.Element("street").Value,
+                                       NumOfAdults = int.Parse(item.Element("num-of-adults").Value),
+                                       NumOfChildren = int.Parse(item.Element("num-of-children").Value),
+                                       PriceForAdult = int.Parse(item.Element("price-of-adult").Value),
+                                       PriceForChild = int.Parse(item.Element("price-of-child").Value),
+                                       area = (Area)Enum.Parse(typeof(Area), item.Element("area").Value, true),
+                                       type = (Type)Enum.Parse(typeof(Type), item.Element("hosting-unit-type").Value, true),
+                                       childrenAttractions = (ChildrensAttractions)Enum.Parse(typeof(ChildrensAttractions), item.Element("children-attractions").Value, true),
+                                       garden = (Garden)Enum.Parse(typeof(Garden), item.Element("garden").Value, true),
+                                       jacuzzi = (Jaccuzzi)Enum.Parse(typeof(Jaccuzzi), item.Element("jaccuzi").Value, true),
+                                       pool = (Pool)Enum.Parse(typeof(Pool), item.Element("pool").Value, true),
+                                       Pictures = (from pic in item.Element("pictures").Elements()
+                                                   select pic.Value).ToArray()
+
+                                   }
+                                   ).ToList();
+            }
+            catch
+            {
+                hostingUnitName = null;
+            }
+            return hostingUnitName;
+
+        }
+    
+
+    public bool SendGuestToHost(GuestRequest guest, HostingUnit hosting)
         {
             throw new NotImplementedException();
         }

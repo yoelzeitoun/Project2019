@@ -24,6 +24,7 @@ namespace PL
     {
         public HostingUnit CurrentHostingUnit { get; set; }
         Image MyImage;
+        public IBL bl;
         public GuestRequestOrderUserControl(HostingUnit hostUnit, GuestRequest guest)
         {
             InitializeComponent();
@@ -34,7 +35,7 @@ namespace PL
             UserControlGrid.DataContext = userDataContext;
             Grid.SetColumn(vbImage, 1);
             Grid.SetRow(vbImage, 0);
-
+            bl = Factory_BL.getBL();
             MyImage = CreateViewImage();
             vbImage.Child = null;
             vbImage.Child = MyImage;
@@ -42,10 +43,11 @@ namespace PL
             totalPriceTB.Text = CalculateTotalPrice(hostUnit, guest);
             entryDateTB.Text = guest.EntryDate.ToString("dd/MM/yyyy");
             releaseDateTB.Text = guest.ReleaseDate.ToString("dd/MM/yyyy");
+            totalNumberOfDaysTB.Text = bl.Time_Span(guest.EntryDate, guest.ReleaseDate).ToString();
         }
         public string CalculateTotalPrice (HostingUnit hostUnit, GuestRequest guest)
         {
-            int total = hostUnit.PriceForAdult * guest.NumAdults + hostUnit.PriceForChild * guest.NumChildren;
+            int total = (hostUnit.PriceForAdult * guest.NumAdults + hostUnit.PriceForChild * guest.NumChildren)* bl.Time_Span(guest.EntryDate, guest.ReleaseDate);
             return total.ToString();
         }
         public class UserDataContext

@@ -34,6 +34,6 @@
         <TextBox x:Name="releaseDateTB"  HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="436,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="113" RenderTransformOrigin="0.515,0.369"/>
         <TextBox x:Name="entryDateTB"  HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="428,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" RenderTransformOrigin="0.371,0.225"/>
         <Label Content=" Total Number of Days:" HorizontalAlignment="Left" Margin="2,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.694,-0.362" Width="214" Height="33"/>
-        <TextBox x:Name="totalPriceTB_Copy"  HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="227,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+        <TextBox x:Name="totalNumberOfDaysTB"  HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="227,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
     </Grid>
 </UserControl>
