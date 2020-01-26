@@ -58,8 +58,8 @@
     <GuestRequestKey>3</GuestRequestKey>
     <eMail>fwe</eMail>
     <name>
-      <firstName>wef</firstName>
-      <lastName>fwe</lastName>
+      <firstName>Sarah</firstName>
+      <lastName>Zerbib</lastName>
       <phoneNumber>23</phoneNumber>
     </name>
     <date>
@@ -85,8 +85,8 @@
     <GuestRequestKey>4</GuestRequestKey>
     <eMail>ef</eMail>
     <name>
-      <firstName>fe</firstName>
-      <lastName>fe</lastName>
+      <firstName>Chlomi</firstName>
+      <lastName>Levy</lastName>
       <phoneNumber>ef</phoneNumber>
     </name>
     <date>
@@ -106,6 +106,60 @@
       <numAdults>1</numAdults>
       <numChildren>1</numChildren>
       <totalNumPersons>2</totalNumPersons>
+    </numbers>
+  </GuestRequest>
+  <GuestRequest>
+    <GuestRequestKey>5</GuestRequestKey>
+    <eMail>Yonathan</eMail>
+    <name>
+      <firstName>Yonathan</firstName>
+      <lastName>Troupi</lastName>
+      <phoneNumber>rtg</phoneNumber>
+    </name>
+    <date>
+      <entryDate>08-01-2020</entryDate>
+      <releaseDate>18-01-2020</releaseDate>
+      <registrationDate>26-01-2020</registrationDate>
+    </date>
+    <options>
+      <pool>Option</pool>
+      <childrenAttractions>Option</childrenAttractions>
+      <jaccuzzi>Option</jaccuzzi>
+      <garden>Option</garden>
+      <hostingUnitType>All</hostingUnitType>
+      <area>All</area>
+    </options>
+    <numbers>
+      <numAdults>23</numAdults>
+      <numChildren>23</numChildren>
+      <totalNumPersons>46</totalNumPersons>
+    </numbers>
+  </GuestRequest>
+  <GuestRequest>
+    <GuestRequestKey>6</GuestRequestKey>
+    <eMail>ertg</eMail>
+    <name>
+      <firstName>yol</firstName>
+      <lastName>tupo</lastName>
+      <phoneNumber>rdt</phoneNumber>
+    </name>
+    <date>
+      <entryDate>08-02-2020</entryDate>
+      <releaseDate>19-02-2020</releaseDate>
+      <registrationDate>26-01-2020</registrationDate>
+    </date>
+    <options>
+      <pool>Option</pool>
+      <childrenAttractions>Option</childrenAttractions>
+      <jaccuzzi>Option</jaccuzzi>
+      <garden>Option</garden>
+      <hostingUnitType>All</hostingUnitType>
+      <area>All</area>
+    </options>
+    <numbers>
+      <numAdults>12</numAdults>
+      <numChildren>21</numChildren>
+      <totalNumPersons>33</totalNumPersons>
     </numbers>
   </GuestRequest>
 </guests>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Configuration>
   <HostKey>5</HostKey>
-  <GuestRequestKey>4</GuestRequestKey>
-  <HostingUnitKey>4</HostingUnitKey>
-  <OrderKey>1</OrderKey>
+  <GuestRequestKey>6</GuestRequestKey>
+  <HostingUnitKey>5</HostingUnitKey>
+  <OrderKey>6</OrderKey>
   <NumStaticOrderExpiration>0</NumStaticOrderExpiration>
   <Commission>10</Commission>
   <Admin_PASSWORD />

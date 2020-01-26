@@ -79,6 +79,9 @@ namespace PL
             bl.AddOrder(order);
             bl.DiaryChangeToOccuped(CurrentHostingUnit, CurrentGuestRequest);
             bl.UpdateHostingUnit(CurrentHostingUnit);
+
+            MessageBox.Show($"An email has just been sent!", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
+            Window.GetWindow(this).Close();
         }
 
         private void rejectBtn_Click(object sender, RoutedEventArgs e)

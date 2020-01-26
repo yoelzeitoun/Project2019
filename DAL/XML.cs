@@ -133,15 +133,15 @@ namespace DAL
         #region Order
         public void AddOrder(Order order)
         {
+            XElement OrderKey = new XElement("orderKey", order.OrderKey);
             XElement HostingUnitKey = new XElement("hostingUnitKey", order.HostingUnitKey);
             XElement GuestRequestKey = new XElement("guestRequestKey", order.GuestRequestKey);
-            XElement OrderKey = new XElement("orderKey", order.OrderKey);
             XElement status_Order = new XElement("status_Order", order.status_Order);
-            XElement CreateDate = new XElement("createDate", order.CreateDate);
-            XElement OrderDate = new XElement("orderDate", order.OrderDate);
+            XElement CreateDate = new XElement("createDate", order.CreateDate.ToString("dd/MM/yyyy"));
+            XElement OrderDate = new XElement("orderDate", order.OrderDate.ToString("dd/MM/yyyy"));
 
-            hostRoot.Add(new XElement("order", HostingUnitKey, GuestRequestKey, OrderKey, status_Order, CreateDate, OrderDate));
-            hostRoot.Save(orderPath);
+            orderRoot.Add(new XElement("order", OrderKey, HostingUnitKey, GuestRequestKey, status_Order, CreateDate, OrderDate));
+            orderRoot.Save(orderPath);
         }
         #endregion
         #region HOST
