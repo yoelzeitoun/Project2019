@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\App.xaml
-10-926847063
+16-494515184
 
-15-1432661245
+21-1856416536
 161766556435
-AddHostingUnit.xaml;GuestRequestOrder.xaml;GuestRequestOrderUserControl.xaml;HostingUnitWindows.xaml;HostInterface.xaml;HostOrder.xaml;MainWindow.xaml;GuestRequestWindows.xaml;RemoveHostingUnit.xaml;UpdateHostingUnit.xaml;
+AddHostingUnit.xaml;AdminMainWindow.xaml;AdminWindow.xaml;GetAllGuestRequestsListWindow.xaml;GetAllHostListWindow.xaml;GetHostingUnitListWindow.xaml;GetOrdersListWindow.xaml;GuestRequestOrder.xaml;GuestRequestOrderUserControl.xaml;HostingUnitWindows.xaml;HostInterface.xaml;HostOrder.xaml;MainWindow.xaml;GuestRequestWindows.xaml;RemoveHostingUnit.xaml;UpdateHostingUnit.xaml;
 
 True
 

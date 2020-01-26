@@ -1,0 +1,23 @@
+﻿<Window x:Class="PL.GetOrdersListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        Title="GetOrdersListWindow" Height="450" Width="800">
+    <Grid>
+
+        <DataGrid x:Name="OrdersDataList" RowHeight="70"  IsReadOnly="True" Grid.Row="1"  AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Status"  Binding="{Binding Order.status_order}" />
+                <DataGridTextColumn Header="HostingUnitKey" Binding="{Binding Order.HostingUnitKey}"/>
+                <DataGridTextColumn Header="GuestRequestKey" Binding="{Binding Order.GuestRequestKey}"/>
+                <DataGridTextColumn Header="OrderKey" Binding="{Binding Order.OrderKey}"/>
+                <DataGridTextColumn Header="OrderDate" Binding="{Binding Order.OrderDate}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

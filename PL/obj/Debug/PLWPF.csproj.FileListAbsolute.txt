@@ -39,3 +39,15 @@ C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\Gue
 C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\GuestRequestOrder.baml
 C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\GuestRequestOrderUserControl.g.cs
 C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\GuestRequestOrderUserControl.baml
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\AdminMainWindow.g.cs
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\AdminWindow.g.cs
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\GetAllGuestRequestsListWindow.g.cs
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\GetAllHostListWindow.g.cs
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\GetHostingUnitListWindow.g.cs
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\GetOrdersListWindow.g.cs
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\AdminMainWindow.baml
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\AdminWindow.baml
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\GetAllGuestRequestsListWindow.baml
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\GetAllHostListWindow.baml
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\GetHostingUnitListWindow.baml
+C:\Users\td\source\repos\GitRepositorie\yoelzeitoun\Project2019\PL\obj\Debug\GetOrdersListWindow.baml

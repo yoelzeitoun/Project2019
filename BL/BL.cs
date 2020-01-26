@@ -97,9 +97,9 @@ namespace BL
             return d.GetGuestRequest(guestRequestKey);
         }
 
-        public IEnumerable<GuestRequest> GetGuestRequestList(Func<GuestRequest, bool> predicate = null)
+        public IEnumerable<GuestRequest> GetGuestRequestList()
         {
-            return d.GetGuestRequestList(predicate);
+            return d.GetGuestRequestList();
         }
 
         public HostingUnit GetHostingUnit(string email, string hu)
@@ -295,6 +295,11 @@ namespace BL
                 )
                 return false;
             return true;
+        }
+
+        public IEnumerable<GuestRequest> GetGuestRequestList(Func<GuestRequest, bool> predicat = null)
+        {
+            throw new NotImplementedException();
         }
         //public IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicat = null)
         //{

@@ -58,6 +58,24 @@
     <Compile Include="AddHostingUnit.xaml.cs">
       <DependentUpon>AddHostingUnit.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AdminMainWindow.xaml.cs">
+      <DependentUpon>AdminMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllGuestRequestsListWindow.xaml.cs">
+      <DependentUpon>GetAllGuestRequestsListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllHostListWindow.xaml.cs">
+      <DependentUpon>GetAllHostListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GetHostingUnitListWindow.xaml.cs">
+      <DependentUpon>GetHostingUnitListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GetOrdersListWindow.xaml.cs">
+      <DependentUpon>GetOrdersListWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GuestRequestOrder.xaml.cs">
       <DependentUpon>GuestRequestOrder.xaml</DependentUpon>
     </Compile>
@@ -77,6 +95,30 @@
       <DependentUpon>UpdateHostingUnit.xaml</DependentUpon>
     </Compile>
     <Page Include="AddHostingUnit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminMainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GetAllGuestRequestsListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GetAllHostListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GetHostingUnitListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GetOrdersListWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
