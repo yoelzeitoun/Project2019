@@ -4,36 +4,34 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PL"
-             mc:Ignorable="d" 
-             d:DesignHeight="236.299" d:DesignWidth="795.73" BorderThickness="1" FontFamily="Arial" FontSize="20">
-    <Grid Name="UserControlGrid" Margin="0,0,-4.667,-4.667" >
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+             mc:Ignorable="d" BorderThickness="1" FontFamily="Arial" FontSize="20" Height="306.762" Width="826.691">
+    <Grid Name="UserControlGrid" Margin="4,0,1,-2" >
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="553*"/>
             <ColumnDefinition Width="246*"/>
         </Grid.ColumnDefinitions>
 
         <TextBox Name="huNameTB" Text="{Binding hostUnit.HostingUnitName}" TextAlignment="Center" BorderThickness="0" FontStyle="Italic" FontSize="30" FontFamily="Gabriola" Foreground="SkyBlue" IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Top" Height="51" Margin="6,0,7,0" TextWrapping="Wrap"  Width="785" Padding="5" Grid.ColumnSpan="2"  />
-        <Label Content=" Number of Guests:" HorizontalAlignment="Left" Margin="-1,120,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.694,-0.362" Width="190" Height="33"/>
-        <TextBox Name="numOfGuestsTB"  BorderThickness="0" IsHitTestVisible="False" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.653,1.413" Margin="190,125,0,0" />
+        <Label Content=" Number of Guests:" FontSize="15" HorizontalAlignment="Left" Margin="-1,120,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.694,-0.362" Width="190" Height="33"/>
+        <TextBox Name="numOfGuestsTB" FontSize="15" BorderThickness="0" IsHitTestVisible="False" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.653,1.413" Margin="179,125,0,0" />
         <Button Name="approveBtn" Content="APPROVE" Background="Green" HorizontalAlignment="Left" Margin="147,203,0,0" VerticalAlignment="Top" Width="171" Grid.Column="0" Height="27" Click="approveBtn_Click"/>
-        <Label Content=" First Name:" HorizontalAlignment="Left" Margin="3,42,0,0" VerticalAlignment="Top" Height="35" Width="145" RenderTransformOrigin="0.335,0.497"/>
-        <Label Content=" Last Name:" HorizontalAlignment="Left" Margin="292,45,0,0" VerticalAlignment="Top" Height="35" Width="120"/>
-        <TextBox Name="FirstNameTB" Text="{Binding guest.FirstName}" HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="137,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="LastNameTB" Text="{Binding guest.LastName}" HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="433,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" Grid.ColumnSpan="2"/>
-        <Label Content=" Phone Number:" HorizontalAlignment="Left" Margin="3,82,0,0" VerticalAlignment="Top" Height="35" Width="177"/>
-        <TextBox Name="PhoneNumberTB" Text="{Binding guest.PhoneNumber}" HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="176,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" RenderTransformOrigin="0.34,0.601"/>
+        <Label Content=" First Name:" FontSize="15" HorizontalAlignment="Left" Margin="3,42,0,0" VerticalAlignment="Top" Height="35" Width="145" RenderTransformOrigin="0.335,0.497"/>
+        <Label Content=" Last Name:" FontSize="15" HorizontalAlignment="Left" Margin="292,45,0,0" VerticalAlignment="Top" Height="35" Width="120"/>
+        <TextBox Name="FirstNameTB" Text="{Binding guest.FirstName}" FontSize="15" HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="137,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+        <TextBox Name="LastNameTB" FontSize="15" Text="{Binding guest.LastName}" HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="420,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <Label Content=" Phone Number:" FontSize="15" HorizontalAlignment="Left" Margin="3,82,0,0" VerticalAlignment="Top" Height="35" Width="177"/>
+        <TextBox Name="PhoneNumberTB" FontSize="15" Text="{Binding guest.PhoneNumber}" HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="177,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.34,0.601"/>
         <Viewbox x:Name="vbImage" Width="226" Height="145" Stretch="Fill"  Grid.Column="1" HorizontalAlignment="Left" Margin="13.667,49,0,0" VerticalAlignment="Top"/>
         <Button x:Name="rejectBtn" Content="REJECT" Background="Red" HorizontalAlignment="Left" Margin="446,204,0,0" VerticalAlignment="Top" Width="171" Grid.Column="0" Height="27" Grid.ColumnSpan="2" Click="rejectBtn_Click"/>
-        <Label Content=" Total Price:" HorizontalAlignment="Left" Margin="303,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.694,-0.362" Width="118" Height="33"/>
-        <TextBox x:Name="totalPriceTB"  HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="438,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="113"/>
-        <Label Content=" Release Date:" HorizontalAlignment="Left" Margin="291,116,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.694,-0.362" Width="139" Height="33"/>
-        <Label Content=" Entry Date:" HorizontalAlignment="Left" Margin="291,81,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.694,-0.362" Width="144" Height="33"/>
-        <TextBox x:Name="releaseDateTB"  HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="436,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="113" RenderTransformOrigin="0.515,0.369"/>
-        <TextBox x:Name="entryDateTB"  HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="428,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" RenderTransformOrigin="0.371,0.225"/>
-        <Label Content=" Total Number of Days:" HorizontalAlignment="Left" Margin="2,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.694,-0.362" Width="214" Height="33"/>
-        <TextBox x:Name="totalNumberOfDaysTB"  HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="227,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+        <Label Content=" Total Price:" FontSize="15" HorizontalAlignment="Left" Margin="303,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.694,-0.362" Width="118" Height="33"/>
+        <TextBox x:Name="totalPriceTB" FontSize="15"  HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="420,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content=" Release Date:" FontSize="15" HorizontalAlignment="Left" Margin="291,116,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.694,-0.362" Width="139" Height="33"/>
+        <Label Content=" Entry Date:" FontSize="15" HorizontalAlignment="Left" Margin="291,81,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.694,-0.362" Width="144" Height="33"/>
+        <TextBox x:Name="releaseDateTB" FontSize="15"  HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="420,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.515,0.369"/>
+        <TextBox x:Name="entryDateTB" FontSize="15"  HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="420,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.371,0.225"/>
+        <Label Content=" Total Number of Days:" FontSize="15" HorizontalAlignment="Left" Margin="2,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.694,-0.362" Width="214" Height="33"/>
+        <TextBox x:Name="totalNumberOfDaysTB" FontSize="15"  HorizontalAlignment="Left" IsHitTestVisible="False" BorderThickness="0" Height="30" Margin="179,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103"/>
+        <Border BorderBrush="SkyBlue" BorderThickness="3" CornerRadius="20" HorizontalAlignment="Left" Height="258" Margin="0,-3,0,0" VerticalAlignment="Top" Width="812" Grid.ColumnSpan="2"/>
     </Grid>
 </UserControl>

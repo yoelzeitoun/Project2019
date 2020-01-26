@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL"
         mc:Ignorable="d"
-        Title="HostOrder" Height="700" Width="800">
+        Title="HostOrder" Height="700" Width="900">
     <ScrollViewer>
     <Grid x:Name="MainGrid" >
         <Grid.RowDefinitions>
