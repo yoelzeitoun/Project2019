@@ -12,6 +12,6 @@ namespace BE
         public static int _OrderKey = 0;
         public static int NumStaticOrderExpiration = 0;
         public static int Commission = 10;
-        public static string Admin_PASSWORD;
+        public static string Admin_PASSWORD = "1";
     }
 }

@@ -133,6 +133,7 @@ namespace BL
         void SetGuestRequestKey(GuestRequest guestRequest);
         void SetOrderKey(Order order);
         void AddHost(Host host);
+        IEnumerable<Host> GetHostList();
         bool IsHostExists(string email);
         bool CheckPass(string email, string password);
         Host GetHost(string email);

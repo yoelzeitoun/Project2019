@@ -24,22 +24,6 @@ namespace PL
         {
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
-
-        }
-
-        private void TesterTab_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void OrdersTab_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TabAdmin_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

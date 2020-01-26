@@ -48,4 +48,36 @@
     <createDate>26-01-2020</createDate>
     <orderDate>26-01-2020</orderDate>
   </order>
+  <order>
+    <orderKey>7</orderKey>
+    <hostingUnitKey>2</hostingUnitKey>
+    <guestRequestKey>2</guestRequestKey>
+    <status_Order>Email_sent</status_Order>
+    <createDate>26-01-2020</createDate>
+    <orderDate>26-01-2020</orderDate>
+  </order>
+  <order>
+    <orderKey>8</orderKey>
+    <hostingUnitKey>2</hostingUnitKey>
+    <guestRequestKey>1</guestRequestKey>
+    <status_Order>Email_sent</status_Order>
+    <createDate>26-01-2020</createDate>
+    <orderDate>26-01-2020</orderDate>
+  </order>
+  <order>
+    <orderKey>9</orderKey>
+    <hostingUnitKey>1</hostingUnitKey>
+    <guestRequestKey>5</guestRequestKey>
+    <status_Order>Email_sent</status_Order>
+    <createDate>27-01-2020</createDate>
+    <orderDate>27-01-2020</orderDate>
+  </order>
+  <order>
+    <orderKey>10</orderKey>
+    <hostingUnitKey>3</hostingUnitKey>
+    <guestRequestKey>1</guestRequestKey>
+    <status_Order>Email_sent</status_Order>
+    <createDate>27-01-2020</createDate>
+    <orderDate>27-01-2020</orderDate>
+  </order>
 </orders>

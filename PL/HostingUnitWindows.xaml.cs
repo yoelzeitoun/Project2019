@@ -53,7 +53,7 @@ namespace PL
             }
             else
             {
-                if (email.Text == "" || pword.Text == "" || First_name.Text == "" || Last_Name.Text == "" || Phone_number.Text == "")
+                if (email.Text == "" || pword.Text == "" || First_name.Text == "" || Last_Name.Text == "" || Phone_number.Text == "" || BankAccountNumber.Text == "")
                     MessageBox.Show($"Please fill all the fields!", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
                 else
                 {
@@ -63,9 +63,16 @@ namespace PL
                     host.FirstName = First_name.Text;
                     host.LastName = Last_Name.Text;
                     host.PhoneNumber = Phone_number.Text;
-                    bL.AddHost(host);
-                    this.Close();
-                    new HostInterface(email.Text).ShowDialog();
+                    host.BankAccountNumber = int.Parse(BankAccountNumber.Text);
+                    if (CollectionClearanceCheckBox.IsChecked == true)
+                    {
+                        login_button.IsEnabled = false;
+                        bL.AddHost(host);
+                        this.Close();
+                        new HostInterface(email.Text).ShowDialog();
+                    }
+                    else
+                        MessageBox.Show("please accept collections clearance!");
                 }
             }
         }

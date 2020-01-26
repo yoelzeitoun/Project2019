@@ -56,32 +56,39 @@ namespace PLWPF
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)
         {
-            GuestRequest guestRequest = new GuestRequest();
-            bL.SetGuestRequestKey(guestRequest);
-            guestRequest.FirstName = firstNameTextBox.Text;
-            guestRequest.LastName = lastNameTextBox.Text;
-            guestRequest.MailAddress = emailTextBox.Text;
-            guestRequest.PhoneNumber = phoneNumberTextBox.Text;
-            guestRequest.NumAdults = int.Parse(numbersOfAdultsTextBox.Text);
-            guestRequest.NumChildren = int.Parse(NumOfChildrentextBox.Text);
-            guestRequest.EntryDate = entryDate.SelectedDate.Value;
-            guestRequest.ReleaseDate = releaseDate.SelectedDate.Value;
-            guestRequest.RegistrationDate = DateTime.Now;
-            guestRequest.area = (Area)AreaComboBox.SelectedItem;
-            guestRequest.jacuzzi = (Jaccuzzi)jacuzzi.SelectedItem;
-            guestRequest.pool = (Pool)pool.SelectedItem;
-            guestRequest.childrenAttractions = (ChildrensAttractions)childrensAttraction.SelectedItem;
-            guestRequest.garden = (Garden)garden.SelectedItem;
-            guestRequest.type = (Type)HostingUnitTypeComboBox.SelectedItem;
+            try
+            {
+                GuestRequest guestRequest = new GuestRequest();
+                bL.SetGuestRequestKey(guestRequest);
+                guestRequest.FirstName = firstNameTextBox.Text;
+                guestRequest.LastName = lastNameTextBox.Text;
+                guestRequest.MailAddress = emailTextBox.Text;
+                guestRequest.PhoneNumber = phoneNumberTextBox.Text;
+                guestRequest.NumAdults = int.Parse(numbersOfAdultsTextBox.Text);
+                guestRequest.NumChildren = int.Parse(NumOfChildrentextBox.Text);
+                guestRequest.EntryDate = entryDate.SelectedDate.Value;
+                guestRequest.ReleaseDate = releaseDate.SelectedDate.Value;
+                guestRequest.RegistrationDate = DateTime.Now;
+                guestRequest.area = (Area)AreaComboBox.SelectedItem;
+                guestRequest.jacuzzi = (Jaccuzzi)jacuzzi.SelectedItem;
+                guestRequest.pool = (Pool)pool.SelectedItem;
+                guestRequest.childrenAttractions = (ChildrensAttractions)childrensAttraction.SelectedItem;
+                guestRequest.garden = (Garden)garden.SelectedItem;
+                guestRequest.type = (Type)HostingUnitTypeComboBox.SelectedItem;
+                if (firstNameTextBox.Text != "" && lastNameTextBox.Text != "" && emailTextBox.Text != "" && phoneNumberTextBox.Text != "")
+                    if (phoneNumberTextBox.Text.All(char.IsDigit) && numbersOfAdultsTextBox.Text.All(char.IsDigit) && NumOfChildrentextBox.Text.All(char.IsDigit))
+                    {
+                        bL.AddGuestRequest(guestRequest);
+                        MessageBox.Show($"your request has been successfully added,\n" + " one of us Hosts will contact you in the brief delay!  ", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
+                        this.Close();
+                    }
+            }
+            catch (Exception a)
+            {
+                MessageBox.Show(a.ToString());
+            }
 
-            bL.AddGuestRequest(guestRequest);
-
-            MessageBox.Show($"your request has been successfully added,\n" + " one of us Hosts will contact you in the brief delay!  ", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
-
-            this.Close();
-            //new GuestRequestOrder().ShowDialog();
-
-        }
+}
 
         private void firstNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {

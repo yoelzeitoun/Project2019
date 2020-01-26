@@ -55,6 +55,10 @@ namespace BL
         {
             return xml.GetHost(email);
         }
+        public IEnumerable<Host> GetHostList()
+        {
+            return xml.GetHostList();
+        }
         #endregion
         #region other
         public void AddGuestRequest(GuestRequest guestRequest)

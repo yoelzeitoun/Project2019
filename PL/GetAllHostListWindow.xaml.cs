@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BE;
+using BL;
 
 namespace PL
 {
@@ -19,9 +21,12 @@ namespace PL
     /// </summary>
     public partial class GetAllHostListWindow : Window
     {
+        IBL bl;
         public GetAllHostListWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); bl = BL.Factory_BL.getBL();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            this.HostListData.ItemsSource = bl.GetHostList();
         }
     }
 }

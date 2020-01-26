@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" Title="Main Window" Height="700" Width="800">
-    <Grid>
+    <Grid Background="AliceBlue">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="4*"/>
@@ -13,17 +13,16 @@
         <Image x:Name="welcomeImage"  Grid.Row="1" Source="https://i.imgur.com/tm2yGpu.jpg" Margin="0,0,0.2,119.8" Grid.RowSpan="2" />
         <TextBlock x:Name="textBlockWelcome"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="65" Foreground="SkyBlue" Text="Welcome !"></TextBlock>
 
-        <Grid  Grid.Row="2" >
+        <Grid Background="AliceBlue" Grid.Row="2" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Content="Guest Request" FontFamily="Gabriola" Margin="9.8,27,9.6,22" Grid.Column="0" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Click="Guest_Request_Button_Click" RenderTransformOrigin="0.5,0.502" />
-            <Button Content="Host Enter" FontFamily="Gabriola" Margin="9.8,27,9.6,22" Grid.Column="1" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Click="Hosting_Units_Button_Click" RenderTransformOrigin="0.5,0.503" />
-            <Button Content="Administrator" FontFamily="Gabriola" Margin="9.8,27,9.6,22" Grid.Column="2" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Click="Administrator_Button_Click" />
-            <Button Content="More..." FontFamily="Gabriola" Margin="9.8,27,9.6,22" Grid.Column="3" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="35" FontWeight="Bold" Click="More_Window_Button_Click" />
+            <Button Content="Guest Request" BorderBrush="Black"  FontFamily="Gabriola" Margin="0,27,263.6,22" Grid.Column="0" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Click="Guest_Request_Button_Click" RenderTransformOrigin="0.5,0.502" Grid.ColumnSpan="2" />
+            <Button Content="Host Enter" BorderBrush="Black"  FontFamily="Gabriola" Margin="5.2,27,259.6,22" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Click="Hosting_Units_Button_Click" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Column="1" />
+            <Button Content="Administrator" BorderBrush="Black" FontFamily="Gabriola" Margin="10.4,27,-0.4,22" Grid.Column="2" Background="SkyBlue" Foreground="#FFF1F3F4" FontSize="30" FontWeight="Bold" Click="Administrator_Button_Click" />
         </Grid>
+        <Label Content="בסד" HorizontalAlignment="Left" Margin="728,10,0,0" VerticalAlignment="Top" Width="56"/>
     </Grid>
 </Window>

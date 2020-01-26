@@ -8,7 +8,7 @@
 Title="AdminWindow" Height="450" Width="800">
     <Grid Background="AliceBlue">
 
-        <TextBox x:Name="IdTextBox" HorizontalAlignment="Left"  PreviewMouseDown="ID_PreviewMouseDown"   FontSize="24"  Foreground="Gray" MaxLength="9"  Text="Enter your Password" Height="99" Margin="128,135,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="577" />
+        <TextBox x:Name="Id" HorizontalAlignment="Left"  PreviewMouseDown="ID_PreviewMouseDown"   FontSize="24"  Foreground="Gray" MaxLength="9"  Text="Enter your Password" Height="99" Margin="128,135,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="577" />
         <GroupBox x:Name="groupBox"  FlowDirection="RightToLeft" BorderBrush="Blue" BorderThickness="3" Header="password"  Margin="89,125,88.6,0" VerticalAlignment="Top" Height="109"/>
         <Button x:Name="GoBotton" Background="WhiteSmoke" FontStyle="Italic" FontFamily="black" FontStretch="Medium"  Content="OK" Margin="128,266,567.6,0" VerticalAlignment="Top" Height="29" Click="GoBotton_Click"/>
         <Label Content="WELCOME DEAR ADMIN!" FontSize="36"  FontStretch="ExtraCondensed" FontWeight="Bold" Background="WhiteSmoke" HorizontalAlignment="Left" Margin="195,10,0,0" VerticalAlignment="Top" Height="97" Width="443"/>

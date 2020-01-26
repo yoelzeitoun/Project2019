@@ -687,7 +687,7 @@ namespace DAL
                 hostingUnitName = (from item in selectHost.Elements()
                                    select new HostingUnit()
                                    {
-                                       //  HostingUnitKey=long.Parse(item.Element("HostingUnitKey").Value),
+                                       HostingUnitKey=long.Parse(item.Element("HostingUnitKey").Value),
                                        HostingUnitName = item.Element("name").Value,
                                        City = item.Element("city").Value,
                                        HouseNumber = item.Element("house-number").Value,

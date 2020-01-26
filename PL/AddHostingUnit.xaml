@@ -22,14 +22,14 @@
               Value="White" />
         </Style>
     </Window.Resources>-->
-    <Grid >
+    <Grid Background="AliceBlue">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="7*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock FontFamily="Gabriola"  Text="Add Hosting Unit" FontSize="50" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="DarkBlue"/>
-        <Button x:Name="addButton" FontFamily="Gabriola" Content="Save"  Grid.Row="2" FontSize="40" Margin="5,10,4.4,10" Foreground="#FFF4EFEF" Background="DarkGreen" Click="Add_Button_Click" FontWeight="Bold"  />
+        <Button x:Name="addButton" FontFamily="Gabriola" Content="Save"  Grid.Row="2" FontSize="40" Margin="5,10,4.4,10" Foreground="#FFF4EFEF" Background="LightSkyBlue" Click="Add_Button_Click" FontWeight="Bold"  />
         <Grid Grid.Row="1" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -71,7 +71,7 @@
                 <Label Content="Numbers of Adults:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
                 <TextBox x:Name="NumOfAdultsTextBox" Grid.Column="1" HorizontalAlignment="Center" Height="23" Margin="3" Grid.Row="4" VerticalAlignment="Center" Width="120" />
                 <Label Content="Area:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="6" VerticalAlignment="Center"/>
-                <ComboBox x:Name="areaComboBox" Grid.Column="1"  HorizontalAlignment="Center" Height="Auto"  Margin="3" Grid.Row="6" VerticalAlignment="Center" Width="120" />
+                <ComboBox x:Name="areaComboBox" Grid.Column="1"  HorizontalAlignment="Center" Height="Auto"  Margin="3" Grid.Row="6" VerticalAlignment="Center" Width="120" Background="Aqua"/>
                 <Label Content="Numbers of Children:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,7.667,0,3.333" Grid.Row="5" VerticalAlignment="Center" Width="186"/>
                 <TextBox x:Name="NumOfChildrenTextBox" Grid.Column="1" HorizontalAlignment="Center" Height="22" Grid.Row="5"  VerticalAlignment="Center" Width="120" />
                 <Label Content="" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="9" VerticalAlignment="Center"/>

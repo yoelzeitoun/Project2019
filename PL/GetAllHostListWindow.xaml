@@ -3,10 +3,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PL"
+        xmlns:local="clr-namespace:PLWPF.Properties"
+        xmlns:be="clr-namespace:BE;assembly=BE"
         mc:Ignorable="d"
         Title="GetAllHostListWindow" Height="450" Width="800">
     <Grid>
+        <DataGrid x:Name="HostListData" RowHeight="70" d:DataContext="{d:DesignInstance be:Host}"  IsReadOnly="True"  AutoGenerateColumns="False" Margin="0,74,-0.4,0"  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="HostKey"  Binding="{Binding HostKey}" />
+                <DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn Header="LastName" Binding="{Binding LastName}"/>
+                <DataGridTextColumn Header="PhoneNumber" Binding="{Binding PhoneNumber}"/>
+                <DataGridTextColumn Header="MailAddress" Binding="{Binding MailAddress}"/>
+                <!--<DataGridTextColumn Header="bankBranchDetails" Binding="{Binding bankBranchDetails}"/>-->
+                <!--<DataGridTextColumn Header="BankAccountNumber" Binding="{Binding BankAccountNumber}"/>-->
+                <DataGridTextColumn Header="CollectionClearance" Binding="{Binding CollectionClearance}"/>
+                <!--<DataGridTextColumn Header="Total_commission" Binding="{Binding Total_commission}"/>-->
 
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock x:Name="textBlockHostList"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="65" Foreground="Black" Text="The Host List!" Height="74" Margin="271,0,216.6,346" Width="306"></TextBlock>
     </Grid>
 </Window>

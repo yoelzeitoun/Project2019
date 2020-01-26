@@ -34,19 +34,25 @@ namespace PL
 
         private void GoBotton_Click(object sender, RoutedEventArgs e)
         {
-            int _id = 1;
-            if (int.Parse(IdTextBox.Text) == _id)
+            try
             {
-                this.Close();
-                new AdminMainWindow().ShowDialog();
+                if (Id.Text == Configuration.Admin_PASSWORD)
+                {
+                    this.Close();
+                    new AdminMainWindow().ShowDialog();
+                }
+                else
+                    MessageBox.Show("please enter a correct code!");
             }
-            else
-                MessageBox.Show("please enter a correct code!");
+            catch (Exception a)
+            {
+                MessageBox.Show(a.ToString());
+            }
         }
         private void ID_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (IdTextBox.Text == "Enter your ID")
-                IdTextBox.Clear();
+            if (Id.Text == "Enter your Password")
+                Id.Clear();
         }
     }
 }

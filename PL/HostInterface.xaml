@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="HostInterface" Height="700" Width="800">
 
-    <Grid>
+    <Grid Background="AliceBlue">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -16,7 +16,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid  Grid.Row="0" >
+        <Grid  Grid.Row="0" Background="AliceBlue">
             <TextBlock x:Name="textBlockWelcome"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Gabriola" TextWrapping="Wrap" FontSize="65" Foreground="SkyBlue" Text="Welcome Host!" ></TextBlock>
         </Grid>
         <Grid  Grid.Row="2" >
