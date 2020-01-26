@@ -130,12 +130,6 @@ namespace DAL
                 throw new Exception("File upload problem");
             }
         }
-        #region Configuration
-        public void UpdateConfiguration()
-        {
-
-        }
-        #endregion
         #region Order
         public void AddOrder(Order order)
         {
