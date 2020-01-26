@@ -13,14 +13,14 @@
     </name>
     <hosting-units>
       <hosting-unit>
-        <name>a</name>
+        <name>Great Hosting Unit</name>
         <city>a</city>
         <house-number>a</house-number>
         <street>a</street>
         <num-of-adults>1</num-of-adults>
         <num-of-children>1</num-of-children>
-        <price-of-adult>1</price-of-adult>
-        <price-of-child>1</price-of-child>
+        <price-of-adult>100</price-of-adult>
+        <price-of-child>50</price-of-child>
         <area>North</area>
         <hosting-unit-type>Zimmer</hosting-unit-type>
         <children-attractions>No</children-attractions>
@@ -42,14 +42,14 @@
         </pictures>
       </hosting-unit>
       <hosting-unit>
-        <name>b</name>
+        <name>Hosting Unit Roul</name>
         <city>b</city>
         <house-number>b</house-number>
         <street>b</street>
         <num-of-adults>1</num-of-adults>
         <num-of-children>1</num-of-children>
-        <price-of-adult>4</price-of-adult>
-        <price-of-child>4</price-of-child>
+        <price-of-adult>200</price-of-adult>
+        <price-of-child>100</price-of-child>
         <area>North</area>
         <hosting-unit-type>Guest_room</hosting-unit-type>
         <children-attractions>Yes</children-attractions>
@@ -68,35 +68,6 @@
           <pic7>https://i.pinimg.com/originals/b9/bb/71/b9bb71712fe6450a6c8faca0e15a9d63.jpg</pic7>
           <pic8>https://i.pinimg.com/originals/b9/bb/71/b9bb71712fe6450a6c8faca0e15a9d63.jpg</pic8>
           <pic9>https://i.pinimg.com/originals/b9/bb/71/b9bb71712fe6450a6c8faca0e15a9d63.jpg</pic9>
-        </pictures>
-      </hosting-unit>
-      <hosting-unit>
-        <name>c</name>
-        <city>c</city>
-        <house-number>c</house-number>
-        <street>c</street>
-        <num-of-adults>1</num-of-adults>
-        <num-of-children>1</num-of-children>
-        <price-of-adult>1</price-of-adult>
-        <price-of-child>1</price-of-child>
-        <area>South</area>
-        <hosting-unit-type>Guest_room</hosting-unit-type>
-        <children-attractions>No</children-attractions>
-        <garden>No</garden>
-        <jaccuzi>No</jaccuzi>
-        <pool>No</pool>
-        <diary>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,</diary>
-        <pictures>
-          <pic0>https://scontent.ftlv10-1.fna.fbcdn.net/v/t1.0-9/539256_149340201862497_1926228446_n.jpg?_nc_cat=111&amp;_nc_ohc=Cz_Mu3GdNMcAX_QsoEQ&amp;_nc_ht=scontent.ftlv10-1.fna&amp;oh=7dd3eff4553f27ebf145b93d57a40a59&amp;oe=5ED1C813</pic0>
-          <pic1>https://scontent.ftlv10-1.fna.fbcdn.net/v/t1.0-9/539256_149340201862497_1926228446_n.jpg?_nc_cat=111&amp;_nc_ohc=Cz_Mu3GdNMcAX_QsoEQ&amp;_nc_ht=scontent.ftlv10-1.fna&amp;oh=7dd3eff4553f27ebf145b93d57a40a59&amp;oe=5ED1C813</pic1>
-          <pic2>https://scontent.ftlv10-1.fna.fbcdn.net/v/t1.0-9/539256_149340201862497_1926228446_n.jpg?_nc_cat=111&amp;_nc_ohc=Cz_Mu3GdNMcAX_QsoEQ&amp;_nc_ht=scontent.ftlv10-1.fna&amp;oh=7dd3eff4553f27ebf145b93d57a40a59&amp;oe=5ED1C813</pic2>
-          <pic3>https://scontent.ftlv10-1.fna.fbcdn.net/v/t1.0-9/539256_149340201862497_1926228446_n.jpg?_nc_cat=111&amp;_nc_ohc=Cz_Mu3GdNMcAX_QsoEQ&amp;_nc_ht=scontent.ftlv10-1.fna&amp;oh=7dd3eff4553f27ebf145b93d57a40a59&amp;oe=5ED1C813</pic3>
-          <pic4>https://scontent.ftlv10-1.fna.fbcdn.net/v/t1.0-9/539256_149340201862497_1926228446_n.jpg?_nc_cat=111&amp;_nc_ohc=Cz_Mu3GdNMcAX_QsoEQ&amp;_nc_ht=scontent.ftlv10-1.fna&amp;oh=7dd3eff4553f27ebf145b93d57a40a59&amp;oe=5ED1C813</pic4>
-          <pic5>https://scontent.ftlv10-1.fna.fbcdn.net/v/t1.0-9/539256_149340201862497_1926228446_n.jpg?_nc_cat=111&amp;_nc_ohc=Cz_Mu3GdNMcAX_QsoEQ&amp;_nc_ht=scontent.ftlv10-1.fna&amp;oh=7dd3eff4553f27ebf145b93d57a40a59&amp;oe=5ED1C813</pic5>
-          <pic6>https://scontent.ftlv10-1.fna.fbcdn.net/v/t1.0-9/539256_149340201862497_1926228446_n.jpg?_nc_cat=111&amp;_nc_ohc=Cz_Mu3GdNMcAX_QsoEQ&amp;_nc_ht=scontent.ftlv10-1.fna&amp;oh=7dd3eff4553f27ebf145b93d57a40a59&amp;oe=5ED1C813</pic6>
-          <pic7>https://scontent.ftlv10-1.fna.fbcdn.net/v/t1.0-9/539256_149340201862497_1926228446_n.jpg?_nc_cat=111&amp;_nc_ohc=Cz_Mu3GdNMcAX_QsoEQ&amp;_nc_ht=scontent.ftlv10-1.fna&amp;oh=7dd3eff4553f27ebf145b93d57a40a59&amp;oe=5ED1C813</pic7>
-          <pic8>https://scontent.ftlv10-1.fna.fbcdn.net/v/t1.0-9/539256_149340201862497_1926228446_n.jpg?_nc_cat=111&amp;_nc_ohc=Cz_Mu3GdNMcAX_QsoEQ&amp;_nc_ht=scontent.ftlv10-1.fna&amp;oh=7dd3eff4553f27ebf145b93d57a40a59&amp;oe=5ED1C813</pic8>
-          <pic9>https://scontent.ftlv10-1.fna.fbcdn.net/v/t1.0-9/539256_149340201862497_1926228446_n.jpg?_nc_cat=111&amp;_nc_ohc=Cz_Mu3GdNMcAX_QsoEQ&amp;_nc_ht=scontent.ftlv10-1.fna&amp;oh=7dd3eff4553f27ebf145b93d57a40a59&amp;oe=5ED1C813</pic9>
         </pictures>
       </hosting-unit>
     </hosting-units>

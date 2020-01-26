@@ -47,18 +47,13 @@ namespace PL
                     HostingUnit hostingUnit = bL.GetHostingUnit(eMail, hosting);
                     if (bL.SendGuestToHost(guest, hostingUnit))
                     {
-                        GuestRequestOrderUserControl a = new GuestRequestOrderUserControl(hostingUnit);
+                        GuestRequestOrderUserControl a = new GuestRequestOrderUserControl(hostingUnit, guest);
                         MainGrid.Children.Add(a);
                         MainGrid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
                         Grid.SetRow(a, index + 1);
                         index++;
                     }
                 }
-        }
-
-        private void MainGrid_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
-        {
-
         }
     }
 }

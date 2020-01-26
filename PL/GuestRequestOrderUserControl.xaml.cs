@@ -24,17 +24,34 @@ namespace PL
     {
         public HostingUnit CurrentHostingUnit { get; set; }
         Image MyImage;
-        public GuestRequestOrderUserControl(HostingUnit hostUnit)
+        public GuestRequestOrderUserControl(HostingUnit hostUnit, GuestRequest guest)
         {
             InitializeComponent();
             this.CurrentHostingUnit = hostUnit;
-            UserControlGrid.DataContext = hostUnit;
+            UserDataContext userDataContext = new UserDataContext();
+            userDataContext.hostUnit = hostUnit;
+            userDataContext.guest = guest;
+            UserControlGrid.DataContext = userDataContext;
             Grid.SetColumn(vbImage, 1);
             Grid.SetRow(vbImage, 0);
 
             MyImage = CreateViewImage();
             vbImage.Child = null;
             vbImage.Child = MyImage;
+            numOfGuestsTB.Text = guest.TotalNumPersons.ToString();
+            totalPriceTB.Text = CalculateTotalPrice(hostUnit, guest);
+            entryDateTB.Text = guest.EntryDate.ToString("dd/MM/yyyy");
+            releaseDateTB.Text = guest.ReleaseDate.ToString("dd/MM/yyyy");
+        }
+        public string CalculateTotalPrice (HostingUnit hostUnit, GuestRequest guest)
+        {
+            int total = hostUnit.PriceForAdult * guest.NumAdults + hostUnit.PriceForChild * guest.NumChildren;
+            return total.ToString();
+        }
+        public class UserDataContext
+        {
+            public HostingUnit hostUnit { get; set; }
+            public GuestRequest guest { get; set; }
         }
         private Image CreateViewImage()
         {

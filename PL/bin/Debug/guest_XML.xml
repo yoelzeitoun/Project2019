@@ -4,9 +4,9 @@
     <GuestRequestKey>10000000</GuestRequestKey>
     <eMail>a</eMail>
     <name>
-      <firstName>a</firstName>
-      <lastName>a</lastName>
-      <phoneNumber>1</phoneNumber>
+      <firstName>Julien</firstName>
+      <lastName>dubois</lastName>
+      <phoneNumber>0547881771</phoneNumber>
     </name>
     <date>
       <entryDate>09-01-2020</entryDate>
@@ -23,7 +23,7 @@
     </options>
     <numbers>
       <numAdults>1</numAdults>
-      <numChildren>1</numChildren>
+      <numChildren>5</numChildren>
       <totalNumPersons>2</totalNumPersons>
     </numbers>
   </GuestRequest>
@@ -31,9 +31,9 @@
     <GuestRequestKey>10000000</GuestRequestKey>
     <eMail>b</eMail>
     <name>
-      <firstName>b</firstName>
-      <lastName>b</lastName>
-      <phoneNumber>1</phoneNumber>
+      <firstName>david</firstName>
+      <lastName>Benhamou</lastName>
+      <phoneNumber>0549882001</phoneNumber>
     </name>
     <date>
       <entryDate>23-01-2020</entryDate>
@@ -49,8 +49,8 @@
       <area>All</area>
     </options>
     <numbers>
-      <numAdults>1</numAdults>
-      <numChildren>1</numChildren>
+      <numAdults>2</numAdults>
+      <numChildren>0</numChildren>
       <totalNumPersons>2</totalNumPersons>
     </numbers>
   </GuestRequest>
