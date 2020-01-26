@@ -10,6 +10,7 @@ namespace BL
     public class BL : IBL
     {
         IDal d;
+        public XML xml = Factory_XML.GetXML();
         private static BL instance = null;
         public static BL getMyBL()
         {
@@ -22,44 +23,36 @@ namespace BL
         #region SetKey
         public void SetHostKey(Host host)
         {
-            XML xml = new XML();
             xml.SetHostKey(host);
         }
         public void SetHostingUnitKey(HostingUnit hostingUnit)
         {
-            XML xml = new XML();
             xml.SetHostingUnitKey(hostingUnit);
         }
         public void SetGuestRequestKey(GuestRequest guestRequest)
         {
-            XML xml = new XML();
             xml.SetGuestRequestKey(guestRequest);
         }
         public void SetOrderKey(Order order)
         {
-            XML xml = new XML();
             xml.SetOrderKey(order);
         }
         #endregion
         #region Host XML
         public void AddHost (Host host)
         {
-            XML xml = new XML();
             xml.AddHost(host);
         }
         public bool IsHostExists(string email)
         {
-            XML xml = new XML();
             return xml.IsHostExists(email);
         }
         public bool CheckPass(string email, string password)
         {
-            XML xml = new XML();
             return xml.CheckPass(email, password);
         }
         public Host GetHost(string email)
         {
-            XML xml = new XML();
             return xml.GetHost(email);
         }
         #endregion
@@ -71,28 +64,22 @@ namespace BL
                 throw new DuplicateWaitObjectException("Error in the interval date");
             else
             {
-                XML xml = new XML();
                 xml.AddGuestRequest(guestRequest);
             }
-            //d.AddGuestRequest(guestRequest);
         }
 
         public IEnumerable<string> HostingUnitList(string email)
         {
-            XML xml = new XML();
             return xml.HostingUnitList(email);
         }
 
         public void AddHostingUnit(HostingUnit hostingUnit)
         {
-            //d.AddHostingUnit(hostingUnit);
-            XML xml = new XML();
             xml.AddHostingUnit(hostingUnit);
         }
 
         public void AddOrder(Order order)
         {
-            XML xml = new XML();
             xml.AddOrder(order);
         }
 
@@ -104,7 +91,6 @@ namespace BL
             //if (d.DeleteHostingUnit(hostingUnit))
             //    return true;
             //return false;
-            XML xml = new XML();
             if (xml.DeleteHostingUnit(email, hu))
                 return true;
             return false;
@@ -122,13 +108,11 @@ namespace BL
 
         public HostingUnit GetHostingUnit(string email, string hu)
         {
-            XML xml = new XML();
             return xml.GetHostingUnit(email, hu);
         }
 
         public IEnumerable<HostingUnit> GetHostingUnitList()
         {
-            XML xml = new XML();
             return xml.GetHostingUnitList();
         }
 
@@ -154,7 +138,6 @@ namespace BL
             //if an order is in progress we can't cancel the Debit Authorisation
             //if (!hostingUnit.DebitAuthorization && hu.DebitAuthorization && order.status_Order==Status_order.In_progress)
             //    throw new Exception("You can't cancel the Debit Authorisation as an order is in progress!");
-            XML xml = new XML();
             xml.UpdateHostingUnit(hostingUnit);
         }
 
@@ -309,7 +292,6 @@ namespace BL
 
         public IEnumerable<GuestRequest> GuestRequestList()
         {
-            XML xml = new XML();
             return xml.GuestRequestList();
         }
 

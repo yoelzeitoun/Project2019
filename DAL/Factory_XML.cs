@@ -4,11 +4,11 @@ using System.Text;
 
 namespace DAL
 {
-    public class Factory
+    public class Factory_XML
     {
-        public static IDal getDal()
+        public static XML GetXML()
         {
-            return new Dal_imp();
+            return XML.GetMyXML();
         }
     }
 }

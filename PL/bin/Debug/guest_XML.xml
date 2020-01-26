@@ -81,4 +81,31 @@
       <totalNumPersons>4</totalNumPersons>
     </numbers>
   </GuestRequest>
+  <GuestRequest>
+    <GuestRequestKey>4</GuestRequestKey>
+    <eMail>ef</eMail>
+    <name>
+      <firstName>fe</firstName>
+      <lastName>fe</lastName>
+      <phoneNumber>ef</phoneNumber>
+    </name>
+    <date>
+      <entryDate>01-01-2020</entryDate>
+      <releaseDate>24-01-2020</releaseDate>
+      <registrationDate>26-01-2020</registrationDate>
+    </date>
+    <options>
+      <pool>Option</pool>
+      <childrenAttractions>Option</childrenAttractions>
+      <jaccuzzi>Option</jaccuzzi>
+      <garden>Option</garden>
+      <hostingUnitType>All</hostingUnitType>
+      <area>All</area>
+    </options>
+    <numbers>
+      <numAdults>1</numAdults>
+      <numChildren>1</numChildren>
+      <totalNumPersons>2</totalNumPersons>
+    </numbers>
+  </GuestRequest>
 </guests>
