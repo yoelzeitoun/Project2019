@@ -1,8 +1,13 @@
-﻿using System;
+﻿using BE;
+using BL;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,10 +16,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BE;
-using BL;
 
 namespace PL
 {
@@ -48,9 +50,9 @@ namespace PL
             releaseDateTB.Text = guest.ReleaseDate.ToString("dd/MM/yyyy");
             totalNumberOfDaysTB.Text = bl.Time_Span(guest.EntryDate, guest.ReleaseDate).ToString();
         }
-        public string CalculateTotalPrice (HostingUnit hostUnit, GuestRequest guest)
+        public string CalculateTotalPrice(HostingUnit hostUnit, GuestRequest guest)
         {
-            int total = (hostUnit.PriceForAdult * guest.NumAdults + hostUnit.PriceForChild * guest.NumChildren)* bl.Time_Span(guest.EntryDate, guest.ReleaseDate);
+            int total = (hostUnit.PriceForAdult * guest.NumAdults + hostUnit.PriceForChild * guest.NumChildren) * bl.Time_Span(guest.EntryDate, guest.ReleaseDate);
             return total.ToString();
         }
         public class UserDataContext
@@ -60,18 +62,19 @@ namespace PL
         }
         private Image CreateViewImage()
         {
-            
-                Image dynamicImage = new Image();
-                BitmapImage bitmap = new BitmapImage();
-                bitmap.BeginInit();
+
+            Image dynamicImage = new Image();
+            BitmapImage bitmap = new BitmapImage();
+            bitmap.BeginInit();
 
             if (CurrentHostingUnit.Pictures[0] != "")
-            { bitmap.UriSource = new Uri(CurrentHostingUnit.Pictures[0]);
+            {
+                bitmap.UriSource = new Uri(CurrentHostingUnit.Pictures[0]);
                 bitmap.EndInit();
                 dynamicImage.Source = bitmap;
                 return dynamicImage;
             }
-            else {return null;}
+            else { return null; }
         }
         private void approveBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -90,12 +93,12 @@ namespace PL
             Window.GetWindow(this).Close();
 
             MailMessage email = new MailMessage();
-            email.To.Add("yoelzeit@gmail.com");
+            email.To.Add(CurrentGuestRequest.MailAddress);
 
             email.From = new MailAddress("project.roul@gmail.com");
-            email.Subject = "salut roul comment vas tu ?";
-            email.Body = "roul et roul";
-            email.IsBodyHtml = true;
+            email.Subject = CurrentHostingUnit.HostingUnitName;
+            email.Body = CurrentHostingUnit.ToString();
+            email.IsBodyHtml = false;
             SmtpClient smtp = new SmtpClient();
             smtp.Host = "smtp.gmail.com";
             smtp.Credentials = new System.Net.NetworkCredential("project.roul@gmail.com", "abcd@1234");
