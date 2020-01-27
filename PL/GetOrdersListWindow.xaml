@@ -4,17 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL"
+        xmlns:be="clr-namespace:BE;assembly=BE"
         mc:Ignorable="d"
         Title="GetOrdersListWindow" Height="450" Width="800">
     <Grid>
 
-        <DataGrid x:Name="OrdersDataList" RowHeight="70"  IsReadOnly="True" Grid.Row="1"  AutoGenerateColumns="False" >
+        <DataGrid x:Name="OrdersDataList" RowHeight="70" d:DataContext="{d:DesignInstance be:Order}" IsReadOnly="True" Grid.Row="1"  AutoGenerateColumns="False" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Status"  Binding="{Binding Order.status_order}" />
-                <DataGridTextColumn Header="HostingUnitKey" Binding="{Binding Order.HostingUnitKey}"/>
-                <DataGridTextColumn Header="GuestRequestKey" Binding="{Binding Order.GuestRequestKey}"/>
-                <DataGridTextColumn Header="OrderKey" Binding="{Binding Order.OrderKey}"/>
-                <DataGridTextColumn Header="OrderDate" Binding="{Binding Order.OrderDate}"/>
+                <DataGridTextColumn Header="Status"  Binding="{Binding status_Order}" />
+                <DataGridTextColumn Header="HostingUnitKey" Binding="{Binding HostingUnitKey}"/>
+                <DataGridTextColumn Header="GuestRequestKey" Binding="{Binding GuestRequestKey}"/>
+                <DataGridTextColumn Header="OrderKey" Binding="{Binding OrderKey}"/>
+                <DataGridTextColumn Header="OrderDate" Binding="{Binding OrderDate}"/>
+                <DataGridTextColumn Header="CreateDate" Binding="{Binding CreateDate}"/>
 
             </DataGrid.Columns>
         </DataGrid>

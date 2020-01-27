@@ -82,6 +82,11 @@ namespace DAL
         /// </summary>
         /// <returns></returns>
         IEnumerable<HostingUnit> GetHostingUnitList();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<Order> GetOrderList();
         #endregion
 
         #region Order

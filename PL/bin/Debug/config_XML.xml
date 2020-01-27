@@ -2,8 +2,8 @@
 <Configuration>
   <HostKey>11</HostKey>
   <GuestRequestKey>37</GuestRequestKey>
-  <HostingUnitKey>7</HostingUnitKey>
-  <OrderKey>11</OrderKey>
+  <HostingUnitKey>8</HostingUnitKey>
+  <OrderKey>20</OrderKey>
   <NumStaticOrderExpiration>0</NumStaticOrderExpiration>
   <Commission>10</Commission>
   <Admin_PASSWORD />

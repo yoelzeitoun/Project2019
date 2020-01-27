@@ -14,7 +14,7 @@ using System.Xml.Serialization;
 
 namespace DAL
 {
-    public class XML:IDal
+    public class XML : IDal
     {
         private static XML instance = null;
         public static XML GetMyXML()
@@ -188,7 +188,7 @@ namespace DAL
             XElement phoneNumber = new XElement("phoneNumber", host.PhoneNumber);
             XElement name = new XElement("name", firstName, lastName, phoneNumber);
             XElement hostingUnits = new XElement("hosting-units");
-            
+
             hostRoot.Add(new XElement("host", hostKey, login, name, hostingUnits));
             hostRoot.Save(hostPath);
         }
@@ -198,8 +198,8 @@ namespace DAL
             try
             {
                 hostElement = (from item in hostRoot.Elements()
-                                  where int.Parse(item.Element("hostKey").Value) == id
-                                  select item).FirstOrDefault();
+                               where int.Parse(item.Element("hostKey").Value) == id
+                               select item).FirstOrDefault();
                 hostElement.Remove();
                 hostRoot.Save(hostPath);
                 return true;
@@ -212,8 +212,8 @@ namespace DAL
         public void UpdateHost(Host host)
         {
             XElement hostElement = (from item in hostRoot.Elements()
-                                       where int.Parse(item.Element("id").Value) == host.HostKey
-                                       select item).FirstOrDefault();
+                                    where int.Parse(item.Element("id").Value) == host.HostKey
+                                    select item).FirstOrDefault();
 
             hostElement.Element("login").Element("eMail").Value = host.MailAddress;
             hostElement.Element("login").Element("password").Value = host.Password;
@@ -266,8 +266,8 @@ namespace DAL
             try
             {
                 host = (from item in hostRoot.Elements()
-                           where item.Element("login").Element("eMail").Value == email && item.Element("login").Element("password").Value== password
-                           select item
+                        where item.Element("login").Element("eMail").Value == email && item.Element("login").Element("password").Value == password
+                        select item
                            ).Any();
             }
             catch
@@ -284,8 +284,8 @@ namespace DAL
             try
             {
                 host = (from item in hostRoot.Elements()
-                           where item.Element("login").Element("eMail").Value == email
-                           select item).Any();
+                        where item.Element("login").Element("eMail").Value == email
+                        select item).Any();
             }
             catch
             {
@@ -389,8 +389,8 @@ namespace DAL
                                                 new XElement("pictures")));
 
                     var hostingElement = (from item in hostElement.Elements()
-                                   where item.Element("name").Value == hostingUnit.HostingUnitName
-                                   select item).FirstOrDefault();
+                                          where item.Element("name").Value == hostingUnit.HostingUnitName
+                                          select item).FirstOrDefault();
                     for (int i = 0; i < 10; i++)
                     {
                         hostingElement.Element("pictures").Add(new XElement("pic" + i, hostingUnit.Pictures[i]));
@@ -409,11 +409,11 @@ namespace DAL
         {
             LoadHostData();
             var hostElement = (from item in hostRoot.Elements()
-                             where item.Element("login").Element("eMail").Value == hostingUnit.Owner.MailAddress
-                             select item.Element("hosting-units")).FirstOrDefault();
+                               where item.Element("login").Element("eMail").Value == hostingUnit.Owner.MailAddress
+                               select item.Element("hosting-units")).FirstOrDefault();
             var hostingUnitElement = (from item1 in hostElement.Elements()
-                                           where item1.Element("name").Value == hostingUnit.HostingUnitName
-                                           select item1
+                                      where item1.Element("name").Value == hostingUnit.HostingUnitName
+                                      select item1
                                            ).FirstOrDefault();
             hostingUnitElement.Element("HostingUnitKey").Value = hostingUnit.HostingUnitKey.ToString();
             hostingUnitElement.Element("name").Value = hostingUnit.HostingUnitName;
@@ -490,7 +490,7 @@ namespace DAL
                                    pool = (Pool)Enum.Parse(typeof(Pool), item.Element("pool").Value, true),
                                    Diary = GetDiary(item.Element("diary").Value),
                                    Pictures = (from pic in item.Element("pictures").Elements()
-                                               select pic.Value ).ToArray() 
+                                               select pic.Value).ToArray()
                                }).FirstOrDefault();
             }
             catch
@@ -547,7 +547,7 @@ namespace DAL
             XElement totalNumPersons = new XElement("totalNumPersons", guestRequest.TotalNumPersons);
             XElement numbers = new XElement("numbers", numAdults, numChildren, totalNumPersons);
 
-            guestRoot.Add(new XElement("GuestRequest", guestRequestkey, email, name, date, options,numbers));
+            guestRoot.Add(new XElement("GuestRequest", guestRequestkey, email, name, date, options, numbers));
             guestRoot.Save(guestPath);
         }
         public IEnumerable<GuestRequest> GuestRequestList()
@@ -557,25 +557,25 @@ namespace DAL
             try
             {
                 guestRequestList = (from item in guestRoot.Elements()
-                                  select new GuestRequest()
-                                  {
-                                      GuestRequestKey = int.Parse(item.Element("GuestRequestKey").Value),
-                                      MailAddress = item.Element("eMail").Value,
-                                      FirstName = item.Element("name").Element("firstName").Value,
-                                      LastName = item.Element("name").Element("lastName").Value,
-                                      PhoneNumber = item.Element("name").Element("phoneNumber").Value,
-                                      EntryDate = DateTime.Parse(item.Element("date").Element("entryDate").Value),
-                                      ReleaseDate = DateTime.Parse(item.Element("date").Element("releaseDate").Value),
-                                      RegistrationDate = DateTime.Parse(item.Element("date").Element("registrationDate").Value),
-                                      pool = (Pool)Enum.Parse(typeof(Pool), item.Element("options").Element("pool").Value, true),
-                                      childrenAttractions = (ChildrensAttractions)Enum.Parse(typeof(ChildrensAttractions), item.Element("options").Element("childrenAttractions").Value, true),
-                                      jacuzzi = (Jaccuzzi)Enum.Parse(typeof(Jaccuzzi), item.Element("options").Element("jaccuzzi").Value, true),
-                                      garden = (Garden)Enum.Parse(typeof(Garden), item.Element("options").Element("garden").Value, true),
-                                      type = (Type)Enum.Parse(typeof(Type), item.Element("options").Element("hostingUnitType").Value, true),
-                                      area = (Area)Enum.Parse(typeof(Area), item.Element("options").Element("area").Value, true),
-                                      NumAdults = int.Parse(item.Element("numbers").Element("numAdults").Value),
-                                      NumChildren = int.Parse(item.Element("numbers").Element("numChildren").Value),
-                                  }
+                                    select new GuestRequest()
+                                    {
+                                        GuestRequestKey = int.Parse(item.Element("GuestRequestKey").Value),
+                                        MailAddress = item.Element("eMail").Value,
+                                        FirstName = item.Element("name").Element("firstName").Value,
+                                        LastName = item.Element("name").Element("lastName").Value,
+                                        PhoneNumber = item.Element("name").Element("phoneNumber").Value,
+                                        EntryDate = DateTime.Parse(item.Element("date").Element("entryDate").Value),
+                                        ReleaseDate = DateTime.Parse(item.Element("date").Element("releaseDate").Value),
+                                        RegistrationDate = DateTime.Parse(item.Element("date").Element("registrationDate").Value),
+                                        pool = (Pool)Enum.Parse(typeof(Pool), item.Element("options").Element("pool").Value, true),
+                                        childrenAttractions = (ChildrensAttractions)Enum.Parse(typeof(ChildrensAttractions), item.Element("options").Element("childrenAttractions").Value, true),
+                                        jacuzzi = (Jaccuzzi)Enum.Parse(typeof(Jaccuzzi), item.Element("options").Element("jaccuzzi").Value, true),
+                                        garden = (Garden)Enum.Parse(typeof(Garden), item.Element("options").Element("garden").Value, true),
+                                        type = (Type)Enum.Parse(typeof(Type), item.Element("options").Element("hostingUnitType").Value, true),
+                                        area = (Area)Enum.Parse(typeof(Area), item.Element("options").Element("area").Value, true),
+                                        NumAdults = int.Parse(item.Element("numbers").Element("numAdults").Value),
+                                        NumChildren = int.Parse(item.Element("numbers").Element("numChildren").Value),
+                                    }
                                   ).ToList();
             }
             catch
@@ -614,7 +614,7 @@ namespace DAL
                 }
             return result;
         }
-        public bool[,] GetDiary( string strDiary)
+        public bool[,] GetDiary(string strDiary)
         {
             bool[,] diary = new bool[12, 31];
             int index = 0;
@@ -687,7 +687,7 @@ namespace DAL
                 hostingUnitName = (from item in selectHost.Elements()
                                    select new HostingUnit()
                                    {
-                                       HostingUnitKey=long.Parse(item.Element("HostingUnitKey").Value),
+                                       HostingUnitKey = long.Parse(item.Element("HostingUnitKey").Value),
                                        HostingUnitName = item.Element("name").Value,
                                        City = item.Element("city").Value,
                                        HouseNumber = item.Element("house-number").Value,
@@ -715,12 +715,37 @@ namespace DAL
             return hostingUnitName;
 
         }
-    
 
-    public bool SendGuestToHost(GuestRequest guest, HostingUnit hosting)
+
+        public bool SendGuestToHost(GuestRequest guest, HostingUnit hosting)
         {
             throw new NotImplementedException();
         }
         #endregion
+
+        public IEnumerable<Order> GetOrderList()
+        {
+            LoadOrderData();
+            IEnumerable<Order> orderList;
+            try
+            {
+                orderList = (from item in orderRoot.Elements()
+                             select new Order()
+                             {
+                                 HostingUnitKey = int.Parse(item.Element("hostingUnitKey").Value),
+                                 OrderKey = int.Parse(item.Element("orderKey").Value),
+                                 GuestRequestKey = int.Parse(item.Element("guestRequestKey").Value),
+                                 status_Order = (Status_order)Enum.Parse(typeof(Status_order), item.Element("status_Order").Value),
+                                 CreateDate = DateTime.Parse(item.Element("createDate").Value),
+                                 OrderDate = DateTime.Parse(item.Element("orderDate").Value),
+
+                             }).ToList();
+            }
+            catch
+            {
+                return orderList = null;
+            }
+            return orderList;
+        }
     }
 }

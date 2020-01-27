@@ -283,5 +283,9 @@ namespace DAL
         {
             throw new NotImplementedException();
         }
+        public IEnumerable<Order> GetOrderList()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

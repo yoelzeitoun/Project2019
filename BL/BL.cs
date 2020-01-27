@@ -317,6 +317,11 @@ namespace BL
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<Order> GetOrderList()
+        {
+            return xml.GetOrderList();
+        }
         //public IEnumerable<HostingUnit> GetHostingUnitList(Func<HostingUnit, bool> predicat = null)
         //{
         //    throw new NotImplementedException();

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -87,11 +88,26 @@ namespace PL
 
             MessageBox.Show($"An email has just been sent!", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
             Window.GetWindow(this).Close();
-        }
 
-        private void rejectBtn_Click(object sender, RoutedEventArgs e)
-        {
+            MailMessage email = new MailMessage();
+            email.To.Add("yoelzeit@gmail.com");
 
+            email.From = new MailAddress("project.roul@gmail.com");
+            email.Subject = "salut roul comment vas tu ?";
+            email.Body = "roul et roul";
+            email.IsBodyHtml = true;
+            SmtpClient smtp = new SmtpClient();
+            smtp.Host = "smtp.gmail.com";
+            smtp.Credentials = new System.Net.NetworkCredential("project.roul@gmail.com", "abcd@1234");
+            smtp.EnableSsl = true;
+            try
+            {
+                smtp.Send(email);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
