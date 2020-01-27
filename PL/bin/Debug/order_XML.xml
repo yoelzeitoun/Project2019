@@ -80,4 +80,12 @@
     <createDate>27-01-2020</createDate>
     <orderDate>27-01-2020</orderDate>
   </order>
+  <order>
+    <orderKey>11</orderKey>
+    <hostingUnitKey>1</hostingUnitKey>
+    <guestRequestKey>1</guestRequestKey>
+    <status_Order>Email_sent</status_Order>
+    <createDate>27-01-2020</createDate>
+    <orderDate>27-01-2020</orderDate>
+  </order>
 </orders>

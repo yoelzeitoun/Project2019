@@ -59,13 +59,18 @@ namespace PL
         }
         private Image CreateViewImage()
         {
-            Image dynamicImage = new Image();
-            BitmapImage bitmap = new BitmapImage();
-            bitmap.BeginInit();
-            bitmap.UriSource = new Uri(CurrentHostingUnit.Pictures[0]);
-            bitmap.EndInit();
-            dynamicImage.Source = bitmap;
-            return dynamicImage;
+            
+                Image dynamicImage = new Image();
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+
+            if (CurrentHostingUnit.Pictures[0] != "")
+            { bitmap.UriSource = new Uri(CurrentHostingUnit.Pictures[0]);
+                bitmap.EndInit();
+                dynamicImage.Source = bitmap;
+                return dynamicImage;
+            }
+            else {return null;}
         }
         private void approveBtn_Click(object sender, RoutedEventArgs e)
         {
