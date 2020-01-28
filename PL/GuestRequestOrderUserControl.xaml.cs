@@ -17,6 +17,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace PL
 {
@@ -89,19 +90,22 @@ namespace PL
             bl.DiaryChangeToOccuped(CurrentHostingUnit, CurrentGuestRequest);
             bl.UpdateHostingUnit(CurrentHostingUnit);
 
-            MessageBox.Show($"An email has just been sent!", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
-            Window.GetWindow(this).Close();
-
             MailMessage email = new MailMessage();
             email.To.Add(CurrentGuestRequest.MailAddress);
 
+            new Thread(()=>SendMail(email, CurrentHostingUnit)).Start();
+            
+            Window.GetWindow(this).Close();
+        }
+        private void SendMail(MailMessage email, HostingUnit hostingUnit)
+        {
             email.From = new MailAddress("project.roul@gmail.com");
-            email.Subject = CurrentHostingUnit.HostingUnitName;
-            email.Body = CurrentHostingUnit.ToString();
+            email.Subject = hostingUnit.HostingUnitName;
+            email.Body = hostingUnit.ToString();
             email.IsBodyHtml = false;
             SmtpClient smtp = new SmtpClient();
             smtp.Host = "smtp.gmail.com";
-            smtp.Credentials = new System.Net.NetworkCredential("project.roul@gmail.com", "abcd@1234");
+            smtp.Credentials = new NetworkCredential("project.roul@gmail.com", "abcd@1234");
             smtp.EnableSsl = true;
             try
             {
@@ -111,6 +115,7 @@ namespace PL
             {
                 MessageBox.Show(ex.ToString());
             }
+            MessageBox.Show($"An email has just been sent!", "OK!", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }
