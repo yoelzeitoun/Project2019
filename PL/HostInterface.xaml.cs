@@ -44,7 +44,6 @@ namespace PL
             //{
             //    myPicture.Source = new BitmapImage(new Uri(op.FileName));
             //}
-            this.Close();
             new AddHostingUnit(eMail).ShowDialog();
         }
 
