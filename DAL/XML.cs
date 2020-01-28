@@ -249,6 +249,7 @@ namespace DAL
                              HostKey = int.Parse(item.Element("hostKey").Value),
                              MailAddress = item.Element("login").Element("eMail").Value,
                              Password = item.Element("login").Element("password").Value,
+                             PhoneNumber = item.Element("name").Element("phoneNumber").Value,
                              FirstName = item.Element("name").Element("firstName").Value,
                              LastName = item.Element("name").Element("lastName").Value
                          }).ToList();

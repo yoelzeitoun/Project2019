@@ -17,14 +17,12 @@
                 <DataGridTextColumn Header="LastName" Binding="{Binding LastName}"/>
                 <DataGridTextColumn Header="area" Binding="{Binding area}"/>
                 <DataGridTextColumn Header="Type" Binding="{Binding type}"/>
-                <DataGridTextColumn Header="Jacuzzi" Binding="{Binding jaccuzzi}"/>
+                <DataGridTextColumn Header="Jacuzzi" Binding="{Binding jacuzzi}"/>
                 <DataGridTextColumn Header="Garden" Binding="{Binding garden}"/>
                 <DataGridTextColumn Header="ChildrensAttractions" Binding="{Binding childrenAttractions}"/>
                 <DataGridTextColumn Header="Pool" Binding="{Binding pool}"/>
-                <DataGridTextColumn Header="NumOfAdults" Binding="{Binding NumOfAdults}"/>
-                <DataGridTextColumn Header="PriceForAdult" Binding="{Binding PriceForAdult}"/>
-                <DataGridTextColumn Header="PriceForChild" Binding="{Binding PriceForChild}"/>
-                <DataGridTextColumn Header="NumOfChildren" Binding="{Binding NumOfChildren}"/>
+                <DataGridTextColumn Header="NumOfAdults" Binding="{Binding NumAdults}"/>
+                <DataGridTextColumn Header="NumOfChildren" Binding="{Binding NumChildren}"/>
                 <DataGridTextColumn Header="Status_Client" Binding="{Binding status_Client}"/>
                 <DataGridTextColumn Header="EntryDate" Binding="{Binding EntryDate}"/>
                 <DataGridTextColumn Header="ReleaseDate" Binding="{Binding ReleaseDate}"/>

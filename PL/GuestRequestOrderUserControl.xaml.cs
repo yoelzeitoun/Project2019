@@ -92,7 +92,7 @@ namespace PL
 
             MailMessage email = new MailMessage();
             email.To.Add(CurrentGuestRequest.MailAddress);
-
+            //fonction Lambda for Thread
             new Thread(()=>SendMail(email, CurrentHostingUnit)).Start();
             
             Window.GetWindow(this).Close();

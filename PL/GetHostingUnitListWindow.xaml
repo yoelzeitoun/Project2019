@@ -14,10 +14,9 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="HostingUnitKey"  Binding="{Binding HostingUnitKey}" />
                 <DataGridTextColumn Header="HostingUnitName" Binding="{Binding HostingUnitName}"/>
-                <DataGridTextColumn Header="NumHostingUnit" Binding="{Binding NumHostingUnit}"/>
                 <DataGridTextColumn Header="area" Binding="{Binding area}"/>
                 <DataGridTextColumn Header="Type" Binding="{Binding type}"/>
-                <DataGridTextColumn Header="Jacuzzi" Binding="{Binding jaccuzzi}"/>
+                <DataGridTextColumn Header="Jacuzzi" Binding="{Binding jacuzzi}"/>
                 <DataGridTextColumn Header="Garden" Binding="{Binding garden}"/>
                 <DataGridTextColumn Header="ChildrensAttractions" Binding="{Binding childrenAttractions}"/>
                 <DataGridTextColumn Header="Pool" Binding="{Binding pool}"/>
@@ -25,11 +24,9 @@
                 <DataGridTextColumn Header="PriceForAdult" Binding="{Binding PriceForAdult}"/>
                 <DataGridTextColumn Header="PriceForChild" Binding="{Binding PriceForChild}"/>
                 <DataGridTextColumn Header="NumOfChildren" Binding="{Binding NumOfChildren}"/>
-                <DataGridTextColumn Header="Owner" Binding="{Binding Owner}"/>
                 <DataGridTextColumn Header="City" Binding="{Binding City}"/>
                 <DataGridTextColumn Header="HouseNumber" Binding="{Binding HouseNumber}"/>
                 <DataGridTextColumn Header="Street" Binding="{Binding Street}"/>
-                <DataGridTextColumn Header="Diary" Binding="{Binding Diary}"/>
 
 
 
