@@ -24,7 +24,7 @@ namespace PL
         IBL bl;
         public GetAllHostListWindow()
         {
-            InitializeComponent(); bl = BL.Factory_BL.getBL();
+            InitializeComponent(); bl = Factory_BL.getBL();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
             this.HostListData.ItemsSource = bl.GetHostList();
         }
