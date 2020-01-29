@@ -10,7 +10,7 @@ namespace BL
     public class BL : IBL
     {
         IDal d;
-        public XML xml = Factory_XML.GetXML();
+        public IDal xml = Factory_DAL.GetXML();
         private static BL instance = null;
         public static BL getMyBL()
         {

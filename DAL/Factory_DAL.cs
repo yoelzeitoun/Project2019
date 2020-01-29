@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DAL
 {
-    public class Factory_XML
+    public class Factory_DAL
     {
         protected static XML instance = null;
         public static XML GetXML()

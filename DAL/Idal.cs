@@ -152,6 +152,14 @@ namespace DAL
         /// <param name="hosting"></param>
         /// <returns></returns>
         bool SendGuestToHost(GuestRequest guest, HostingUnit hosting);
+
+        void SetHostKey(Host host);
+        void SetHostingUnitKey(HostingUnit hostingUnit);
+        void SetGuestRequestKey(GuestRequest guestRequest);
+        void SetOrderKey(Order order);
+        bool IsHostExists(string email);
+        bool CheckPass(string email, string password);
+        IEnumerable<string> HostingUnitList(string email);
         #endregion
     }
 }

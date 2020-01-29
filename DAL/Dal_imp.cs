@@ -287,5 +287,40 @@ namespace DAL
         {
             throw new NotImplementedException();
         }
+
+        public void SetHostKey(Host host)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetHostingUnitKey(HostingUnit hostingUnit)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetGuestRequestKey(GuestRequest guestRequest)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetOrderKey(Order order)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsHostExists(string email)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool CheckPass(string email, string password)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<string> HostingUnitList(string email)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
