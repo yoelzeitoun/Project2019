@@ -16,15 +16,6 @@ namespace DAL
 {
     public class XML : IDal
     {
-        protected static XML instance = null;
-        public static XML GetMyXML()
-        {
-            if (instance == null)
-            {
-                instance = new XML();
-            }
-            return instance;
-        }
         XElement hostRoot;
         XElement guestRoot;
         XElement orderRoot;

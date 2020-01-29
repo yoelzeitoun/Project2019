@@ -270,31 +270,4 @@
       <totalNumPersons>6</totalNumPersons>
     </numbers>
   </GuestRequest>
-  <GuestRequest>
-    <GuestRequestKey>37</GuestRequestKey>
-    <eMail>yoelzeit@gmail.com</eMail>
-    <name>
-      <firstName>a</firstName>
-      <lastName>a</lastName>
-      <phoneNumber>1</phoneNumber>
-    </name>
-    <date>
-      <entryDate>13-01-2020</entryDate>
-      <releaseDate>25-01-2020</releaseDate>
-      <registrationDate>26-01-2020</registrationDate>
-    </date>
-    <options>
-      <pool>Option</pool>
-      <childrenAttractions>Option</childrenAttractions>
-      <jaccuzzi>Option</jaccuzzi>
-      <garden>Option</garden>
-      <hostingUnitType>All</hostingUnitType>
-      <area>All</area>
-    </options>
-    <numbers>
-      <numAdults>1</numAdults>
-      <numChildren>1</numChildren>
-      <totalNumPersons>2</totalNumPersons>
-    </numbers>
-  </GuestRequest>
 </guests>

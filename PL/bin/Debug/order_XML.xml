@@ -392,4 +392,12 @@
     <createDate>29-01-2020</createDate>
     <orderDate>29-01-2020</orderDate>
   </order>
+  <order>
+    <orderKey>50</orderKey>
+    <hostingUnitKey>3</hostingUnitKey>
+    <guestRequestKey>3</guestRequestKey>
+    <status_Order>Email_sent</status_Order>
+    <createDate>29-01-2020</createDate>
+    <orderDate>29-01-2020</orderDate>
+  </order>
 </orders>

@@ -6,9 +6,14 @@ namespace DAL
 {
     public class Factory_XML
     {
+        protected static XML instance = null;
         public static XML GetXML()
         {
-            return XML.GetMyXML();
+            if (instance == null)
+            {
+                instance = new XML();
+            }
+            return instance;
         }
     }
 }
