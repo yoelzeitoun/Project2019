@@ -17,7 +17,7 @@ namespace BE
             string str = "";
             foreach (PropertyInfo item in t.GetType().GetProperties())
             {
-                //if ((item.Name != "ImageSource") && (item.Name != "AvailabilityTester") && (item.Name != "Criteria") && (item.Name != "matrix_availability"))
+                if ((item.Name != "HostingUnitKey") && (item.Name != "Pictures") && (item.Name != "DebitAuthorization") && (item.Name != "Diary") && (item.Name != "MailAddress") && (item.Name != "Password") && (item.Name != "Owner"))
                 {
                     str += InsertSpaces(item.Name) + ": " + item.GetValue(t, null) + "\n";
                 }

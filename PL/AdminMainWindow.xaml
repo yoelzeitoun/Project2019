@@ -21,11 +21,11 @@
             <RowDefinition Height="289*"/>
             <RowDefinition Height="131*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="ButtonOrder" Content="Get All Orders" Background="Aqua" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="186" Height="279" Grid.RowSpan="2" Click="Button_Click"/>
-        <Button x:Name="ButtonHostingUnits" Content="Get All Hosting Units" Background="Aqua" HorizontalAlignment="Left" Margin="196,10,0,0" VerticalAlignment="Top" Width="194" Height="279" Grid.RowSpan="2" Click="ButtonHostingUnits_Click" Grid.ColumnSpan="2"/>
-        <Button x:Name="ButtonHosts" Content="Get All Hosts" Background="Aqua" Grid.Column="2" HorizontalAlignment="Left" Margin="0.2,10,0,0" VerticalAlignment="Top" Width="194" Height="279" Grid.RowSpan="2" Click="ButtonHosts_Click"/>
-        <Button  Background="Coral" Content="EXIT" Grid.Column="1" HorizontalAlignment="Left" Margin="48.6,52.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="245" Height="53" Click="Button_Click_1" Grid.ColumnSpan="2"/>
-        <Button Content="Get All Guest Requests" Grid.Column="3"  Margin="9.8,10,0,0" VerticalAlignment="Top" Width="179" Height="279" Background="Aqua"  HorizontalAlignment="Left" Grid.RowSpan="2" Click="Button_Click_2"/>
+        <Button x:Name="ButtonOrder" Content="Get All Orders" Background="Aqua" HorizontalAlignment="Left" Margin="5,92,0,0" VerticalAlignment="Top" Width="190" Height="90" Click="Button_Click"/>
+        <Button x:Name="ButtonHostingUnits" Content="Get All Hosting Units" Background="Aqua" HorizontalAlignment="Center" Margin="1.333,92,3.333,0" VerticalAlignment="Top" Width="190" Height="90" Click="ButtonHostingUnits_Click" Grid.Column="1"/>
+        <Button x:Name="ButtonHosts" Content="Get All Hosts" Background="Aqua" Grid.Column="2" HorizontalAlignment="Center" Margin="1.667,92,2.333,0" VerticalAlignment="Top" Width="190" Height="90" Click="ButtonHosts_Click"/>
+        <Button  Background="SkyBlue" Content="EXIT" Grid.Column="1" HorizontalAlignment="Center" Margin="48.6,52.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="245" Height="53" Click="Button_Click_1" Grid.ColumnSpan="2"/>
+        <Button Content="Get All Guest Requests" Grid.Column="3"   VerticalAlignment="Top" Width="190" Height="90" Background="Aqua"  HorizontalAlignment="Center" Click="Button_Click_2" Margin="1.667,92,2.333,0"/>
 
     </Grid>
 
