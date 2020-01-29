@@ -85,7 +85,7 @@ namespace PLWPF
             }
             catch (Exception a)
             {
-                MessageBox.Show(a.ToString());
+                MessageBox.Show(a.Message);
             }
 
 }
